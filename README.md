@@ -88,6 +88,11 @@ Outputs:
 - `reports/2026_tournament_predictions.csv`
 - `reports/2026_tournament_summary.json`
 - `reports/2026_tournament_results.md`
+- `reports/feature_importance.png`
+- `reports/2026_accuracy_by_round.png`
+- `reports/2026_prediction_confidence.png`
+- `reports/2026_prediction_explanations.csv`
+- `reports/2026_bracket_predictions.html`
 
 ## Run 2026 Tournament Predictions
 
@@ -98,6 +103,14 @@ After scraping/caching KenPom 2026 ratings:
 ```
 
 The included 2026 results file is `data/raw/ncaa_2026_tournament_results.csv`.
+
+## Visualize The Model
+
+```bash
+MPLCONFIGDIR=.mplconfig ./.venv/bin/python -m src.visualize_model
+```
+
+This generates feature-importance, round-accuracy, confidence, matchup-explanation, and bracket-view reports under `reports/`.
 
 ## Modeling Approach
 

@@ -1,0 +1,806 @@
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>2026 March Madness Model Bracket</title>
+      <style>
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f7f4ef; color: #20242a; }
+        header { padding: 24px 28px 12px; }
+        h1 { margin: 0 0 8px; font-size: 28px; }
+        .note { max-width: 980px; color: #555; line-height: 1.45; }
+        .bracket { display: grid; grid-template-columns: repeat(7, minmax(230px, 1fr)); gap: 14px; padding: 16px 24px 32px; overflow-x: auto; }
+        .round { min-width: 230px; }
+        h2 { font-size: 15px; margin: 0 0 10px; border-bottom: 2px solid #222; padding-bottom: 6px; }
+        .game { background: white; border: 1px solid #d6d1c8; border-left: 5px solid #356f8f; border-radius: 8px; padding: 10px; margin-bottom: 10px; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+        .game.miss { border-left-color: #b6544f; }
+        .roundline { font-size: 11px; color: #777; margin-bottom: 5px; }
+        .teams { font-size: 13px; line-height: 1.45; }
+        .pick { margin-top: 8px; font-size: 12px; }
+        .why { margin-top: 6px; font-size: 11px; color: #555; line-height: 1.35; }
+        details { margin-top: 6px; font-size: 11px; }
+        summary { cursor: pointer; color: #333; }
+        details p { color: #555; line-height: 1.35; }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1>2026 March Madness Decision Tree Bracket</h1>
+        <p class="note">Each card shows the actual matchup, model pick, confidence in that pick, top matchup gaps from the pick's point of view, and the decision-tree path used by the model. Blue cards were correct; red cards were misses.</p>
+      </header>
+      <main class="bracket">
+            <section class="round">
+              <h2>First Four</h2>
+              
+                <article class="game correct">
+                  <div class="roundline">2026-03-17</div>
+                  <div class="teams">
+                    <div><strong>Howard</strong> 86</div>
+                    <div>UMBC 83</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Howard</strong> (53%)</div>
+                  <div class="why">Rk Diff +9.00; Non-Conf SOS Net Rating Diff +5.09; Off Rating Diff -4.00</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 9.00) | Net Rating Diff &gt; -7.88 (value -0.82) | Luck Diff &gt; -0.04 (value -0.02) | Net Rating Diff &gt; -3.48 (value -0.82)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-17</div>
+                  <div class="teams">
+                    <div><strong>Texas</strong> 68</div>
+                    <div>NC State 66</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>NC State</strong> (53%)</div>
+                  <div class="why">Non-Conf SOS Net Rating Diff +10.82; Rk Diff +6.00; SOS Net Rating Diff -3.30</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -6.00) | Net Rating Diff &lt;= 7.88 (value 1.38) | Luck Rank Diff &gt; -73.50 (value 34.00) | Net Rating Diff &lt;= 3.48 (value 1.38)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-18</div>
+                  <div class="teams">
+                    <div><strong>Prairie View A&amp;M</strong> 67</div>
+                    <div>Lehigh 55</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Lehigh</strong> (53%)</div>
+                  <div class="why">Rk Diff +11.00; Non-Conf SOS Net Rating Diff -9.44; Tempo Diff -3.90</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -11.00) | Net Rating Diff &lt;= 7.88 (value 0.97) | Luck Rank Diff &gt; -73.50 (value 66.00) | Net Rating Diff &lt;= 3.48 (value 0.97)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-18</div>
+                  <div class="teams">
+                    <div><strong>Miami OH</strong> 89</div>
+                    <div>SMU 79</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>SMU</strong> (87%)</div>
+                  <div class="why">Rk Diff -42.00; SOS Net Rating Diff +14.79; Non-Conf SOS Net Rating Diff +10.95</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 42.00) | Net Rating Diff &lt;= -7.88 (value -8.18) | Def Rating Rank Abs Diff &lt;= 125.00 (value 45.00) | Tempo Rank Diff &gt; -132.50 (value -61.00)</p></details>
+                </article>
+                
+            </section>
+            
+            <section class="round">
+              <h2>First Round</h2>
+              
+                <article class="game miss">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>TCU</strong> 66</div>
+                    <div>Ohio State 64</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Ohio State</strong> (68%)</div>
+                  <div class="why">Rk Diff -19.00; Off Rating Diff +9.00; Non-Conf SOS Net Rating Diff +5.17</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 19.00) | Net Rating Diff &gt; -7.88 (value -4.87) | Luck Diff &gt; -0.04 (value 0.07) | Net Rating Diff &lt;= -3.48 (value -4.87)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Nebraska</strong> 76</div>
+                    <div>Troy 47</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Nebraska</strong> (100%)</div>
+                  <div class="why">Rk Diff -134.00; Net Rating Diff +25.42; Def Rating Diff -16.20</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -134.00) | Net Rating Diff &gt; 7.88 (value 25.42) | Def Rating Rank Abs Diff &gt; 125.00 (value 165.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Louisville</strong> 83</div>
+                    <div>South Florida 79</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Louisville</strong> (68%)</div>
+                  <div class="why">Rk Diff -28.00; SOS Net Rating Diff +8.83; Net Rating Diff +7.67</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -28.00) | Net Rating Diff &lt;= 7.88 (value 7.67) | Luck Rank Diff &gt; -73.50 (value -48.00) | Net Rating Diff &gt; 3.48 (value 7.67)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>High Point</strong> 83</div>
+                    <div>Wisconsin 82</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Wisconsin</strong> (87%)</div>
+                  <div class="why">Rk Diff -62.00; SOS Net Rating Diff +21.44; Net Rating Diff +13.57</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 62.00) | Net Rating Diff &lt;= -7.88 (value -13.57) | Def Rating Rank Abs Diff &lt;= 125.00 (value 85.00) | Tempo Rank Diff &gt; -132.50 (value -60.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Duke</strong> 71</div>
+                    <div>Siena 65</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Duke</strong> (100%)</div>
+                  <div class="why">Rk Diff -177.00; Net Rating Diff +38.41; SOS Net Rating Diff +23.04</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -177.00) | Net Rating Diff &gt; 7.88 (value 38.41) | Def Rating Rank Abs Diff &gt; 125.00 (value 159.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Vanderbilt</strong> 78</div>
+                    <div>McNeese 68</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Vanderbilt</strong> (87%)</div>
+                  <div class="why">Rk Diff -54.00; SOS Net Rating Diff +15.96; Net Rating Diff +14.86</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -54.00) | Net Rating Diff &gt; 7.88 (value 14.86) | Def Rating Rank Abs Diff &lt;= 125.00 (value 22.00) | Tempo Rank Diff &lt;= 132.50 (value -140.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Michigan State</strong> 92</div>
+                    <div>North Dakota State 67</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Michigan State</strong> (87%)</div>
+                  <div class="why">Rk Diff -108.00; Net Rating Diff +24.21; SOS Net Rating Diff +19.67</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -108.00) | Net Rating Diff &gt; 7.88 (value 24.21) | Def Rating Rank Abs Diff &lt;= 125.00 (value 115.00) | Tempo Rank Diff &lt;= 132.50 (value 19.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Arkansas</strong> 97</div>
+                    <div>Hawaii 78</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Arkansas</strong> (87%)</div>
+                  <div class="why">Rk Diff -90.00; Off Rating Diff +20.70; Net Rating Diff +19.89</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -90.00) | Net Rating Diff &gt; 7.88 (value 19.89) | Def Rating Rank Abs Diff &lt;= 125.00 (value 13.00) | Tempo Rank Diff &lt;= 132.50 (value -38.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>VCU</strong> 82</div>
+                    <div>North Carolina 78</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>VCU</strong> (53%)</div>
+                  <div class="why">Rk Diff +10.00; SOS Net Rating Diff -6.20; Net Rating Diff -2.67</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 10.00) | Net Rating Diff &gt; -7.88 (value -2.67) | Luck Diff &gt; -0.04 (value -0.02) | Net Rating Diff &gt; -3.48 (value -2.67)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Michigan</strong> 101</div>
+                    <div>Howard 80</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Michigan</strong> (100%)</div>
+                  <div class="why">Rk Diff -195.00; Net Rating Diff +42.34; SOS Net Rating Diff +30.90</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -195.00) | Net Rating Diff &gt; 7.88 (value 42.34) | Def Rating Rank Abs Diff &gt; 125.00 (value 138.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Texas</strong> 79</div>
+                    <div>BYU 71</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Texas</strong> (53%)</div>
+                  <div class="why">Non-Conf SOS Net Rating Diff -11.30; Rk Diff +7.00; Tempo Diff -3.30</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 7.00) | Net Rating Diff &gt; -7.88 (value -2.21) | Luck Diff &gt; -0.04 (value -0.04) | Net Rating Diff &gt; -3.48 (value -2.21)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Texas A&amp;M</strong> 63</div>
+                    <div>Saint Mary&#x27;s 50</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Texas A&amp;M</strong> (53%)</div>
+                  <div class="why">Rk Diff +13.00; Non-Conf SOS Net Rating Diff -9.95; SOS Net Rating Diff +6.78</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 13.00) | Net Rating Diff &gt; -7.88 (value -3.18) | Luck Diff &gt; -0.04 (value 0.00) | Net Rating Diff &gt; -3.48 (value -3.18)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Illinois</strong> 105</div>
+                    <div>Penn 70</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Illinois</strong> (100%)</div>
+                  <div class="why">Rk Diff -151.00; Net Rating Diff +32.67; Off Rating Diff +23.50</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -151.00) | Net Rating Diff &gt; 7.88 (value 32.67) | Def Rating Rank Abs Diff &lt;= 125.00 (value 103.00) | Tempo Rank Diff &gt; 132.50 (value 211.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Saint Louis</strong> 102</div>
+                    <div>Georgia 77</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Saint Louis</strong> (53%)</div>
+                  <div class="why">SOS Net Rating Diff -8.68; Def Rating Diff -4.00; Off Rating Diff -3.80</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value -1.00) | Net Rating Diff &gt; -7.88 (value 0.15) | Luck Diff &gt; -0.04 (value 0.04) | Net Rating Diff &gt; -3.48 (value 0.15)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Gonzaga</strong> 73</div>
+                    <div>Kennesaw State 64</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Gonzaga</strong> (100%)</div>
+                  <div class="why">Rk Diff -134.00; Net Rating Diff +25.79; Def Rating Diff -15.40</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -134.00) | Net Rating Diff &gt; 7.88 (value 25.79) | Def Rating Rank Abs Diff &gt; 125.00 (value 168.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-19</div>
+                  <div class="teams">
+                    <div><strong>Houston</strong> 78</div>
+                    <div>Idaho 47</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Houston</strong> (100%)</div>
+                  <div class="why">Rk Diff -151.00; Net Rating Diff +32.84; Def Rating Diff -16.60</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -151.00) | Net Rating Diff &gt; 7.88 (value 32.84) | Def Rating Rank Abs Diff &gt; 125.00 (value 134.00)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Kentucky</strong> 89</div>
+                    <div>Santa Clara 84</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Santa Clara</strong> (53%)</div>
+                  <div class="why">SOS Net Rating Diff -10.19; Rk Diff +9.00; Def Rating Diff +5.40</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -9.00) | Net Rating Diff &lt;= 7.88 (value 2.07) | Luck Rank Diff &gt; -73.50 (value 26.00) | Net Rating Diff &lt;= 3.48 (value 2.07)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Texas Tech</strong> 91</div>
+                    <div>Akron 71</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Texas Tech</strong> (100%)</div>
+                  <div class="why">Rk Diff -51.00; SOS Net Rating Diff +19.01; Net Rating Diff +12.52</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -51.00) | Net Rating Diff &gt; 7.88 (value 12.52) | Def Rating Rank Abs Diff &lt;= 125.00 (value 92.00) | Tempo Rank Diff &gt; 132.50 (value 225.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Arizona</strong> 92</div>
+                    <div>LIU 58</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Arizona</strong> (100%)</div>
+                  <div class="why">Rk Diff -214.00; Net Rating Diff +42.05; SOS Net Rating Diff +25.30</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -214.00) | Net Rating Diff &gt; 7.88 (value 42.05) | Def Rating Rank Abs Diff &gt; 125.00 (value 186.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Virginia</strong> 82</div>
+                    <div>Wright State 73</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Virginia</strong> (100%)</div>
+                  <div class="why">Rk Diff -121.00; Net Rating Diff +23.35; SOS Net Rating Diff +13.36</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -121.00) | Net Rating Diff &gt; 7.88 (value 23.35) | Def Rating Rank Abs Diff &gt; 125.00 (value 180.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Iowa State</strong> 108</div>
+                    <div>Tennessee State 74</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Iowa State</strong> (100%)</div>
+                  <div class="why">Rk Diff -184.00; Net Rating Diff +34.05; SOS Net Rating Diff +20.13</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -184.00) | Net Rating Diff &gt; 7.88 (value 34.05) | Def Rating Rank Abs Diff &gt; 125.00 (value 210.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Alabama</strong> 90</div>
+                    <div>Hofstra 70</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Alabama</strong> (87%)</div>
+                  <div class="why">Rk Diff -77.00; Net Rating Diff +18.16; SOS Net Rating Diff +17.81</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -77.00) | Net Rating Diff &gt; 7.88 (value 18.16) | Def Rating Rank Abs Diff &lt;= 125.00 (value 36.00) | Tempo Rank Diff &lt;= 132.50 (value -313.00)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Utah State</strong> 86</div>
+                    <div>Villanova 76</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Villanova</strong> (53%)</div>
+                  <div class="why">Rk Diff +6.00; SOS Net Rating Diff +2.56; Off Rating Diff -2.30</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -6.00) | Net Rating Diff &lt;= 7.88 (value 1.61) | Luck Rank Diff &gt; -73.50 (value -4.00) | Net Rating Diff &lt;= 3.48 (value 1.61)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Tennessee</strong> 78</div>
+                    <div>Miami OH 56</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Tennessee</strong> (100%)</div>
+                  <div class="why">Rk Diff -76.00; SOS Net Rating Diff +20.30; Net Rating Diff +18.36</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -76.00) | Net Rating Diff &gt; 7.88 (value 18.36) | Def Rating Rank Abs Diff &gt; 125.00 (value 137.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Iowa</strong> 67</div>
+                    <div>Clemson 61</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Iowa</strong> (68%)</div>
+                  <div class="why">Rk Diff -18.00; Non-Conf SOS Net Rating Diff -7.90; Off Rating Diff +7.10</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -18.00) | Net Rating Diff &lt;= 7.88 (value 4.78) | Luck Rank Diff &gt; -73.50 (value 91.00) | Net Rating Diff &gt; 3.48 (value 4.78)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>St. John&#x27;s</strong> 79</div>
+                    <div>Northern Iowa 53</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>St. John&#x27;s</strong> (87%)</div>
+                  <div class="why">Rk Diff -65.00; Net Rating Diff +16.24; Off Rating Diff +11.30</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -65.00) | Net Rating Diff &gt; 7.88 (value 16.24) | Def Rating Rank Abs Diff &lt;= 125.00 (value 14.00) | Tempo Rank Diff &lt;= 132.50 (value -292.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Purdue</strong> 104</div>
+                    <div>Queens 71</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Purdue</strong> (100%)</div>
+                  <div class="why">Rk Diff -178.00; Net Rating Diff +32.85; SOS Net Rating Diff +21.27</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -178.00) | Net Rating Diff &gt; 7.88 (value 32.85) | Def Rating Rank Abs Diff &gt; 125.00 (value 291.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>UCLA</strong> 75</div>
+                    <div>UCF 71</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>UCLA</strong> (68%)</div>
+                  <div class="why">Rk Diff -25.00; Net Rating Diff +6.22; Tempo Diff -4.50</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -25.00) | Net Rating Diff &lt;= 7.88 (value 6.22) | Luck Rank Diff &gt; -73.50 (value 101.00) | Net Rating Diff &gt; 3.48 (value 6.22)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Florida</strong> 114</div>
+                    <div>Prairie View A&amp;M 55</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Florida</strong> (100%)</div>
+                  <div class="why">Rk Diff -275.00; Net Rating Diff +43.72; Off Rating Diff +24.80</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -275.00) | Net Rating Diff &gt; 7.88 (value 43.72) | Def Rating Rank Abs Diff &gt; 125.00 (value 211.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Kansas</strong> 68</div>
+                    <div>Cal Baptist 60</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Kansas</strong> (87%)</div>
+                  <div class="why">Rk Diff -84.00; SOS Net Rating Diff +18.27; Net Rating Diff +18.07</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -84.00) | Net Rating Diff &gt; 7.88 (value 18.07) | Def Rating Rank Abs Diff &lt;= 125.00 (value 41.00) | Tempo Rank Diff &lt;= 132.50 (value -102.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>Miami FL</strong> 80</div>
+                    <div>Missouri 66</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Miami FL</strong> (68%)</div>
+                  <div class="why">Rk Diff -24.00; Net Rating Diff +5.71; Def Rating Diff -3.90</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -24.00) | Net Rating Diff &lt;= 7.88 (value 5.71) | Luck Rank Diff &gt; -73.50 (value 48.00) | Net Rating Diff &gt; 3.48 (value 5.71)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-20</div>
+                  <div class="teams">
+                    <div><strong>UConn</strong> 82</div>
+                    <div>Furman 71</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>UConn</strong> (100%)</div>
+                  <div class="why">Rk Diff -175.00; Net Rating Diff +31.20; SOS Net Rating Diff +19.98</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -175.00) | Net Rating Diff &gt; 7.88 (value 31.20) | Def Rating Rank Abs Diff &gt; 125.00 (value 177.00)</p></details>
+                </article>
+                
+            </section>
+            
+            <section class="round">
+              <h2>Second Round</h2>
+              
+                <article class="game correct">
+                  <div class="roundline">2026-03-21</div>
+                  <div class="teams">
+                    <div><strong>Michigan</strong> 95</div>
+                    <div>Saint Louis 72</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Michigan</strong> (87%)</div>
+                  <div class="why">Rk Diff -33.00; Net Rating Diff +20.19; Non-Conf SOS Net Rating Diff +18.20</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -33.00) | Net Rating Diff &gt; 7.88 (value 20.19) | Def Rating Rank Abs Diff &lt;= 125.00 (value 41.00) | Tempo Rank Diff &lt;= 132.50 (value 2.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-21</div>
+                  <div class="teams">
+                    <div><strong>Michigan State</strong> 77</div>
+                    <div>Louisville 69</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Michigan State</strong> (68%)</div>
+                  <div class="why">Rk Diff -9.00; Def Rating Diff -4.50; Net Rating Diff +4.19</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -9.00) | Net Rating Diff &lt;= 7.88 (value 4.19) | Luck Rank Diff &gt; -73.50 (value -40.00) | Net Rating Diff &gt; 3.48 (value 4.19)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-21</div>
+                  <div class="teams">
+                    <div><strong>Duke</strong> 81</div>
+                    <div>TCU 58</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Duke</strong> (87%)</div>
+                  <div class="why">Rk Diff -41.00; Net Rating Diff +20.02; Non-Conf SOS Net Rating Diff +17.20</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -41.00) | Net Rating Diff &gt; 7.88 (value 20.02) | Def Rating Rank Abs Diff &lt;= 125.00 (value 19.00) | Tempo Rank Diff &lt;= 132.50 (value 119.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-21</div>
+                  <div class="teams">
+                    <div><strong>Houston</strong> 88</div>
+                    <div>Texas A&amp;M 57</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Houston</strong> (100%)</div>
+                  <div class="why">Rk Diff -35.00; Net Rating Diff +15.15; Def Rating Diff -9.90</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -35.00) | Net Rating Diff &gt; 7.88 (value 15.15) | Def Rating Rank Abs Diff &lt;= 125.00 (value 35.00) | Tempo Rank Diff &gt; 132.50 (value 312.00)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-21</div>
+                  <div class="teams">
+                    <div><strong>Texas</strong> 74</div>
+                    <div>Gonzaga 68</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Gonzaga</strong> (100%)</div>
+                  <div class="why">Rk Diff -16.00; Non-Conf SOS Net Rating Diff +14.72; Def Rating Diff -10.30</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 16.00) | Net Rating Diff &gt; -7.88 (value -6.41) | Luck Diff &lt;= -0.04 (value -0.12) | Non-Conf SOS Net Rating Rank Diff &gt; 94.00 (value 294.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-21</div>
+                  <div class="teams">
+                    <div><strong>Illinois</strong> 76</div>
+                    <div>VCU 55</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Illinois</strong> (100%)</div>
+                  <div class="why">Rk Diff -37.00; Net Rating Diff +16.22; Off Rating Diff +11.90</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -37.00) | Net Rating Diff &gt; 7.88 (value 16.22) | Def Rating Rank Abs Diff &lt;= 125.00 (value 31.00) | Tempo Rank Diff &gt; 132.50 (value 180.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-21</div>
+                  <div class="teams">
+                    <div><strong>Nebraska</strong> 74</div>
+                    <div>Vanderbilt 72</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Nebraska</strong> (53%)</div>
+                  <div class="why">Off Rating Diff -7.60; Non-Conf SOS Net Rating Diff -6.93; Def Rating Diff -6.80</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 5.00) | Net Rating Diff &gt; -7.88 (value -0.77) | Luck Diff &gt; -0.04 (value 0.02) | Net Rating Diff &gt; -3.48 (value -0.77)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-21</div>
+                  <div class="teams">
+                    <div><strong>Arkansas</strong> 94</div>
+                    <div>High Point 88</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Arkansas</strong> (87%)</div>
+                  <div class="why">Rk Diff -67.00; SOS Net Rating Diff +22.67; Net Rating Diff +15.95</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -67.00) | Net Rating Diff &gt; 7.88 (value 15.95) | Def Rating Rank Abs Diff &lt;= 125.00 (value 81.00) | Tempo Rank Diff &lt;= 132.50 (value -23.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-22</div>
+                  <div class="teams">
+                    <div><strong>Purdue</strong> 79</div>
+                    <div>Miami FL 69</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Purdue</strong> (100%)</div>
+                  <div class="why">Rk Diff -22.00; Non-Conf SOS Net Rating Diff +13.48; Off Rating Diff +10.60</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -22.00) | Net Rating Diff &gt; 7.88 (value 10.44) | Def Rating Rank Abs Diff &lt;= 125.00 (value 1.00) | Tempo Rank Diff &gt; 132.50 (value 165.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-22</div>
+                  <div class="teams">
+                    <div><strong>Iowa State</strong> 82</div>
+                    <div>Kentucky 63</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Iowa State</strong> (87%)</div>
+                  <div class="why">Rk Diff -22.00; Net Rating Diff +10.91; Def Rating Diff -7.70</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -22.00) | Net Rating Diff &gt; 7.88 (value 10.91) | Def Rating Rank Abs Diff &lt;= 125.00 (value 23.00) | Tempo Rank Diff &lt;= 132.50 (value 72.00)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-22</div>
+                  <div class="teams">
+                    <div><strong>St. John&#x27;s</strong> 67</div>
+                    <div>Kansas 65</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Kansas</strong> (53%)</div>
+                  <div class="why">Rk Diff +8.00; Non-Conf SOS Net Rating Diff +4.23; SOS Net Rating Diff +4.04</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -8.00) | Net Rating Diff &lt;= 7.88 (value 3.02) | Luck Rank Diff &gt; -73.50 (value -13.00) | Net Rating Diff &lt;= 3.48 (value 3.02)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-22</div>
+                  <div class="teams">
+                    <div><strong>Tennessee</strong> 79</div>
+                    <div>Virginia 72</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Virginia</strong> (53%)</div>
+                  <div class="why">SOS Net Rating Diff -6.22; Non-Conf SOS Net Rating Diff -3.83; Rk Diff +3.00</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -3.00) | Net Rating Diff &lt;= 7.88 (value 1.29) | Luck Rank Diff &gt; -73.50 (value 208.00) | Net Rating Diff &lt;= 3.48 (value 1.29)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-22</div>
+                  <div class="teams">
+                    <div><strong>Iowa</strong> 73</div>
+                    <div>Florida 72</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Florida</strong> (87%)</div>
+                  <div class="why">Rk Diff -16.00; Non-Conf SOS Net Rating Diff +15.12; Net Rating Diff +10.18</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 16.00) | Net Rating Diff &lt;= -7.88 (value -10.18) | Def Rating Rank Abs Diff &lt;= 125.00 (value 27.00) | Tempo Rank Diff &gt; -132.50 (value 331.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-22</div>
+                  <div class="teams">
+                    <div><strong>Arizona</strong> 78</div>
+                    <div>Utah State 66</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Arizona</strong> (87%)</div>
+                  <div class="why">Rk Diff -25.00; Net Rating Diff +16.53; Def Rating Diff -11.50</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -25.00) | Net Rating Diff &gt; 7.88 (value 16.53) | Def Rating Rank Abs Diff &lt;= 125.00 (value 42.00) | Tempo Rank Diff &lt;= 132.50 (value -120.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-22</div>
+                  <div class="teams">
+                    <div><strong>UConn</strong> 73</div>
+                    <div>UCLA 57</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>UConn</strong> (87%)</div>
+                  <div class="why">Rk Diff -19.00; Non-Conf SOS Net Rating Diff +10.30; Def Rating Diff -8.80</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -19.00) | Net Rating Diff &gt; 7.88 (value 8.59) | Def Rating Rank Abs Diff &lt;= 125.00 (value 42.00) | Tempo Rank Diff &lt;= 132.50 (value 14.00)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-22</div>
+                  <div class="teams">
+                    <div><strong>Alabama</strong> 90</div>
+                    <div>Texas Tech 65</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Texas Tech</strong> (53%)</div>
+                  <div class="why">Rk Diff +8.00; Tempo Diff -6.90; Non-Conf SOS Net Rating Diff -5.92</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -8.00) | Net Rating Diff &lt;= 7.88 (value 2.76) | Luck Rank Diff &gt; -73.50 (value 9.00) | Net Rating Diff &lt;= 3.48 (value 2.76)</p></details>
+                </article>
+                
+            </section>
+            
+            <section class="round">
+              <h2>Sweet 16</h2>
+              
+                <article class="game correct">
+                  <div class="roundline">2026-03-26</div>
+                  <div class="teams">
+                    <div><strong>Purdue</strong> 79</div>
+                    <div>Texas 77</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Purdue</strong> (87%)</div>
+                  <div class="why">Rk Diff -23.00; Non-Conf SOS Net Rating Diff +12.54; Net Rating Diff +10.51</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -23.00) | Net Rating Diff &gt; 7.88 (value 10.51) | Def Rating Rank Abs Diff &lt;= 125.00 (value 47.00) | Tempo Rank Diff &lt;= 132.50 (value 102.00)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-26</div>
+                  <div class="teams">
+                    <div><strong>Iowa</strong> 77</div>
+                    <div>Nebraska 71</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Nebraska</strong> (75%)</div>
+                  <div class="why">Def Rating Diff -7.30; Rk Diff -6.00; Off Rating Diff -4.20</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 6.00) | Net Rating Diff &gt; -7.88 (value -3.19) | Luck Diff &lt;= -0.04 (value -0.06) | Non-Conf SOS Net Rating Rank Diff &lt;= 94.00 (value 19.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-26</div>
+                  <div class="teams">
+                    <div><strong>Arizona</strong> 109</div>
+                    <div>Arkansas 88</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Arizona</strong> (87%)</div>
+                  <div class="why">Rk Diff -16.00; Net Rating Diff +12.59; Def Rating Diff -12.40</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -16.00) | Net Rating Diff &gt; 7.88 (value 12.59) | Def Rating Rank Abs Diff &lt;= 125.00 (value 58.00) | Tempo Rank Diff &lt;= 132.50 (value 32.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-26</div>
+                  <div class="teams">
+                    <div><strong>Illinois</strong> 65</div>
+                    <div>Houston 55</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Illinois</strong> (53%)</div>
+                  <div class="why">Def Rating Diff +6.60; Off Rating Diff +6.40; Non-Conf SOS Net Rating Diff +3.11</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 1.00) | Net Rating Diff &gt; -7.88 (value -0.18) | Luck Diff &gt; -0.04 (value -0.03) | Net Rating Diff &gt; -3.48 (value -0.18)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-27</div>
+                  <div class="teams">
+                    <div><strong>Duke</strong> 80</div>
+                    <div>St. John&#x27;s 75</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Duke</strong> (100%)</div>
+                  <div class="why">Net Rating Diff +10.20; Rk Diff -10.00; Off Rating Diff +7.00</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -10.00) | Net Rating Diff &gt; 7.88 (value 10.20) | Def Rating Rank Abs Diff &lt;= 125.00 (value 8.00) | Tempo Rank Diff &gt; 132.50 (value 214.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-27</div>
+                  <div class="teams">
+                    <div><strong>Michigan</strong> 90</div>
+                    <div>Alabama 77</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Michigan</strong> (87%)</div>
+                  <div class="why">Def Rating Diff -14.00; Net Rating Diff +12.48; Rk Diff -11.00</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -11.00) | Net Rating Diff &gt; 7.88 (value 12.48) | Def Rating Rank Abs Diff &lt;= 125.00 (value 60.00) | Tempo Rank Diff &lt;= 132.50 (value 17.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-27</div>
+                  <div class="teams">
+                    <div><strong>UConn</strong> 67</div>
+                    <div>Michigan State 63</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>UConn</strong> (53%)</div>
+                  <div class="why">Non-Conf SOS Net Rating Diff +4.43; Tempo Diff -1.70; Def Rating Diff -1.60</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value -1.00) | Net Rating Diff &gt; -7.88 (value 1.02) | Luck Diff &gt; -0.04 (value 0.07) | Net Rating Diff &gt; -3.48 (value 1.02)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-27</div>
+                  <div class="teams">
+                    <div><strong>Tennessee</strong> 76</div>
+                    <div>Iowa State 62</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Iowa State</strong> (68%)</div>
+                  <div class="why">Rk Diff -7.00; Net Rating Diff +5.00; Non-Conf SOS Net Rating Diff -4.24</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 7.00) | Net Rating Diff &gt; -7.88 (value -5.00) | Luck Diff &gt; -0.04 (value -0.01) | Net Rating Diff &lt;= -3.48 (value -5.00)</p></details>
+                </article>
+                
+            </section>
+            
+            <section class="round">
+              <h2>Elite Eight</h2>
+              
+                <article class="game correct">
+                  <div class="roundline">2026-03-28</div>
+                  <div class="teams">
+                    <div><strong>Illinois</strong> 71</div>
+                    <div>Iowa 59</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Illinois</strong> (87%)</div>
+                  <div class="why">Rk Diff -17.00; Non-Conf SOS Net Rating Diff +11.02; Net Rating Diff +10.27</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -17.00) | Net Rating Diff &gt; 7.88 (value 10.27) | Def Rating Rank Abs Diff &lt;= 125.00 (value 13.00) | Tempo Rank Diff &lt;= 132.50 (value -67.00)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-28</div>
+                  <div class="teams">
+                    <div><strong>Arizona</strong> 79</div>
+                    <div>Purdue 64</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Arizona</strong> (68%)</div>
+                  <div class="why">Def Rating Diff -10.50; Net Rating Diff +6.98; Rk Diff -6.00</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -6.00) | Net Rating Diff &lt;= 7.88 (value 6.98) | Luck Rank Diff &gt; -73.50 (value -54.00) | Net Rating Diff &gt; 3.48 (value 6.98)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-03-29</div>
+                  <div class="teams">
+                    <div><strong>Michigan</strong> 95</div>
+                    <div>Tennessee 62</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Michigan</strong> (87%)</div>
+                  <div class="why">Rk Diff -13.00; Net Rating Diff +12.70; Non-Conf SOS Net Rating Diff +11.61</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -13.00) | Net Rating Diff &gt; 7.88 (value 12.70) | Def Rating Rank Abs Diff &lt;= 125.00 (value 13.00) | Tempo Rank Diff &lt;= 132.50 (value -265.00)</p></details>
+                </article>
+                
+                <article class="game miss">
+                  <div class="roundline">2026-03-29</div>
+                  <div class="teams">
+                    <div><strong>UConn</strong> 73</div>
+                    <div>Duke 72</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Duke</strong> (68%)</div>
+                  <div class="why">Net Rating Diff +7.59; Rk Diff -6.00; Off Rating Diff +5.50</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 6.00) | Net Rating Diff &gt; -7.88 (value -7.59) | Luck Diff &gt; -0.04 (value 0.02) | Net Rating Diff &lt;= -3.48 (value -7.59)</p></details>
+                </article>
+                
+            </section>
+            
+            <section class="round">
+              <h2>Final Four</h2>
+              
+                <article class="game miss">
+                  <div class="roundline">2026-04-04</div>
+                  <div class="teams">
+                    <div><strong>UConn</strong> 71</div>
+                    <div>Illinois 62</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Illinois</strong> (68%)</div>
+                  <div class="why">Off Rating Diff +8.50; Def Rating Diff +4.60; Non-Conf SOS Net Rating Diff -4.07</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value 4.00) | Net Rating Diff &gt; -7.88 (value -3.88) | Luck Diff &gt; -0.04 (value 0.11) | Net Rating Diff &lt;= -3.48 (value -3.88)</p></details>
+                </article>
+                
+                <article class="game correct">
+                  <div class="roundline">2026-04-04</div>
+                  <div class="teams">
+                    <div><strong>Michigan</strong> 91</div>
+                    <div>Arizona 73</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Michigan</strong> (53%)</div>
+                  <div class="why">Non-Conf SOS Net Rating Diff +9.01; SOS Net Rating Diff +1.67; Net Rating Diff +1.64</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &gt; -1.50 (value -1.00) | Net Rating Diff &gt; -7.88 (value 1.64) | Luck Diff &gt; -0.04 (value 0.02) | Net Rating Diff &gt; -3.48 (value 1.64)</p></details>
+                </article>
+                
+            </section>
+            
+            <section class="round">
+              <h2>Championship</h2>
+              
+                <article class="game correct">
+                  <div class="roundline">2026-04-06</div>
+                  <div class="teams">
+                    <div><strong>Michigan</strong> 69</div>
+                    <div>UConn 63</div>
+                  </div>
+                  <div class="pick">Model pick: <strong>Michigan</strong> (87%)</div>
+                  <div class="why">Net Rating Diff +9.92; Rk Diff -8.00; Tempo Diff +6.40</div>
+                  <details><summary>Decision path</summary><p>Rk Diff &lt;= -1.50 (value -8.00) | Net Rating Diff &gt; 7.88 (value 9.92) | Def Rating Rank Abs Diff &lt;= 125.00 (value 6.00) | Tempo Rank Diff &lt;= 132.50 (value -300.00)</p></details>
+                </article>
+                
+            </section>
+            </main>
+    </body>
+    </html>
+    

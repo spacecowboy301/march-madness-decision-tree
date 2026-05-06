@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 .DS_Store
+.mplconfig/
 
 # Reproducible/downloaded source data. Keep the manually sourced 2026 results file.
 data/raw/MTeams.csv
