@@ -1,0 +1,49 @@
+{
+  "requested_train_years": "1997-2016",
+  "requested_validation_years": "2017-2025",
+  "actual_train_years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+  ],
+  "actual_validation_years": [
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023
+  ],
+  "rows": {
+    "train": 1584,
+    "validation": 674,
+    "all_examples": 2258
+  },
+  "metrics": {
+    "train": {
+      "accuracy": 0.7657828282828283,
+      "brier": 0.1538404374738382,
+      "log_loss": 0.45978734217591816,
+      "roc_auc": 0.8549095755535149
+    },
+    "validation": {
+      "accuracy": 0.6988130563798219,
+      "brier": 0.18542497749666034,
+      "log_loss": 1.5743488853843417,
+      "roc_auc": 0.7928660109713037
+    }
+  },
+  "tree": "|--- eff_rk_diff <= -1.50\n|   |--- eff_netrtg_diff <= 7.88\n|   |   |--- eff_luck_rank_diff <= -73.50\n|   |   |   |--- eff_ortg_rank_diff <= -35.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- eff_ortg_rank_diff >  -35.50\n|   |   |   |   |--- class: 1\n|   |   |--- eff_luck_rank_diff >  -73.50\n|   |   |   |--- eff_netrtg_diff <= 3.48\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_netrtg_diff >  3.48\n|   |   |   |   |--- class: 1\n|   |--- eff_netrtg_diff >  7.88\n|   |   |--- eff_drtg_rank_abs_diff <= 125.00\n|   |   |   |--- eff_adjt_rank_diff <= 132.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- eff_adjt_rank_diff >  132.50\n|   |   |   |   |--- class: 1\n|   |   |--- eff_drtg_rank_abs_diff >  125.00\n|   |   |   |--- class: 1\n|--- eff_rk_diff >  -1.50\n|   |--- eff_netrtg_diff <= -7.88\n|   |   |--- eff_drtg_rank_abs_diff <= 125.00\n|   |   |   |--- eff_adjt_rank_diff <= -132.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_adjt_rank_diff >  -132.50\n|   |   |   |   |--- class: 0\n|   |   |--- eff_drtg_rank_abs_diff >  125.00\n|   |   |   |--- class: 0\n|   |--- eff_netrtg_diff >  -7.88\n|   |   |--- eff_luck_diff <= -0.04\n|   |   |   |--- eff_ncsos_netrtg_rank_diff <= 94.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_ncsos_netrtg_rank_diff >  94.00\n|   |   |   |   |--- class: 0\n|   |   |--- eff_luck_diff >  -0.04\n|   |   |   |--- eff_netrtg_diff <= -3.48\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_netrtg_diff >  -3.48\n|   |   |   |   |--- class: 1\n"
+}

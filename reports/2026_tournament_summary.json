@@ -1,0 +1,47 @@
+{
+  "season": 2026,
+  "games": 67,
+  "correct": 51,
+  "accuracy": 0.7611940298507462,
+  "brier": 0.1569706529587297,
+  "log_loss": 0.953002993188337,
+  "roc_auc": null,
+  "note": "Predictions are scored from actual-winner orientation, so ROC AUC is undefined because y_true contains only wins.",
+  "by_round": {
+    "Championship": {
+      "sum": 1,
+      "count": 1,
+      "mean": 1.0
+    },
+    "Elite Eight": {
+      "sum": 3,
+      "count": 4,
+      "mean": 0.75
+    },
+    "Final Four": {
+      "sum": 1,
+      "count": 2,
+      "mean": 0.5
+    },
+    "First Four": {
+      "sum": 1,
+      "count": 4,
+      "mean": 0.25
+    },
+    "First Round": {
+      "sum": 28,
+      "count": 32,
+      "mean": 0.875
+    },
+    "Second Round": {
+      "sum": 11,
+      "count": 16,
+      "mean": 0.6875
+    },
+    "Sweet 16": {
+      "sum": 6,
+      "count": 8,
+      "mean": 0.75
+    }
+  }
+}

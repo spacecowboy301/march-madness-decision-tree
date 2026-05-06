@@ -1,0 +1,68 @@
+round,date,winner,loser,winner_score,loser_score,source
+First Four,2026-03-17,Howard,UMBC,86,83,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-06/michigan-wins-2026-di-mens-basketball-championship
+First Four,2026-03-17,Texas,NC State,68,66,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-06/michigan-wins-2026-di-mens-basketball-championship
+First Four,2026-03-18,Prairie View A&M,Lehigh,67,55,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-06/michigan-wins-2026-di-mens-basketball-championship
+First Four,2026-03-18,Miami OH,SMU,89,79,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-06/michigan-wins-2026-di-mens-basketball-championship
+First Round,2026-03-19,TCU,Ohio State,66,64,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Nebraska,Troy,76,47,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Louisville,South Florida,83,79,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,High Point,Wisconsin,83,82,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Duke,Siena,71,65,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Vanderbilt,McNeese,78,68,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Michigan State,North Dakota State,92,67,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Arkansas,Hawaii,97,78,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,VCU,North Carolina,82,78,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Michigan,Howard,101,80,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Texas,BYU,79,71,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Texas A&M,Saint Mary's,63,50,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Illinois,Penn,105,70,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Saint Louis,Georgia,102,77,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Gonzaga,Kennesaw State,73,64,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-19,Houston,Idaho,78,47,https://www.ncaa.com/news/basketball-men/article/2026-04-06/2026-march-madness-mens-ncaa-tournament-schedule-dates
+First Round,2026-03-20,Kentucky,Santa Clara,89,84,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Texas Tech,Akron,91,71,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Arizona,LIU,92,58,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Virginia,Wright State,82,73,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Iowa State,Tennessee State,108,74,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Alabama,Hofstra,90,70,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Utah State,Villanova,86,76,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Tennessee,Miami OH,78,56,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Iowa,Clemson,67,61,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,St. John's,Northern Iowa,79,53,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Purdue,Queens,104,71,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,UCLA,UCF,75,71,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Florida,Prairie View A&M,114,55,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Kansas,Cal Baptist,68,60,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,Miami FL,Missouri,80,66,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+First Round,2026-03-20,UConn,Furman,82,71,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-21,Michigan,Saint Louis,95,72,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-21,Michigan State,Louisville,77,69,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-21,Duke,TCU,81,58,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-21,Houston,Texas A&M,88,57,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-21,Texas,Gonzaga,74,68,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-21,Illinois,VCU,76,55,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-21,Nebraska,Vanderbilt,74,72,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-21,Arkansas,High Point,94,88,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-22,Purdue,Miami FL,79,69,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-22,Iowa State,Kentucky,82,63,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-22,St. John's,Kansas,67,65,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-22,Tennessee,Virginia,79,72,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-22,Iowa,Florida,73,72,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-22,Arizona,Utah State,78,66,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-22,UConn,UCLA,73,57,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Second Round,2026-03-22,Alabama,Texas Tech,90,65,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Sweet 16,2026-03-26,Purdue,Texas,79,77,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Sweet 16,2026-03-26,Iowa,Nebraska,77,71,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Sweet 16,2026-03-26,Arizona,Arkansas,109,88,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Sweet 16,2026-03-26,Illinois,Houston,65,55,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Sweet 16,2026-03-27,Duke,St. John's,80,75,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Sweet 16,2026-03-27,Michigan,Alabama,90,77,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Sweet 16,2026-03-27,UConn,Michigan State,67,63,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Sweet 16,2026-03-27,Tennessee,Iowa State,76,62,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Elite Eight,2026-03-28,Illinois,Iowa,71,59,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Elite Eight,2026-03-28,Arizona,Purdue,79,64,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Elite Eight,2026-03-29,Michigan,Tennessee,95,62,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Elite Eight,2026-03-29,UConn,Duke,73,72,https://www.ncaa.com/news/basketball-men/mml-official-bracket/2026-04-05/2026-ncaa-tournament-bracket-schedule-scores-march-madness
+Final Four,2026-04-04,UConn,Illinois,71,62,https://www.espn.com/mens-college-basketball/game/_/gameId/401856598/illinois-uconn
+Final Four,2026-04-04,Michigan,Arizona,91,73,https://www.espn.com/mens-college-basketball/game/_/gameId/401856599/michigan-arizona
+Championship,2026-04-06,Michigan,UConn,69,63,https://www.ncaa.com/news/basketball-men/article/2026-04-06/michigan-beats-uconn-wins-2026-mens-basketball-national-championship

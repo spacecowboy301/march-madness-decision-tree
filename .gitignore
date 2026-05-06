@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# Reproducible/downloaded source data. Keep the manually sourced 2026 results file.
+data/raw/MTeams.csv
+data/raw/MNCAATourneyCompactResults.csv
+data/raw/kenpom/
+data/processed/kenpom_team_features.csv
+
+# Keep published result artifacts and the trained model.
+!reports/
+!models/
