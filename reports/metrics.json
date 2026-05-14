@@ -27,23 +27,23 @@
     2023
   ],
   "rows": {
-    "train": 1584,
-    "validation": 674,
-    "all_examples": 2258
+    "train": 1658,
+    "validation": 688,
+    "all_examples": 2346
   },
   "metrics": {
     "train": {
-      "accuracy": 0.7657828282828283,
-      "brier": 0.1538404374738382,
-      "log_loss": 0.45978734217591816,
-      "roc_auc": 0.8549095755535149
+      "accuracy": 0.7665862484921593,
+      "brier": 0.15439577466551402,
+      "log_loss": 0.4591448332676966,
+      "roc_auc": 0.8543196636987607
     },
     "validation": {
-      "accuracy": 0.6988130563798219,
-      "brier": 0.18542497749666034,
-      "log_loss": 1.5743488853843417,
-      "roc_auc": 0.7928660109713037
+      "accuracy": 0.7180232558139535,
+      "brier": 0.17725462974812164,
+      "log_loss": 0.9088917025636478,
+      "roc_auc": 0.8140253177393186
     }
   },
-  "tree": "|--- eff_rk_diff <= -1.50\n|   |--- eff_netrtg_diff <= 7.88\n|   |   |--- eff_luck_rank_diff <= -73.50\n|   |   |   |--- eff_ortg_rank_diff <= -35.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- eff_ortg_rank_diff >  -35.50\n|   |   |   |   |--- class: 1\n|   |   |--- eff_luck_rank_diff >  -73.50\n|   |   |   |--- eff_netrtg_diff <= 3.48\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_netrtg_diff >  3.48\n|   |   |   |   |--- class: 1\n|   |--- eff_netrtg_diff >  7.88\n|   |   |--- eff_drtg_rank_abs_diff <= 125.00\n|   |   |   |--- eff_adjt_rank_diff <= 132.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- eff_adjt_rank_diff >  132.50\n|   |   |   |   |--- class: 1\n|   |   |--- eff_drtg_rank_abs_diff >  125.00\n|   |   |   |--- class: 1\n|--- eff_rk_diff >  -1.50\n|   |--- eff_netrtg_diff <= -7.88\n|   |   |--- eff_drtg_rank_abs_diff <= 125.00\n|   |   |   |--- eff_adjt_rank_diff <= -132.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_adjt_rank_diff >  -132.50\n|   |   |   |   |--- class: 0\n|   |   |--- eff_drtg_rank_abs_diff >  125.00\n|   |   |   |--- class: 0\n|   |--- eff_netrtg_diff >  -7.88\n|   |   |--- eff_luck_diff <= -0.04\n|   |   |   |--- eff_ncsos_netrtg_rank_diff <= 94.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_ncsos_netrtg_rank_diff >  94.00\n|   |   |   |   |--- class: 0\n|   |   |--- eff_luck_diff >  -0.04\n|   |   |   |--- eff_netrtg_diff <= -3.48\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_netrtg_diff >  -3.48\n|   |   |   |   |--- class: 1\n"
+  "tree": "|--- eff_rk_diff <= -2.50\n|   |--- eff_netrtg_abs_diff <= 7.88\n|   |   |--- eff_luck_diff <= -0.02\n|   |   |   |--- eff_sos_ortg_abs_diff <= 0.95\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_sos_ortg_abs_diff >  0.95\n|   |   |   |   |--- class: 1\n|   |   |--- eff_luck_diff >  -0.02\n|   |   |   |--- misc_a_diff <= -7.85\n|   |   |   |   |--- class: 1\n|   |   |   |--- misc_a_diff >  -7.85\n|   |   |   |   |--- class: 1\n|   |--- eff_netrtg_abs_diff >  7.88\n|   |   |--- eff_drtg_rank_diff <= -125.00\n|   |   |   |--- class: 1\n|   |   |--- eff_drtg_rank_diff >  -125.00\n|   |   |   |--- misc_stl_rank_diff <= -139.00\n|   |   |   |   |--- class: 1\n|   |   |   |--- misc_stl_rank_diff >  -139.00\n|   |   |   |   |--- class: 1\n|--- eff_rk_diff >  -2.50\n|   |--- eff_netrtg_abs_diff <= 7.88\n|   |   |--- eff_luck_rank_diff <= 107.50\n|   |   |   |--- eff_netrtg_diff <= -3.48\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_netrtg_diff >  -3.48\n|   |   |   |   |--- class: 1\n|   |   |--- eff_luck_rank_diff >  107.50\n|   |   |   |--- eff_ncsos_netrtg_rank_diff <= 26.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_ncsos_netrtg_rank_diff >  26.00\n|   |   |   |   |--- class: 0\n|   |--- eff_netrtg_abs_diff >  7.88\n|   |   |--- eff_drtg_rank_abs_diff <= 125.00\n|   |   |   |--- misc_stl_rank_diff <= 139.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- misc_stl_rank_diff >  139.00\n|   |   |   |   |--- class: 0\n|   |   |--- eff_drtg_rank_abs_diff >  125.00\n|   |   |   |--- class: 0\n"
 }

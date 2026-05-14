@@ -108,11 +108,67 @@ EFFICIENCY_COLUMNS = [
     "ncsos_netrtg_rank",
 ]
 
+FOUR_FACTORS_COLUMNS = [
+    "team",
+    "conf",
+    "adjtempo",
+    "adjtempo_rank",
+    "off_adjoe",
+    "off_adjoe_rank",
+    "off_efg",
+    "off_efg_rank",
+    "off_to",
+    "off_to_rank",
+    "off_or",
+    "off_or_rank",
+    "off_ftrate",
+    "off_ftrate_rank",
+    "def_adjde",
+    "def_adjde_rank",
+    "def_efg",
+    "def_efg_rank",
+    "def_to",
+    "def_to_rank",
+    "def_or",
+    "def_or_rank",
+    "def_ftrate",
+    "def_ftrate_rank",
+]
+
+MISC_COLUMNS = [
+    "team",
+    "conf",
+    "3p",
+    "3p_rank",
+    "2p",
+    "2p_rank",
+    "ft",
+    "ft_rank",
+    "blk",
+    "blk_rank",
+    "stl",
+    "stl_rank",
+    "nst",
+    "nst_rank",
+    "2p_dist",
+    "2p_dist_rank",
+    "a",
+    "a_rank",
+    "3pa",
+    "3pa_rank",
+    "adjoe",
+    "adjoe_rank",
+]
+
 
 def expand_header_names(table, width: int, source: str) -> list[str]:
     header_rows = table.select("thead tr")
     if source == "efficiency" and width == len(EFFICIENCY_COLUMNS):
         return EFFICIENCY_COLUMNS
+    if source == "four_factors" and width == len(FOUR_FACTORS_COLUMNS):
+        return FOUR_FACTORS_COLUMNS
+    if source == "misc" and width == len(MISC_COLUMNS):
+        return MISC_COLUMNS
     if not header_rows:
         return [f"col_{idx}" for idx in range(width)]
 
@@ -148,12 +204,14 @@ def parse_kenpom_table(html: str, source: str, year: int) -> pd.DataFrame:
         cells = tr.find_all("td")
         if len(cells) < 3:
             continue
-        rank_text = cells[0].get_text(" ", strip=True)
-        if not rank_text.isdigit():
+        first_text = cells[0].get_text(" ", strip=True)
+        if source == "efficiency" and not first_text.isdigit():
+            continue
+        if source != "efficiency" and first_text.lower() in {"team", ""}:
             continue
         row = []
         for idx, cell in enumerate(cells):
-            if idx == 1:
+            if (source == "efficiency" and idx == 1) or (source != "efficiency" and idx == 0):
                 team_link = cell.find("a", href=re.compile(r"team\.php"))
                 row.append(team_link.get_text(" ", strip=True) if team_link else cell.get_text(" ", strip=True))
             else:

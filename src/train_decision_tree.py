@@ -136,6 +136,9 @@ def main() -> None:
     if train_mask.sum() == 0 or valid_mask.sum() == 0:
         raise ValueError("No train or validation rows after joining tournament games to KenPom features.")
 
+    observed_train_cols = x.loc[train_mask].notna().any(axis=0)
+    x = x.loc[:, observed_train_cols]
+
     model = Pipeline(
         steps=[
             ("imputer", ColumnTransformer([("num", SimpleImputer(strategy="median"), x.columns)], remainder="drop")),

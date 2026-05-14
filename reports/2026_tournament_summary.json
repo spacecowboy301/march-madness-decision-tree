@@ -1,10 +1,10 @@
 {
   "season": 2026,
   "games": 67,
-  "correct": 51,
-  "accuracy": 0.7611940298507462,
-  "brier": 0.1569706529587297,
-  "log_loss": 0.953002993188337,
+  "correct": 58,
+  "accuracy": 0.8656716417910447,
+  "brier": 0.1398306274329879,
+  "log_loss": 0.4381540379139559,
   "roc_auc": null,
   "note": "Predictions are scored from actual-winner orientation, so ROC AUC is undefined because y_true contains only wins.",
   "by_round": {
@@ -24,19 +24,19 @@
       "mean": 0.5
     },
     "First Four": {
-      "sum": 1,
+      "sum": 3,
       "count": 4,
-      "mean": 0.25
+      "mean": 0.75
     },
     "First Round": {
-      "sum": 28,
+      "sum": 30,
       "count": 32,
-      "mean": 0.875
+      "mean": 0.9375
     },
     "Second Round": {
-      "sum": 11,
+      "sum": 14,
       "count": 16,
-      "mean": 0.6875
+      "mean": 0.875
     },
     "Sweet 16": {
       "sum": 6,
