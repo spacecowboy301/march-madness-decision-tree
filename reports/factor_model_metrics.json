@@ -1,0 +1,55 @@
+{
+  "model_name": "Four Factors + Misc matchup-engineered decision tree",
+  "excluded_feature_families": [
+    "KenPom rank",
+    "net rating",
+    "luck",
+    "broad efficiency ratings"
+  ],
+  "actual_train_years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+  ],
+  "actual_validation_years": [
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023
+  ],
+  "feature_count": 96,
+  "rows": {
+    "train": 1658,
+    "validation": 688,
+    "all_examples": 2346
+  },
+  "metrics": {
+    "train": {
+      "accuracy": 0.6743063932448733,
+      "brier": 0.2065826275873486,
+      "log_loss": 0.5984563714518407,
+      "roc_auc": 0.7372901209328314
+    },
+    "validation": {
+      "accuracy": 0.563953488372093,
+      "brier": 0.25158854163360295,
+      "log_loss": 0.7976867416334236,
+      "roc_auc": 0.6078285559762034
+    }
+  },
+  "tree": "|--- efg_net_strength_vs_weakness <= -0.00\n|   |--- misc_nst_strength_diff <= 0.12\n|   |   |--- oreb_b_weakness_vs_strength <= 0.07\n|   |   |   |--- ftrate_b_weakness_vs_strength <= 0.54\n|   |   |   |   |--- class: 0\n|   |   |   |--- ftrate_b_weakness_vs_strength >  0.54\n|   |   |   |   |--- class: 0\n|   |   |--- oreb_b_weakness_vs_strength >  0.07\n|   |   |   |--- oreb_a_attack_edge <= 8.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- oreb_a_attack_edge >  8.00\n|   |   |   |   |--- class: 1\n|   |--- misc_nst_strength_diff >  0.12\n|   |   |--- oreb_net_weakness_vs_strength <= -0.13\n|   |   |   |--- class: 1\n|   |   |--- oreb_net_weakness_vs_strength >  -0.13\n|   |   |   |--- efg_net_strength_vs_weakness <= -0.28\n|   |   |   |   |--- class: 0\n|   |   |   |--- efg_net_strength_vs_weakness >  -0.28\n|   |   |   |   |--- class: 1\n|--- efg_net_strength_vs_weakness >  -0.00\n|   |--- misc_nst_strength_diff <= -0.12\n|   |   |--- oreb_net_weakness_vs_strength <= 0.13\n|   |   |   |--- efg_net_strength_vs_weakness <= 0.28\n|   |   |   |   |--- class: 0\n|   |   |   |--- efg_net_strength_vs_weakness >  0.28\n|   |   |   |   |--- class: 1\n|   |   |--- oreb_net_weakness_vs_strength >  0.13\n|   |   |   |--- class: 0\n|   |--- misc_nst_strength_diff >  -0.12\n|   |   |--- oreb_a_weakness_vs_strength <= 0.07\n|   |   |   |--- misc_threep_abs_diff <= 5.35\n|   |   |   |   |--- class: 1\n|   |   |   |--- misc_threep_abs_diff >  5.35\n|   |   |   |   |--- class: 1\n|   |   |--- oreb_a_weakness_vs_strength >  0.07\n|   |   |   |--- oreb_b_attack_edge <= 8.00\n|   |   |   |   |--- class: 1\n|   |   |   |--- oreb_b_attack_edge >  8.00\n|   |   |   |   |--- class: 0\n"
+}

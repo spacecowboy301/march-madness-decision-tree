@@ -112,6 +112,24 @@ MPLCONFIGDIR=.mplconfig ./.venv/bin/python -m src.visualize_model
 
 This generates feature-importance, round-accuracy, confidence, matchup-explanation, and bracket-view reports under `reports/`.
 
+## Four Factors + Misc Matchup Model
+
+To remove broad KenPom quality signals and focus on matchup texture:
+
+```bash
+MPLCONFIGDIR=.mplconfig ./.venv/bin/python -m src.train_factor_matchup_model
+```
+
+This excludes KenPom rank, net rating, luck, and broad adjusted efficiency ratings. It creates strength-vs-strength and strength-vs-weakness features for Four Factors matchups, then writes:
+
+- `models/decision_tree_four_factors_misc.joblib`
+- `reports/factor_model_metrics.json`
+- `reports/factor_model_top_features.csv`
+- `reports/factor_model_feature_importance.png`
+- `reports/2026_factor_model_predictions.csv`
+- `reports/2026_factor_model_summary.json`
+- `reports/factor_model_results.md`
+
 ## Modeling Approach
 
 Each tournament game becomes two training examples:

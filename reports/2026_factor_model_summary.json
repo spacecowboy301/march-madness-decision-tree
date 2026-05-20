@@ -1,0 +1,45 @@
+{
+  "season": 2026,
+  "games": 67,
+  "correct": 42,
+  "accuracy": 0.6268656716417911,
+  "brier": 0.20058284975546736,
+  "log_loss": 0.5906736802680156,
+  "by_round": {
+    "Championship": {
+      "sum": 1,
+      "count": 1,
+      "mean": 1.0
+    },
+    "Elite Eight": {
+      "sum": 2,
+      "count": 4,
+      "mean": 0.5
+    },
+    "Final Four": {
+      "sum": 0,
+      "count": 2,
+      "mean": 0.0
+    },
+    "First Four": {
+      "sum": 3,
+      "count": 4,
+      "mean": 0.75
+    },
+    "First Round": {
+      "sum": 24,
+      "count": 32,
+      "mean": 0.75
+    },
+    "Second Round": {
+      "sum": 8,
+      "count": 16,
+      "mean": 0.5
+    },
+    "Sweet 16": {
+      "sum": 4,
+      "count": 8,
+      "mean": 0.5
+    }
+  }
+}

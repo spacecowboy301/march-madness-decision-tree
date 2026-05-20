@@ -1,0 +1,10 @@
+feature,importance
+efg_net_strength_vs_weakness,0.3877200746755073
+misc_nst_strength_diff,0.17846640727331778
+oreb_net_weakness_vs_strength,0.10564284808432509
+oreb_a_weakness_vs_strength,0.08256646344374562
+oreb_b_weakness_vs_strength,0.07969048155810383
+oreb_a_attack_edge,0.04648635512885393
+oreb_b_attack_edge,0.04498805570723288
+ftrate_b_weakness_vs_strength,0.03736497765426852
+misc_threep_abs_diff,0.037074336474645225
