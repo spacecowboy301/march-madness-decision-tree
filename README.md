@@ -1,13 +1,13 @@
-# NCAA Men's March Madness Decision Tree
+# NCAA Men's March Madness Factor Importance
 
-This project builds a decision tree model to predict NCAA men's tournament game winners from pre-tournament KenPom team features.
+This project measures how the Four Factors and miscellaneous team stats contribute to NCAA men's tournament predictions. The primary analysis prioritizes trustworthy feature importance before optimizing maximum predictive accuracy.
 
 Requested split:
 
 - Training seasons: 1997-2016
 - Validation seasons: 2017-2025
 
-Important data note: KenPom's public historical archive currently exposes ratings from 2002 onward. The pipeline keeps the requested split, but games before the first scraped KenPom season are dropped because the requested KenPom features do not exist locally for those years.
+Important timing note: KenPom's season-only historical pages contain season-end values. They are retained as a legacy benchmark, but they are not used for the primary importance conclusions. The trustworthy factors pipeline computes KenPom-compatible rates only from regular-season detailed box scores, which are stored separately from NCAA tournament games.
 
 ## Setup
 
@@ -26,7 +26,12 @@ Download the men's March Machine Learning Mania files from Kaggle and place thes
 - `MTeams.csv`
 - `MNCAATourneyCompactResults.csv`
 
-The loader only needs those two files.
+The primary factors analysis uses:
+
+- `MTeams.csv`
+- `MNCAATourneyCompactResults.csv`
+- `MNCAATourneySeeds.csv` (evaluation only; never a model feature)
+- `MRegularSeasonDetailedResults.csv`
 
 For convenience, this project also includes a downloader for a Kaggle-format mirror of those files:
 
@@ -104,6 +109,11 @@ After scraping/caching KenPom 2026 ratings:
 
 The included 2026 results file is `data/raw/ncaa_2026_tournament_results.csv`.
 
+The existing `reports/2026_factor_model_*` files are legacy outputs built from
+season-end KenPom snapshots. They are not used in the confirmed pre-tournament
+factor-importance analysis below and should not be interpreted as leakage-safe
+2026 predictions.
+
 ## Visualize The Model
 
 ```bash
@@ -112,34 +122,46 @@ MPLCONFIGDIR=.mplconfig ./.venv/bin/python -m src.visualize_model
 
 This generates feature-importance, round-accuracy, confidence, matchup-explanation, and bracket-view reports under `reports/`.
 
-## Four Factors + Misc Matchup Model
+## Trustworthy Four Factors + Misc Analysis
 
-To remove broad KenPom quality signals and focus on matchup texture:
+Build confirmed pre-tournament Four Factors and misc rates:
 
 ```bash
-MPLCONFIGDIR=.mplconfig ./.venv/bin/python -m src.train_factor_matchup_model
+./.venv/bin/python -m src.build_pretournament_features
 ```
 
-This excludes KenPom rank, net rating, luck, and broad adjusted efficiency ratings. It creates strength-vs-strength and strength-vs-weakness features for Four Factors matchups, then writes:
+Then compare and calibrate four model families, run one-row-per-game frozen and rolling validation, and measure held-out permutation importance:
+
+```bash
+MPLCONFIGDIR=.mplconfig ./.venv/bin/python -m src.analyze_factor_importance
+```
+
+This excludes tournament seed, KenPom rank, net rating, luck, and adjusted efficiency from model inputs. It includes strength-vs-strength, strength-vs-weakness, factor balance, weakness exploitation, shooting leverage, interior/perimeter, and ball-security features.
+
+Core outputs:
 
 - `models/decision_tree_four_factors_misc.joblib`
 - `reports/factor_model_metrics.json`
+- `reports/factor_model_comparison.csv`
+- `reports/factor_model_rolling_validation.csv`
 - `reports/factor_model_top_features.csv`
 - `reports/factor_model_feature_importance.png`
-- `reports/2026_factor_model_predictions.csv`
-- `reports/2026_factor_model_summary.json`
+- `reports/factor_model_group_importance.csv`
+- `reports/factor_model_group_importance.png`
+- `reports/factor_model_calibration.png`
+- `reports/factor_model_accuracy_by_year.png`
+- `reports/factor_matchup_quadrants.png`
+- `reports/factor_model_upset_analysis.csv`
 - `reports/factor_model_results.md`
+
+The model artifact retains its historical filename for compatibility. Its
+contents are the calibrated model selected by held-out validation, which is
+currently regularized logistic regression rather than a decision tree.
+
+The feature-importance chart uses held-out permutation importance rather than a single tree's impurity counts. The grouped chart shuffles each basketball concept as a block and shows the range across logistic regression, decision tree, random forest, and gradient boosting.
 
 ## Modeling Approach
 
-Each tournament game becomes two training examples:
+The trustworthy factors analysis uses one deterministic orientation per tournament game, so every game counts exactly once. Team A orientation is assigned by a stable hash, preventing winner-side bias without duplicating validation observations.
 
-- Team A vs Team B, label `1`
-- Team B vs Team A, label `0`
-
-For every numeric KenPom feature, the model receives:
-
-- `feature_diff = team_a_feature - team_b_feature`
-- `feature_abs_diff = abs(team_a_feature - team_b_feature)`
-
-This avoids giving the model a fixed winner-side bias and lets a plain decision tree learn matchup thresholds.
+Training data currently covers 2003-2016 because detailed box scores begin in 2003. The downloaded source supports complete held-out tournaments for 2017-2019 and 2021-2023; 2020 had no tournament, and the local 2024 regular-season file is incomplete and therefore fails closed. The audit is saved to `reports/pretournament_feature_audit.json`.

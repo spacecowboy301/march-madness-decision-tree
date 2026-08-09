@@ -1,59 +1,52 @@
-# Four Factors + Misc Matchup Model
+# Trustworthy Four Factors + Misc Importance Analysis
 
-This model intentionally excludes broad KenPom quality signals:
+## Data timing
 
-- KenPom rank
-- Net rating
-- Luck
-- Broad adjusted efficiency ratings
+Features are computed only from NCAA regular-season detailed box scores. Tournament results are stored separately, so the feature snapshot is confirmed pre-tournament rather than inferred from a season-end KenPom page.
 
-It uses Four Factors and Miscellaneous stats only, with matchup engineering for:
+## Selected model
 
-- Strength vs strength
-- Strength vs weakness
-- Weakness vs strength
-- Weakness vs weakness
-- Team A attack edge vs Team B defense
-- Team B attack edge vs Team A defense
+- Model: Regularized Logistic
+- Held-out accuracy: 0.641
+- Held-out ROC AUC: 0.707
+- Held-out log loss: 0.624
+- Accuracy 95% Wilson interval: 0.593-0.686
+- Importance interpretation gate passed: True
 
-## Performance
+## Most important engineered features
 
-Validation seasons: 2017, 2018, 2019, 2021, 2022, 2023
+- Offensive Rebound Offense Strength Diff: 0.0092 mean held-out log-loss increase; positive in 100% of seasons
+- Four Factor Edge Variability: 0.0083 mean held-out log-loss increase; positive in 83% of seasons
+- Block Defense Strength Diff: 0.0075 mean held-out log-loss increase; positive in 100% of seasons
+- eFG Offense Strength Diff: 0.0072 mean held-out log-loss increase; positive in 83% of seasons
+- eFG Net Matchup Edge: 0.0063 mean held-out log-loss increase; positive in 83% of seasons
+- Four Factor Edge Max: 0.0061 mean held-out log-loss increase; positive in 83% of seasons
+- eFG Overall Strength Diff: 0.0058 mean held-out log-loss increase; positive in 67% of seasons
+- Three Point Leverage Edge: 0.0058 mean held-out log-loss increase; positive in 83% of seasons
 
-- Validation accuracy: 56.40%
-- Validation ROC AUC: 0.608
-- Validation Brier score: 0.252
-- Validation log loss: 0.798
+## Factor-group consensus
 
-2026 tournament:
+- Engineered Composites: 0.0320
+- eFG: 0.0280
+- Offensive Rebound: 0.0139
+- Steal: 0.0079
+- Block: 0.0072
+- Non-Steal Turnover: 0.0071
+- Three Point: 0.0068
+- Free Throw Rate: 0.0066
+- Free Throw %: 0.0026
+- Two Point: 0.0021
+- Turnover: 0.0018
+- Three Point Rate: -0.0002
+- Assist: -0.0003
 
-- Correct predictions: 42 / 67
-- Accuracy: 62.69%
-- Brier score: 0.201
-- Log loss: 0.591
+## Upset behavior
 
-## Most Important Features
+- Actual Upsets: 0.363 accuracy across 113 games
+- Favorite Wins: 0.750 accuracy across 288 games
+- All Seeded Games: 0.641 accuracy across 401 games
 
-| Feature | Importance | Interpretation |
-| --- | ---: | --- |
-| `efg_net_strength_vs_weakness` | 0.388 | Net edge when a strong eFG offense attacks a weak eFG defense. |
-| `misc_nst_strength_diff` | 0.178 | Difference in non-steal turnover strength. |
-| `oreb_net_weakness_vs_strength` | 0.106 | Net penalty when offensive rebounding weakness meets defensive rebounding strength. |
-| `oreb_a_weakness_vs_strength` | 0.083 | Team A offensive rebounding weakness against Team B defensive rebounding strength. |
-| `oreb_b_weakness_vs_strength` | 0.080 | Team B offensive rebounding weakness against Team A defensive rebounding strength. |
-| `oreb_a_attack_edge` | 0.046 | Team A offensive rebounding rate vs Team B allowed offensive rebounding rate. |
-| `oreb_b_attack_edge` | 0.045 | Team B offensive rebounding rate vs Team A allowed offensive rebounding rate. |
-| `ftrate_b_weakness_vs_strength` | 0.037 | Team B free-throw-rate weakness against Team A defensive free-throw-rate strength. |
-| `misc_threep_abs_diff` | 0.037 | Absolute 3-point shooting gap. |
+## Interpretation guardrails
 
-## Takeaway
-
-When the broad team-strength signals are removed, the tree leans heavily on matchup texture:
-
-- eFG offense vs eFG defense mismatches
-- offensive rebounding weakness vs defensive rebounding strength
-- offensive rebounding attack edges
-- turnover profile differences
-- 3-point shooting gaps
-
-The performance drop is meaningful. The full KenPom model performs much better because rank/net rating summarize team quality very efficiently, while this model is better for explaining specific matchup dynamics.
+Permutation importance measures predictive reliance, not causality. Correlated engineered features share credit, which is why the grouped chart and cross-model range are more reliable than a single feature's exact rank.
+Tournament seeds, KenPom rank, net rating, luck, and adjusted efficiency are excluded from model features. Seeds are used only after prediction to label upset evaluation segments.

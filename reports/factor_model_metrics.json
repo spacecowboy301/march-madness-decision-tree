@@ -1,13 +1,16 @@
 {
-  "model_name": "Four Factors + Misc matchup-engineered decision tree",
-  "excluded_feature_families": [
+  "analysis_goal": "Interpret Four Factors and misc importance before optimizing maximum predictive accuracy",
+  "snapshot_status": "confirmed_pre_tournament",
+  "feature_source": "NCAA regular-season detailed box scores using KenPom-compatible formulas",
+  "excluded_model_features": [
+    "tournament seed",
     "KenPom rank",
     "net rating",
     "luck",
-    "broad efficiency ratings"
+    "adjusted efficiency"
   ],
+  "requested_train_years": "1997-2016",
   "actual_train_years": [
-    2002,
     2003,
     2004,
     2005,
@@ -23,6 +26,7 @@
     2015,
     2016
   ],
+  "requested_validation_years": "2017-2025",
   "actual_validation_years": [
     2017,
     2018,
@@ -31,25 +35,27 @@
     2022,
     2023
   ],
+  "one_row_per_game": true,
   "feature_count": 96,
-  "rows": {
-    "train": 1658,
-    "validation": 688,
-    "all_examples": 2346
+  "selected_model": "regularized_logistic",
+  "selected_metrics": {
+    "raw_accuracy": 0.6433915211970075,
+    "raw_brier": 0.2208480632092319,
+    "raw_log_loss": 0.6343500725290288,
+    "raw_roc_auc": 0.7065028110851286,
+    "calibrated_accuracy": 0.6408977556109726,
+    "calibrated_brier": 0.21730892643296115,
+    "calibrated_log_loss": 0.6239428246363556,
+    "calibrated_roc_auc": 0.7065028110851286
   },
-  "metrics": {
-    "train": {
-      "accuracy": 0.6743063932448733,
-      "brier": 0.2065826275873486,
-      "log_loss": 0.5984563714518407,
-      "roc_auc": 0.7372901209328314
-    },
-    "validation": {
-      "accuracy": 0.563953488372093,
-      "brier": 0.25158854163360295,
-      "log_loss": 0.7976867416334236,
-      "roc_auc": 0.6078285559762034
-    }
-  },
-  "tree": "|--- efg_net_strength_vs_weakness <= -0.00\n|   |--- misc_nst_strength_diff <= 0.12\n|   |   |--- oreb_b_weakness_vs_strength <= 0.07\n|   |   |   |--- ftrate_b_weakness_vs_strength <= 0.54\n|   |   |   |   |--- class: 0\n|   |   |   |--- ftrate_b_weakness_vs_strength >  0.54\n|   |   |   |   |--- class: 0\n|   |   |--- oreb_b_weakness_vs_strength >  0.07\n|   |   |   |--- oreb_a_attack_edge <= 8.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- oreb_a_attack_edge >  8.00\n|   |   |   |   |--- class: 1\n|   |--- misc_nst_strength_diff >  0.12\n|   |   |--- oreb_net_weakness_vs_strength <= -0.13\n|   |   |   |--- class: 1\n|   |   |--- oreb_net_weakness_vs_strength >  -0.13\n|   |   |   |--- efg_net_strength_vs_weakness <= -0.28\n|   |   |   |   |--- class: 0\n|   |   |   |--- efg_net_strength_vs_weakness >  -0.28\n|   |   |   |   |--- class: 1\n|--- efg_net_strength_vs_weakness >  -0.00\n|   |--- misc_nst_strength_diff <= -0.12\n|   |   |--- oreb_net_weakness_vs_strength <= 0.13\n|   |   |   |--- efg_net_strength_vs_weakness <= 0.28\n|   |   |   |   |--- class: 0\n|   |   |   |--- efg_net_strength_vs_weakness >  0.28\n|   |   |   |   |--- class: 1\n|   |   |--- oreb_net_weakness_vs_strength >  0.13\n|   |   |   |--- class: 0\n|   |--- misc_nst_strength_diff >  -0.12\n|   |   |--- oreb_a_weakness_vs_strength <= 0.07\n|   |   |   |--- misc_threep_abs_diff <= 5.35\n|   |   |   |   |--- class: 1\n|   |   |   |--- misc_threep_abs_diff >  5.35\n|   |   |   |   |--- class: 1\n|   |   |--- oreb_a_weakness_vs_strength >  0.07\n|   |   |   |--- oreb_b_attack_edge <= 8.00\n|   |   |   |   |--- class: 1\n|   |   |   |--- oreb_b_attack_edge >  8.00\n|   |   |   |   |--- class: 0\n"
+  "trustworthiness": {
+    "importance_gate_passed": true,
+    "selection_accuracy_auc_gate_passed": true,
+    "accuracy_wilson_95": [
+      0.592809358133265,
+      0.6863121550709117
+    ],
+    "stable_features_in_top_15": 15,
+    "minimum_stability_definition": "positive permutation importance in at least 60% of held-out seasons"
+  }
 }

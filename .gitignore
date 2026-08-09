@@ -4,12 +4,15 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 .mplconfig/
+.jupyter/
 
 # Reproducible/downloaded source data. Keep the manually sourced 2026 results file.
 data/raw/MTeams.csv
 data/raw/MNCAATourneyCompactResults.csv
+data/raw/MNCAATourneySeeds.csv
+data/raw/MRegularSeasonDetailedResults.csv
 data/raw/kenpom/
-data/processed/kenpom_team_features.csv
+data/processed/
 
 # Keep published result artifacts and the trained model.
 !reports/
