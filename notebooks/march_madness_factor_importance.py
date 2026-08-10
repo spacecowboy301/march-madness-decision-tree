@@ -115,9 +115,10 @@ display(Image(filename=str(FIGURES / "group_importance.png")))
 # %% [markdown]
 # ## 5. Raw Rates And Matchup Mechanisms
 #
-# This view directly compares the importance of raw percentage-point
-# differences, ordinary percentile strengths, strength-vs-strength,
-# strength-vs-weakness, and the remaining engineered mechanisms.
+# This view directly compares raw offense-vs-opposing-defense matchup edges,
+# strength-vs-strength, strength-vs-weakness, and the remaining engineered
+# mechanisms. No feature compares offense only with offense or defense only
+# with defense.
 
 # %%
 display(Image(filename=str(FIGURES / "interaction_importance.png")))

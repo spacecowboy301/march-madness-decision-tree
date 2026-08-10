@@ -403,7 +403,7 @@ def grouped_model_importance(
 
 def feature_role(feature: str) -> str:
     if "_raw_" in feature:
-        return "raw_rate_differences"
+        return "raw_matchup_edges"
     if "strength_vs_strength" in feature:
         return "strength_vs_strength"
     if "strength_vs_weakness" in feature or feature == "weakness_exploitation_composite":
@@ -412,8 +412,8 @@ def feature_role(feature: str) -> str:
         return "weakness_vs_strength"
     if feature.endswith("_net_matchup_edge"):
         return "net_matchup_edges"
-    if feature.endswith(("_off_strength_diff", "_def_strength_diff", "_overall_strength_diff")):
-        return "percentile_strength_differences"
+    if feature.endswith("_matchup_environment"):
+        return "matchup_environments"
     if feature.startswith("three_point_rate_"):
         return "three_point_volume_style"
     return "engineered_composites"
@@ -720,7 +720,7 @@ def main() -> None:
         "actual_validation_years": sorted(meta.loc[valid, "season"].unique().astype(int).tolist()),
         "one_row_per_game": True,
         "feature_count": int(x.shape[1]),
-        "raw_rate_difference_count": int(sum("_raw_" in feature for feature in x.columns)),
+        "raw_matchup_feature_count": int(sum("_raw_" in feature for feature in x.columns)),
         "selected_model": selected_name,
         "selection_basis": "hyperparameters tuned by pre-2017 expanding-window cross-validation; model family selected by calibrated accuracy on the requested 2017-2025 validation period",
         "selected_metrics": {key: float(value) for key, value in selected_metrics.items() if key != "model"},

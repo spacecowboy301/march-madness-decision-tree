@@ -92,15 +92,19 @@ def matchup_terms(a: pd.Series, b: pd.Series) -> tuple[dict[str, float], dict[st
     row: dict[str, float] = {}
     families: dict[str, str] = {}
     attack_edges: dict[str, float] = {}
-    overall_strengths_a: dict[str, float] = {}
-    overall_strengths_b: dict[str, float] = {}
 
     for name, (off_col, def_col, off_higher, def_higher, family) in FACTOR_SPECS.items():
         off_direction = 1.0 if off_higher else -1.0
         def_direction = 1.0 if def_higher else -1.0
+        a_off_raw = off_direction * a[off_col]
+        a_def_raw = def_direction * a[def_col]
+        b_off_raw = off_direction * b[off_col]
+        b_def_raw = def_direction * b[def_col]
+        a_raw_matchup = a_off_raw - b_def_raw
+        b_raw_matchup = b_off_raw - a_def_raw
         raw_values = {
-            f"{name}_raw_off_diff": off_direction * (a[off_col] - b[off_col]),
-            f"{name}_raw_def_diff": def_direction * (a[def_col] - b[def_col]),
+            f"{name}_raw_matchup_edge": a_raw_matchup - b_raw_matchup,
+            f"{name}_raw_matchup_environment": (a_raw_matchup + b_raw_matchup) / 2.0,
         }
         row.update(raw_values)
         for key in raw_values:
@@ -110,12 +114,12 @@ def matchup_terms(a: pd.Series, b: pd.Series) -> tuple[dict[str, float], dict[st
         a_def = a[f"{def_col}_strength"]
         b_off = b[f"{off_col}_strength"]
         b_def = b[f"{def_col}_strength"]
+        a_matchup = a_off - b_def
+        b_matchup = b_off - a_def
 
         values = {
-            f"{name}_off_strength_diff": a_off - b_off,
-            f"{name}_def_strength_diff": a_def - b_def,
-            f"{name}_overall_strength_diff": (a_off + a_def - b_off - b_def) / 2.0,
-            f"{name}_net_matchup_edge": (a_off - b_def) - (b_off - a_def),
+            f"{name}_net_matchup_edge": a_matchup - b_matchup,
+            f"{name}_matchup_environment": (a_matchup + b_matchup) / 2.0,
             f"{name}_net_strength_vs_strength": a_off * b_def - b_off * a_def,
             f"{name}_net_strength_vs_weakness": a_off * (1 - b_def) - b_off * (1 - a_def),
             f"{name}_net_weakness_vs_strength": (1 - a_off) * b_def - (1 - b_off) * a_def,
@@ -124,13 +128,11 @@ def matchup_terms(a: pd.Series, b: pd.Series) -> tuple[dict[str, float], dict[st
         for key in values:
             families[key] = name
         attack_edges[name] = values[f"{name}_net_matchup_edge"]
-        overall_strengths_a[name] = (a_off + a_def) / 2.0
-        overall_strengths_b[name] = (b_off + b_def) / 2.0
 
     for name, (off_col, def_col, _family) in STYLE_SPECS.items():
         raw_values = {
-            f"{name}_raw_off_diff": a[off_col] - b[off_col],
-            f"{name}_raw_def_diff": a[def_col] - b[def_col],
+            f"{name}_raw_expected_diff": (a[off_col] + b[def_col] - b[off_col] - a[def_col]) / 2.0,
+            f"{name}_raw_environment": (a[off_col] + b[def_col] + b[off_col] + a[def_col]) / 4.0,
         }
         row.update(raw_values)
         for key in raw_values:
@@ -141,8 +143,6 @@ def matchup_terms(a: pd.Series, b: pd.Series) -> tuple[dict[str, float], dict[st
         b_off = b[f"{off_col}_percentile"]
         b_def = b[f"{def_col}_percentile"]
         values = {
-            f"{name}_off_style_diff": a_off - b_off,
-            f"{name}_def_style_diff": a_def - b_def,
             f"{name}_expected_diff": (a_off + b_def - b_off - a_def) / 2.0,
             f"{name}_environment": (a_off + a_def + b_off + b_def) / 4.0,
         }
@@ -172,14 +172,6 @@ def matchup_terms(a: pd.Series, b: pd.Series) -> tuple[dict[str, float], dict[st
         ),
         "ball_security_edge": float(
             np.mean([attack_edges["turnover"], attack_edges["steal"], attack_edges["nonsteal_turnover"]])
-        ),
-        "four_factor_balance_diff": float(
-            min(overall_strengths_a[name] for name in ["efg", "turnover", "offensive_rebound", "free_throw_rate"])
-            - min(overall_strengths_b[name] for name in ["efg", "turnover", "offensive_rebound", "free_throw_rate"])
-        ),
-        "four_factor_breadth_diff": float(
-            sum(overall_strengths_a[name] >= 0.67 for name in ["efg", "turnover", "offensive_rebound", "free_throw_rate"])
-            - sum(overall_strengths_b[name] >= 0.67 for name in ["efg", "turnover", "offensive_rebound", "free_throw_rate"])
         ),
         "strength_vs_strength_composite": float(
             np.mean([row[f"{name}_net_strength_vs_strength"] for name in FACTOR_SPECS])

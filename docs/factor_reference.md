@@ -344,18 +344,27 @@ For every strength-based factor above, let:
 
 The model creates the following features for each factor.
 
-### Raw Offensive And Defensive Differences
+### Raw Matchup Edge
 
 ```text
-raw offensive difference = direction * (Team A raw offense - Team B raw offense)
-raw defensive difference = direction * (Team A raw defense - Team B raw defense)
+A attack = direction-adjusted Team A offense
+           - direction-adjusted Team B defense
+B attack = direction-adjusted Team B offense
+           - direction-adjusted Team A defense
+raw matchup edge = A attack - B attack
+raw matchup environment = (A attack + B attack) / 2
 ```
 
-These features preserve the original percentage-point distance between teams.
-The direction is reversed for lower-is-better rates, so a positive value always
-favors Team A. They complement percentile features: percentiles describe
-relative standing within a season, while raw differences preserve whether the
-underlying gap is small or large.
+This directly compares each offense with the opposing defense. The direction is
+reversed for lower-is-better rates, so a positive value always favors Team A.
+It preserves the original percentage-point scale, while percentile interactions
+describe relative standing within a season. The model intentionally contains no
+offense-vs-offense or defense-vs-defense comparison features.
+
+The environment term preserves whether both cross-matchups are generally
+favorable or unfavorable. It lets nonlinear models treat the same directional
+edge differently in a high-offense or low-offense environment without adding
+same-side comparisons.
 
 ### Offensive Strength Difference
 
@@ -390,6 +399,18 @@ Summarizes two-way strength in that factor.
 
 Compares Team A's offensive matchup with Team B's offensive matchup. Positive
 values indicate the factor-level matchup favors Team A on balance.
+
+### Matchup Environment
+
+```text
+Team A matchup = A_off - B_def
+Team B matchup = B_off - A_def
+(Team A matchup + Team B matchup) / 2
+```
+
+This symmetric term measures whether both offenses face generally favorable or
+unfavorable opposition in the factor. It has no winner direction by itself, but
+nonlinear models can use it to condition the directional edge.
 
 ### Net Strength Vs Strength
 
@@ -475,17 +496,6 @@ protection together.
 
 The average overall turnover, steal, and non-steal-turnover net edges. It
 separates possession protection and disruption into related components.
-
-### Four Factor Balance Difference
-
-For each team, take its weakest average offense-defense percentile among the
-Four Factors. The feature is Team A's weakest value minus Team B's weakest
-value. It rewards teams without an obvious Four Factors deficiency.
-
-### Four Factor Breadth Difference
-
-Counts how many Four Factors have an average offense-defense percentile of at
-least `0.67` for each team, then subtracts Team B's count from Team A's.
 
 ### Strength Vs Strength Composite
 

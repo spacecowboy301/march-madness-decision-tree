@@ -7,8 +7,9 @@ prioritizes trustworthy feature importance before maximum predictive accuracy.
 ## Method
 
 - Build team-season features only from regular-season detailed box scores.
-- Include direction-correct raw percentage-point differences for every Four
-  Factor and miscellaneous statistic.
+- Include direction-correct raw matchup edges for every Four Factor and
+  miscellaneous statistic: Team A offense against Team B defense, compared
+  with the reverse matchup.
 - Engineer strength-vs-strength, strength-vs-weakness, balance, shooting,
   rebounding, and ball-security matchup features.
 - Exclude tournament seed, KenPom rank, net rating, luck, and adjusted
@@ -79,7 +80,8 @@ The main feature-importance chart uses validation permutation importance rather
 than decision-tree impurity. One grouped chart shuffles each basketball concept
 as a block; another separately measures raw rates, ordinary strength
 differences, strength-vs-strength, strength-vs-weakness, and other matchup
-mechanisms.
+mechanisms. No model feature compares offense only with offense or defense only
+with defense.
 
 See [`docs/factor_reference.md`](docs/factor_reference.md) for formulas,
 directionality, matchup interpretations, engineered-feature definitions, and
