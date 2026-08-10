@@ -12,7 +12,7 @@ from .team_names import normalize_team_name
 RAW_RESULTS_PATH = Path("data/raw/MRegularSeasonDetailedResults.csv")
 TEAMS_PATH = Path("data/raw/MTeams.csv")
 OUTPUT_PATH = Path("data/processed/pretournament_team_factors.csv")
-AUDIT_PATH = Path("reports/pretournament_feature_audit.json")
+AUDIT_PATH = Path("reports/data_audit.json")
 KENPOM_REFERENCE_PATH = Path("data/processed/kenpom_team_features.csv")
 MIN_COMPLETE_DAY = 125
 

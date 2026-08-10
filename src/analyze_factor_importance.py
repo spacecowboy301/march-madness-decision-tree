@@ -21,25 +21,30 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 
+from .build_pretournament_features import main as build_pretournament_features
 from .factor_matchups import FACTOR_SPECS, FEATURES_PATH, add_percentiles, build_matchup_dataset
 
 
 REPORTS = Path("reports")
-MODEL_PATH = Path("models/decision_tree_four_factors_misc.joblib")
-METRICS_PATH = REPORTS / "factor_model_metrics.json"
-MODEL_COMPARISON_PATH = REPORTS / "factor_model_comparison.csv"
-ROLLING_PATH = REPORTS / "factor_model_rolling_validation.csv"
-PREDICTIONS_PATH = REPORTS / "factor_model_validation_predictions.csv"
-TOP_FEATURES_PATH = REPORTS / "factor_model_top_features.csv"
-GROUP_IMPORTANCE_PATH = REPORTS / "factor_model_group_importance.csv"
-UPSET_PATH = REPORTS / "factor_model_upset_analysis.csv"
-RESULTS_MD_PATH = REPORTS / "factor_model_results.md"
-FEATURE_IMPORTANCE_PATH = REPORTS / "factor_model_feature_importance.png"
-GROUP_IMPORTANCE_CHART_PATH = REPORTS / "factor_model_group_importance.png"
-MODEL_COMPARISON_CHART_PATH = REPORTS / "factor_model_comparison.png"
-YEAR_CHART_PATH = REPORTS / "factor_model_accuracy_by_year.png"
-CALIBRATION_CHART_PATH = REPORTS / "factor_model_calibration.png"
-QUADRANT_CHART_PATH = REPORTS / "factor_matchup_quadrants.png"
+FIGURES = REPORTS / "figures"
+MODEL_PATH = Path("models/factor_importance_model.joblib")
+METRICS_PATH = REPORTS / "metrics.json"
+MODEL_COMPARISON_PATH = REPORTS / "model_comparison.csv"
+ROLLING_PATH = REPORTS / "rolling_validation.csv"
+PREDICTIONS_PATH = REPORTS / "validation_predictions.csv"
+TOP_FEATURES_PATH = REPORTS / "feature_importance.csv"
+GROUP_IMPORTANCE_PATH = REPORTS / "group_importance.csv"
+INTERACTION_IMPORTANCE_PATH = REPORTS / "interaction_importance.csv"
+TUNING_PATH = REPORTS / "hyperparameter_tuning.csv"
+UPSET_PATH = REPORTS / "upset_analysis.csv"
+RESULTS_MD_PATH = REPORTS / "summary.md"
+FEATURE_IMPORTANCE_PATH = FIGURES / "feature_importance.png"
+GROUP_IMPORTANCE_CHART_PATH = FIGURES / "group_importance.png"
+INTERACTION_IMPORTANCE_CHART_PATH = FIGURES / "interaction_importance.png"
+MODEL_COMPARISON_CHART_PATH = FIGURES / "model_comparison.png"
+YEAR_CHART_PATH = FIGURES / "accuracy_by_year.png"
+CALIBRATION_CHART_PATH = FIGURES / "calibration.png"
+QUADRANT_CHART_PATH = FIGURES / "matchup_quadrants.png"
 
 RANDOM_STATE = 42
 
@@ -55,6 +60,14 @@ class SigmoidCalibratedModel:
         return self.calibrator.predict_proba(logits)
 
 
+@dataclass
+class AveragingCalibratedEnsemble:
+    models: tuple[SigmoidCalibratedModel, ...]
+
+    def predict_proba(self, x: pd.DataFrame) -> np.ndarray:
+        return np.mean([model.predict_proba(x) for model in self.models], axis=0)
+
+
 def numeric_pipeline(estimator, features: list[str], scale: bool = False) -> Pipeline:
     transforms = [("imputer", SimpleImputer(strategy="median"))]
     if scale:
@@ -67,44 +80,68 @@ def numeric_pipeline(estimator, features: list[str], scale: bool = False) -> Pip
     )
 
 
-def model_candidates(features: list[str]) -> dict[str, Pipeline]:
+def candidate_configurations(features: list[str]) -> dict[str, list[tuple[str, Pipeline]]]:
     return {
-        "regularized_logistic": numeric_pipeline(
-            LogisticRegression(C=0.25, max_iter=4000, random_state=RANDOM_STATE), features, scale=True
-        ),
-        "decision_tree": numeric_pipeline(
-            DecisionTreeClassifier(
-                max_depth=5,
-                min_samples_leaf=25,
-                criterion="log_loss",
-                class_weight="balanced",
-                random_state=RANDOM_STATE,
-            ),
-            features,
-        ),
-        "random_forest": numeric_pipeline(
-            RandomForestClassifier(
-                n_estimators=350,
-                max_depth=7,
-                min_samples_leaf=10,
-                max_features=0.45,
-                class_weight="balanced",
-                n_jobs=-1,
-                random_state=RANDOM_STATE,
-            ),
-            features,
-        ),
-        "hist_gradient_boosting": numeric_pipeline(
-            HistGradientBoostingClassifier(
-                learning_rate=0.04,
-                max_iter=220,
-                max_leaf_nodes=15,
-                min_samples_leaf=20,
-                l2_regularization=2.0,
-                random_state=RANDOM_STATE,
-            ),
-            features,
-        ),
+        "regularized_logistic": [
+            (
+                f"C={c}",
+                numeric_pipeline(
+                    LogisticRegression(C=c, max_iter=4000, random_state=RANDOM_STATE), features, scale=True
+                ),
+            )
+            for c in [0.02, 0.05, 0.1, 0.25, 0.5, 1.0]
+        ],
+        "decision_tree": [
+            (
+                f"depth={depth},leaf={leaf}",
+                numeric_pipeline(
+                    DecisionTreeClassifier(
+                        max_depth=depth,
+                        min_samples_leaf=leaf,
+                        criterion="log_loss",
+                        class_weight="balanced",
+                        random_state=RANDOM_STATE,
+                    ),
+                    features,
+                ),
+            )
+            for depth, leaf in [(3, 20), (4, 20), (5, 25), (6, 35)]
+        ],
+        "random_forest": [
+            (
+                f"depth={depth},leaf={leaf},max_features={max_features}",
+                numeric_pipeline(
+                    RandomForestClassifier(
+                        n_estimators=450,
+                        max_depth=depth,
+                        min_samples_leaf=leaf,
+                        max_features=max_features,
+                        class_weight="balanced",
+                        n_jobs=-1,
+                        random_state=RANDOM_STATE,
+                    ),
+                    features,
+                ),
+            )
+            for depth, leaf, max_features in [(5, 8, 0.35), (7, 10, 0.45), (9, 12, 0.55), (None, 16, 0.45)]
+        ],
+        "hist_gradient_boosting": [
+            (
+                f"rate={rate},leaves={leaves},l2={l2}",
+                numeric_pipeline(
+                    HistGradientBoostingClassifier(
+                        learning_rate=rate,
+                        max_iter=260,
+                        max_leaf_nodes=leaves,
+                        min_samples_leaf=20,
+                        l2_regularization=l2,
+                        random_state=RANDOM_STATE,
+                    ),
+                    features,
+                ),
+            )
+            for rate, leaves, l2 in [(0.025, 7, 4.0), (0.04, 7, 2.0), (0.03, 15, 4.0), (0.05, 15, 2.0)]
+        ],
     }
 
 
@@ -137,6 +174,56 @@ def temporal_oof_probabilities(
     return np.asarray(probabilities), np.asarray(labels)
 
 
+def tune_candidates(
+    configurations: dict[str, list[tuple[str, Pipeline]]],
+    x: pd.DataFrame,
+    y: pd.Series,
+    seasons: pd.Series,
+) -> tuple[dict[str, Pipeline], pd.DataFrame]:
+    selected: dict[str, Pipeline] = {}
+    rows = []
+    for family, options in configurations.items():
+        family_rows = []
+        for configuration, estimator in options:
+            probability, labels = temporal_oof_probabilities(estimator, x, y, seasons)
+            row = {
+                "model": family,
+                "configuration": configuration,
+                "oof_games": int(len(labels)),
+                **{f"cv_{key}": value for key, value in metric_dict(labels, probability).items()},
+            }
+            family_rows.append((row, estimator))
+            rows.append(row)
+        best_row, best_estimator = min(family_rows, key=lambda item: item[0]["cv_log_loss"])
+        selected[family] = best_estimator
+        best_row["selected_configuration"] = True
+
+    tuning = pd.DataFrame(rows)
+    tuning["selected_configuration"] = tuning["selected_configuration"].fillna(False).astype(bool)
+    return selected, tuning.sort_values(["model", "cv_log_loss"]).reset_index(drop=True)
+
+
+def training_cv_comparison(
+    candidates: dict[str, Pipeline], x: pd.DataFrame, y: pd.Series, seasons: pd.Series
+) -> pd.DataFrame:
+    rows = []
+    probabilities = []
+    labels = None
+    for name, candidate in candidates.items():
+        probability, candidate_labels = temporal_oof_probabilities(candidate, x, y, seasons)
+        probabilities.append(probability)
+        labels = candidate_labels
+        rows.append({"model": name, **{f"training_cv_{key}": value for key, value in metric_dict(labels, probability).items()}})
+    ensemble_probability = np.mean(probabilities, axis=0)
+    rows.append(
+        {
+            "model": "soft_voting_ensemble",
+            **{f"training_cv_{key}": value for key, value in metric_dict(labels, ensemble_probability).items()},
+        }
+    )
+    return pd.DataFrame(rows)
+
+
 def fit_temporally_calibrated(
     estimator: Pipeline, x: pd.DataFrame, y: pd.Series, seasons: pd.Series
 ) -> SigmoidCalibratedModel:
@@ -160,7 +247,7 @@ def wilson_interval(correct: int, total: int, z: float = 1.96) -> tuple[float, f
 
 def fit_and_compare(
     candidates: dict[str, Pipeline], x: pd.DataFrame, y: pd.Series, meta: pd.DataFrame
-) -> tuple[dict[str, SigmoidCalibratedModel], pd.DataFrame]:
+) -> tuple[dict[str, object], pd.DataFrame]:
     train = meta["season"] <= 2016
     valid = meta["season"].between(2017, 2025)
     fitted = {}
@@ -168,7 +255,15 @@ def fit_and_compare(
     for name, candidate in candidates.items():
         calibrated = fit_temporally_calibrated(candidate, x.loc[train], y.loc[train], meta.loc[train, "season"])
         fitted[name] = calibrated
-        raw_probability = calibrated.estimator.predict_proba(x.loc[valid])[:, 1]
+
+    fitted["soft_voting_ensemble"] = AveragingCalibratedEnsemble(tuple(fitted.values()))
+    for name, calibrated in fitted.items():
+        if name == "soft_voting_ensemble":
+            raw_probability = np.mean(
+                [model.estimator.predict_proba(x.loc[valid])[:, 1] for model in calibrated.models], axis=0
+            )
+        else:
+            raw_probability = calibrated.estimator.predict_proba(x.loc[valid])[:, 1]
         calibrated_probability = calibrated.predict_proba(x.loc[valid])[:, 1]
         row = {"model": name}
         row.update({f"raw_{key}": value for key, value in metric_dict(y.loc[valid], raw_probability).items()})
@@ -181,13 +276,24 @@ def rolling_validation(
     candidates: dict[str, Pipeline], x: pd.DataFrame, y: pd.Series, meta: pd.DataFrame
 ) -> pd.DataFrame:
     rows = []
-    for name, candidate in candidates.items():
-        for year in sorted(meta.loc[meta["season"] >= 2017, "season"].unique()):
+    for year in sorted(meta.loc[meta["season"] >= 2017, "season"].unique()):
+        yearly_probabilities = []
+        for name, candidate in candidates.items():
             train = meta["season"] < year
             test = meta["season"] == year
             model = clone(candidate).fit(x.loc[train], y.loc[train])
             probability = model.predict_proba(x.loc[test])[:, 1]
+            yearly_probabilities.append(probability)
             rows.append({"model": name, "season": int(year), "games": int(test.sum()), **metric_dict(y.loc[test], probability)})
+        ensemble_probability = np.mean(yearly_probabilities, axis=0)
+        rows.append(
+            {
+                "model": "soft_voting_ensemble",
+                "season": int(year),
+                "games": int(test.sum()),
+                **metric_dict(y.loc[test], ensemble_probability),
+            }
+        )
     return pd.DataFrame(rows)
 
 
@@ -196,8 +302,11 @@ def select_model(comparison: pd.DataFrame) -> tuple[str, bool]:
         (comparison["calibrated_accuracy"] >= 0.60) & (comparison["calibrated_roc_auc"] >= 0.65)
     ]
     if eligible.empty:
-        return str(comparison.iloc[0]["model"]), False
-    return str(eligible.sort_values("calibrated_log_loss").iloc[0]["model"]), True
+        return str(comparison.sort_values("calibrated_log_loss").iloc[0]["model"]), False
+    selected = eligible.sort_values(
+        ["calibrated_accuracy", "calibrated_log_loss"], ascending=[False, True]
+    ).iloc[0]
+    return str(selected["model"]), True
 
 
 def permute_within_season(
@@ -259,7 +368,7 @@ def permutation_importance_by_season(
 
 
 def grouped_model_importance(
-    models: dict[str, SigmoidCalibratedModel],
+    models: dict[str, object],
     x: pd.DataFrame,
     y: pd.Series,
     seasons: pd.Series,
@@ -290,6 +399,24 @@ def grouped_model_importance(
                 }
             )
     return pd.DataFrame(rows).sort_values(["model", "importance_mean"], ascending=[True, False])
+
+
+def feature_role(feature: str) -> str:
+    if "_raw_" in feature:
+        return "raw_rate_differences"
+    if "strength_vs_strength" in feature:
+        return "strength_vs_strength"
+    if "strength_vs_weakness" in feature or feature == "weakness_exploitation_composite":
+        return "strength_vs_weakness"
+    if "weakness_vs_strength" in feature:
+        return "weakness_vs_strength"
+    if feature.endswith("_net_matchup_edge"):
+        return "net_matchup_edges"
+    if feature.endswith(("_off_strength_diff", "_def_strength_diff", "_overall_strength_diff")):
+        return "percentile_strength_differences"
+    if feature.startswith("three_point_rate_"):
+        return "three_point_volume_style"
+    return "engineered_composites"
 
 
 def build_validation_predictions(
@@ -343,7 +470,7 @@ def plot_feature_importance(importance: pd.DataFrame) -> None:
     fig, ax = plt.subplots(figsize=(11, 8))
     ax.barh(plotted["feature"].map(clean_label), plotted["importance_mean"], color="#287271", xerr=xerr, alpha=0.9)
     ax.axvline(0, color="#333333", linewidth=0.8)
-    ax.set_title("Held-Out Permutation Importance: Four Factors + Misc")
+    ax.set_title("Validation Permutation Importance: Raw + Engineered Factors")
     ax.set_xlabel("Increase in log loss when shuffled (larger = more important)")
     ax.grid(axis="x", alpha=0.2)
     fig.tight_layout()
@@ -351,17 +478,17 @@ def plot_feature_importance(importance: pd.DataFrame) -> None:
     plt.close(fig)
 
 
-def plot_group_importance(grouped: pd.DataFrame) -> None:
+def plot_group_importance(grouped: pd.DataFrame, path: Path, title: str) -> None:
     consensus = grouped.groupby("factor_group")["importance_mean"].agg(["mean", "min", "max"]).sort_values("mean")
     fig, ax = plt.subplots(figsize=(10, 7))
     xerr = np.vstack([consensus["mean"] - consensus["min"], consensus["max"] - consensus["mean"]])
     ax.barh(consensus.index.map(clean_label), consensus["mean"], xerr=xerr, color="#d99b45", alpha=0.92)
     ax.axvline(0, color="#333333", linewidth=0.8)
-    ax.set_title("Factor-Group Importance Across Four Model Families")
+    ax.set_title(title)
     ax.set_xlabel("Mean held-out log-loss increase; whiskers show model range")
     ax.grid(axis="x", alpha=0.2)
     fig.tight_layout()
-    fig.savefig(GROUP_IMPORTANCE_CHART_PATH, dpi=190)
+    fig.savefig(path, dpi=190)
     plt.close(fig)
 
 
@@ -482,12 +609,16 @@ def write_summary(
     comparison: pd.DataFrame,
     importance: pd.DataFrame,
     grouped: pd.DataFrame,
+    interactions: pd.DataFrame,
     upset: pd.DataFrame,
 ) -> None:
     selected = metrics["selected_model"]
     selected_row = comparison.set_index("model").loc[selected]
     top_features = importance.head(8)
     consensus = grouped.groupby("factor_group")["importance_mean"].mean().sort_values(ascending=False)
+    interaction_consensus = (
+        interactions.groupby("factor_group")["importance_mean"].mean().sort_values(ascending=False)
+    )
     lines = [
         "# Trustworthy Four Factors + Misc Importance Analysis",
         "",
@@ -503,8 +634,9 @@ def write_summary(
         f"- Held-out log loss: {selected_row['calibrated_log_loss']:.3f}",
         f"- Accuracy 95% Wilson interval: {metrics['trustworthiness']['accuracy_wilson_95'][0]:.3f}-{metrics['trustworthiness']['accuracy_wilson_95'][1]:.3f}",
         f"- Importance interpretation gate passed: {metrics['trustworthiness']['importance_gate_passed']}",
+        f"- Model selection basis: {metrics['selection_basis']}",
         "",
-        "## Most important engineered features",
+        "## Most important features",
         "",
     ]
     lines.extend(
@@ -513,6 +645,8 @@ def write_summary(
     )
     lines.extend(["", "## Factor-group consensus", ""])
     lines.extend(f"- {clean_label(name)}: {value:.4f}" for name, value in consensus.items())
+    lines.extend(["", "## Matchup-mechanism importance", ""])
+    lines.extend(f"- {clean_label(name)}: {value:.4f}" for name, value in interaction_consensus.items())
     lines.extend(["", "## Upset behavior", ""])
     lines.extend(
         f"- {clean_label(row.segment)}: {row.accuracy:.3f} accuracy across {int(row.games)} games"
@@ -531,7 +665,9 @@ def write_summary(
 
 
 def main() -> None:
+    build_pretournament_features()
     REPORTS.mkdir(parents=True, exist_ok=True)
+    FIGURES.mkdir(parents=True, exist_ok=True)
     MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
     x, y, meta, feature_families = build_matchup_dataset()
     observed = x.notna().any(axis=0)
@@ -542,8 +678,15 @@ def main() -> None:
     if not train.any() or not valid.any():
         raise ValueError("The factor dataset does not cover both requested train and validation periods.")
 
-    candidates = model_candidates(list(x.columns))
+    configurations = candidate_configurations(list(x.columns))
+    candidates, tuning = tune_candidates(
+        configurations, x.loc[train], y.loc[train], meta.loc[train, "season"]
+    )
+    training_comparison = training_cv_comparison(
+        candidates, x.loc[train], y.loc[train], meta.loc[train, "season"]
+    )
     models, comparison = fit_and_compare(candidates, x, y, meta)
+    comparison = comparison.merge(training_comparison, on="model", how="left")
     rolling = rolling_validation(candidates, x, y, meta)
     selected_name, selection_gate = select_model(comparison)
     selected = models[selected_name]
@@ -555,6 +698,8 @@ def main() -> None:
         selected, valid_x, valid_y, valid_meta["season"], feature_families
     )
     grouped = grouped_model_importance(models, valid_x, valid_y, valid_meta["season"], feature_families)
+    feature_roles = {feature: feature_role(feature) for feature in x.columns}
+    interactions = grouped_model_importance(models, valid_x, valid_y, valid_meta["season"], feature_roles)
     predictions = build_validation_predictions(selected, valid_x, valid_y, valid_meta)
     upset = upset_analysis(predictions)
 
@@ -575,11 +720,15 @@ def main() -> None:
         "actual_validation_years": sorted(meta.loc[valid, "season"].unique().astype(int).tolist()),
         "one_row_per_game": True,
         "feature_count": int(x.shape[1]),
+        "raw_rate_difference_count": int(sum("_raw_" in feature for feature in x.columns)),
         "selected_model": selected_name,
+        "selection_basis": "hyperparameters tuned by pre-2017 expanding-window cross-validation; model family selected by calibrated accuracy on the requested 2017-2025 validation period",
         "selected_metrics": {key: float(value) for key, value in selected_metrics.items() if key != "model"},
         "trustworthiness": {
             "importance_gate_passed": importance_gate,
             "selection_accuracy_auc_gate_passed": bool(selection_gate),
+            "validation_used_for_model_family_selection": True,
+            "final_untouched_test_set_available": False,
             "accuracy_wilson_95": list(interval),
             "stable_features_in_top_15": stable_top_features,
             "minimum_stability_definition": "positive permutation importance in at least 60% of held-out seasons",
@@ -591,29 +740,42 @@ def main() -> None:
             "model": selected,
             "features": list(x.columns),
             "feature_families": feature_families,
+            "feature_roles": feature_roles,
             "snapshot_status": "confirmed_pre_tournament",
         },
         MODEL_PATH,
     )
     METRICS_PATH.write_text(json.dumps(metrics, indent=2))
     comparison.to_csv(MODEL_COMPARISON_PATH, index=False)
+    tuning.to_csv(TUNING_PATH, index=False)
     rolling.to_csv(ROLLING_PATH, index=False)
     predictions.to_csv(PREDICTIONS_PATH, index=False)
     importance.to_csv(TOP_FEATURES_PATH, index=False)
     grouped.to_csv(GROUP_IMPORTANCE_PATH, index=False)
+    interactions.to_csv(INTERACTION_IMPORTANCE_PATH, index=False)
     upset.to_csv(UPSET_PATH, index=False)
 
     plot_feature_importance(importance)
-    plot_group_importance(grouped)
+    plot_group_importance(
+        grouped,
+        GROUP_IMPORTANCE_CHART_PATH,
+        "Basketball Factor Importance Across Candidate Models",
+    )
+    plot_group_importance(
+        interactions,
+        INTERACTION_IMPORTANCE_CHART_PATH,
+        "Raw And Matchup-Interaction Importance",
+    )
     plot_model_comparison(comparison)
     plot_accuracy_by_year(predictions)
     plot_calibration(predictions)
     plot_matchup_quadrants(valid_meta)
-    write_summary(metrics, comparison, importance, grouped, upset)
+    write_summary(metrics, comparison, importance, grouped, interactions, upset)
 
     print(json.dumps({"selected_model": selected_name, "metrics": metrics["selected_metrics"], "trustworthiness": metrics["trustworthiness"]}, indent=2))
     print(f"Wrote {FEATURE_IMPORTANCE_PATH}")
     print(f"Wrote {GROUP_IMPORTANCE_CHART_PATH}")
+    print(f"Wrote {INTERACTION_IMPORTANCE_CHART_PATH}")
 
 
 if __name__ == "__main__":

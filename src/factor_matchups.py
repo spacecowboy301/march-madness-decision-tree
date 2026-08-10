@@ -95,7 +95,17 @@ def matchup_terms(a: pd.Series, b: pd.Series) -> tuple[dict[str, float], dict[st
     overall_strengths_a: dict[str, float] = {}
     overall_strengths_b: dict[str, float] = {}
 
-    for name, (off_col, def_col, _off_higher, _def_higher, family) in FACTOR_SPECS.items():
+    for name, (off_col, def_col, off_higher, def_higher, family) in FACTOR_SPECS.items():
+        off_direction = 1.0 if off_higher else -1.0
+        def_direction = 1.0 if def_higher else -1.0
+        raw_values = {
+            f"{name}_raw_off_diff": off_direction * (a[off_col] - b[off_col]),
+            f"{name}_raw_def_diff": def_direction * (a[def_col] - b[def_col]),
+        }
+        row.update(raw_values)
+        for key in raw_values:
+            families[key] = name
+
         a_off = a[f"{off_col}_strength"]
         a_def = a[f"{def_col}_strength"]
         b_off = b[f"{off_col}_strength"]
@@ -118,6 +128,14 @@ def matchup_terms(a: pd.Series, b: pd.Series) -> tuple[dict[str, float], dict[st
         overall_strengths_b[name] = (b_off + b_def) / 2.0
 
     for name, (off_col, def_col, _family) in STYLE_SPECS.items():
+        raw_values = {
+            f"{name}_raw_off_diff": a[off_col] - b[off_col],
+            f"{name}_raw_def_diff": a[def_col] - b[def_col],
+        }
+        row.update(raw_values)
+        for key in raw_values:
+            families[key] = name
+
         a_off = a[f"{off_col}_percentile"]
         a_def = a[f"{def_col}_percentile"]
         b_off = b[f"{off_col}_percentile"]

@@ -1,0 +1,73 @@
+{
+  "timing_status": "confirmed_pre_tournament",
+  "source": "data/raw/MRegularSeasonDetailedResults.csv",
+  "formula_note": "Aggregated only NCAA regular-season detailed box scores; NCAA tournament games are a separate file.",
+  "minimum_complete_regular_season_day": 125,
+  "available_seasons": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "excluded_incomplete_seasons": {
+    "2024": 100
+  },
+  "team_season_rows": 7255,
+  "feature_columns": [
+    "ff_off_efg",
+    "ff_off_to",
+    "ff_off_or",
+    "ff_off_ftrate",
+    "ff_def_efg",
+    "ff_def_to",
+    "ff_def_or",
+    "ff_def_ftrate",
+    "misc_off_3p",
+    "misc_off_2p",
+    "misc_off_ft",
+    "misc_off_blk",
+    "misc_off_stl",
+    "misc_off_nst",
+    "misc_off_a",
+    "misc_off_3pa",
+    "misc_def_3p",
+    "misc_def_2p",
+    "misc_def_ft",
+    "misc_def_blk",
+    "misc_def_stl",
+    "misc_def_nst",
+    "misc_def_a",
+    "misc_def_3pa"
+  ],
+  "kenpom_formula_reference": {
+    "note": "Season-end KenPom values are used only to verify formula agreement, never as model inputs.",
+    "joined_team_seasons": 5714,
+    "pearson_correlations": {
+      "ff_off_efg": 0.9972220952927618,
+      "ff_off_to": 0.982980570863746,
+      "ff_off_or": 0.9621254354533213,
+      "ff_off_ftrate": 0.996982704631081,
+      "ff_def_efg": 0.9968290859750198,
+      "ff_def_to": 0.9838276001273603,
+      "ff_def_or": 0.94138867224274,
+      "ff_def_ftrate": 0.9979283193343822
+    }
+  }
+}

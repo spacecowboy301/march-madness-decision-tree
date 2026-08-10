@@ -1,8 +1,16 @@
 {
+  "analysis_goal": "Interpret Four Factors and misc importance before optimizing maximum predictive accuracy",
+  "snapshot_status": "confirmed_pre_tournament",
+  "feature_source": "NCAA regular-season detailed box scores using KenPom-compatible formulas",
+  "excluded_model_features": [
+    "tournament seed",
+    "KenPom rank",
+    "net rating",
+    "luck",
+    "adjusted efficiency"
+  ],
   "requested_train_years": "1997-2016",
-  "requested_validation_years": "2017-2025",
   "actual_train_years": [
-    2002,
     2003,
     2004,
     2005,
@@ -18,6 +26,7 @@
     2015,
     2016
   ],
+  "requested_validation_years": "2017-2025",
   "actual_validation_years": [
     2017,
     2018,
@@ -26,24 +35,35 @@
     2022,
     2023
   ],
-  "rows": {
-    "train": 1658,
-    "validation": 688,
-    "all_examples": 2346
+  "one_row_per_game": true,
+  "feature_count": 120,
+  "raw_rate_difference_count": 24,
+  "selected_model": "hist_gradient_boosting",
+  "selection_basis": "hyperparameters tuned by pre-2017 expanding-window cross-validation; model family selected by calibrated accuracy on the requested 2017-2025 validation period",
+  "selected_metrics": {
+    "raw_accuracy": 0.6508728179551122,
+    "raw_brier": 0.22346377696902392,
+    "raw_log_loss": 0.6402707745465762,
+    "raw_roc_auc": 0.6943380267675008,
+    "calibrated_accuracy": 0.6583541147132169,
+    "calibrated_brier": 0.22179767465657046,
+    "calibrated_log_loss": 0.6343456088115559,
+    "calibrated_roc_auc": 0.6943380267675008,
+    "training_cv_accuracy": 0.6231003039513677,
+    "training_cv_brier": 0.23387034486533,
+    "training_cv_log_loss": 0.6657187349230299,
+    "training_cv_roc_auc": 0.6774360538746683
   },
-  "metrics": {
-    "train": {
-      "accuracy": 0.7665862484921593,
-      "brier": 0.15439577466551402,
-      "log_loss": 0.4591448332676966,
-      "roc_auc": 0.8543196636987607
-    },
-    "validation": {
-      "accuracy": 0.7180232558139535,
-      "brier": 0.17725462974812164,
-      "log_loss": 0.9088917025636478,
-      "roc_auc": 0.8140253177393186
-    }
-  },
-  "tree": "|--- eff_rk_diff <= -2.50\n|   |--- eff_netrtg_abs_diff <= 7.88\n|   |   |--- eff_luck_diff <= -0.02\n|   |   |   |--- eff_sos_ortg_abs_diff <= 0.95\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_sos_ortg_abs_diff >  0.95\n|   |   |   |   |--- class: 1\n|   |   |--- eff_luck_diff >  -0.02\n|   |   |   |--- misc_a_diff <= -7.85\n|   |   |   |   |--- class: 1\n|   |   |   |--- misc_a_diff >  -7.85\n|   |   |   |   |--- class: 1\n|   |--- eff_netrtg_abs_diff >  7.88\n|   |   |--- eff_drtg_rank_diff <= -125.00\n|   |   |   |--- class: 1\n|   |   |--- eff_drtg_rank_diff >  -125.00\n|   |   |   |--- misc_stl_rank_diff <= -139.00\n|   |   |   |   |--- class: 1\n|   |   |   |--- misc_stl_rank_diff >  -139.00\n|   |   |   |   |--- class: 1\n|--- eff_rk_diff >  -2.50\n|   |--- eff_netrtg_abs_diff <= 7.88\n|   |   |--- eff_luck_rank_diff <= 107.50\n|   |   |   |--- eff_netrtg_diff <= -3.48\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_netrtg_diff >  -3.48\n|   |   |   |   |--- class: 1\n|   |   |--- eff_luck_rank_diff >  107.50\n|   |   |   |--- eff_ncsos_netrtg_rank_diff <= 26.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- eff_ncsos_netrtg_rank_diff >  26.00\n|   |   |   |   |--- class: 0\n|   |--- eff_netrtg_abs_diff >  7.88\n|   |   |--- eff_drtg_rank_abs_diff <= 125.00\n|   |   |   |--- misc_stl_rank_diff <= 139.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- misc_stl_rank_diff >  139.00\n|   |   |   |   |--- class: 0\n|   |   |--- eff_drtg_rank_abs_diff >  125.00\n|   |   |   |--- class: 0\n"
+  "trustworthiness": {
+    "importance_gate_passed": true,
+    "selection_accuracy_auc_gate_passed": true,
+    "validation_used_for_model_family_selection": true,
+    "final_untouched_test_set_available": false,
+    "accuracy_wilson_95": [
+      0.6106281662679696,
+      0.7030747733508838
+    ],
+    "stable_features_in_top_15": 14,
+    "minimum_stability_definition": "positive permutation importance in at least 60% of held-out seasons"
+  }
 }
