@@ -123,3 +123,14 @@ export KENPOM_PASSWORD="your-password"
 The data audit may compare regular-season formulas with cached KenPom values,
 but that comparison is diagnostic only. Raw downloads, cached KenPom data,
 processed feature tables, credentials, and local Jupyter state are ignored.
+
+## Cost safety
+
+Cloning or downloading this project cannot charge the repository owner. It
+contains no credentials, hosted API, paid service key, scheduled workflow, or
+cloud resource. NCAA downloads use public source files. Optional KenPom access
+requires the person running the scraper to supply their own account through
+local environment variables.
+
+See [`COST_SAFETY.md`](COST_SAFETY.md) for the full boundary and run
+`./.venv/bin/python scripts/check_cost_safety.py` before publishing changes.
