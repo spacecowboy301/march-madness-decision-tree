@@ -25,6 +25,24 @@ Detailed box scores begin in 2003, so the realized training period is
 2021-2023; 2020 had no tournament and the downloaded 2024 regular-season file
 is incomplete, so the pipeline excludes it automatically.
 
+## Current Findings
+
+- The selected calibrated regularized logistic model reaches **64.1% accuracy**,
+  **0.706 ROC AUC**, and **0.625 log loss** across 401 validation games.
+- The 95% Wilson interval for accuracy is approximately **59.3%-68.6%**, so
+  exact point estimates should not be overinterpreted.
+- Offensive-rebounding strength-vs-strength is the leading individual feature,
+  followed by the raw offensive-rebounding matchup edge and block-rate
+  strength-vs-strength.
+- Raw matchup edges and engineered composites are the strongest broad feature
+  groups. Strength-vs-strength adds meaningful signal; strength-vs-weakness is
+  positive but smaller after correlated matchup features share credit.
+- Every factor compares each offense with the opposing defense. The model has
+  no offense-vs-offense or defense-vs-defense comparison features.
+- These are validation findings, not causal effects. The 2017-2023 period was
+  used to select the model family, and no later untouched test set is currently
+  available in the downloaded detailed-results source.
+
 ## Setup
 
 ```bash
@@ -78,10 +96,9 @@ reports/
 
 The main feature-importance chart uses validation permutation importance rather
 than decision-tree impurity. One grouped chart shuffles each basketball concept
-as a block; another separately measures raw rates, ordinary strength
-differences, strength-vs-strength, strength-vs-weakness, and other matchup
-mechanisms. No model feature compares offense only with offense or defense only
-with defense.
+as a block; another separately measures raw matchup edges,
+strength-vs-strength, strength-vs-weakness, and other matchup mechanisms. No
+model feature compares offense only with offense or defense only with defense.
 
 See [`docs/factor_reference.md`](docs/factor_reference.md) for formulas,
 directionality, matchup interpretations, engineered-feature definitions, and
