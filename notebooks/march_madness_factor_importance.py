@@ -163,7 +163,20 @@ display(Image(filename=str(FIGURES / "conditional_factor_importance.png")))
 display(Image(filename=str(FIGURES / "conditional_matchup_mechanism_importance.png")))
 
 # %% [markdown]
-# ## 9. Strength Matchups
+# ## 9. Model vs KenPom-Derived Discrepancies
+#
+# This retrospective comparison converts KenPom adjusted net-rating gaps into
+# probabilities using the pre-2017 training period. These are not official
+# KenPom game probabilities, and the cached KenPom pages are season-end
+# snapshots that may include tournament results. The model inputs remain
+# confirmed pre-tournament.
+
+# %%
+display(Image(filename=str(FIGURES / "model_vs_kenpom_discrepancies.png")))
+display(Markdown((REPORTS / "kenpom_discrepancy_summary.md").read_text()))
+
+# %% [markdown]
+# ## 10. Strength Matchups
 #
 # These descriptive held-out rates compare strong and weak offenses with strong
 # and weak defenses. Cells with fewer than ten games are suppressed.
@@ -172,7 +185,7 @@ display(Image(filename=str(FIGURES / "conditional_matchup_mechanism_importance.p
 display(Image(filename=str(FIGURES / "matchup_quadrants.png")))
 
 # %% [markdown]
-# ## 10. Detailed Results
+# ## 11. Detailed Results
 #
 # Seeds appear only in the post-prediction upset diagnostic and never enter the
 # model. Permutation importance measures predictive reliance, not causality.
@@ -187,6 +200,7 @@ upset_analysis = pd.read_csv(REPORTS / "upset_analysis.csv")
 conditional_factor_importance = pd.read_csv(REPORTS / "conditional_factor_importance.csv")
 conditional_mechanisms = pd.read_csv(REPORTS / "conditional_matchup_mechanism_importance.csv")
 channel_importance = pd.read_csv(REPORTS / "channel_importance.csv")
+kenpom_discrepancies = pd.read_csv(REPORTS / "kenpom_discrepancy_matchups.csv")
 
 display(feature_importance.head(20))
 display(group_importance.head(20))
@@ -195,10 +209,11 @@ display(upset_analysis)
 display(channel_importance)
 display(conditional_factor_importance.head(20))
 display(conditional_mechanisms.head(20))
+display(kenpom_discrepancies.head(20))
 rolling_validation[rolling_validation["model"].eq(metrics["selected_model"])]
 
 # %% [markdown]
-# ## 11. Saved Summaries
+# ## 12. Saved Summaries
 
 # %%
 display(Markdown((REPORTS / "summary.md").read_text()))

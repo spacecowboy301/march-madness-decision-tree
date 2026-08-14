@@ -6,6 +6,11 @@ import numpy as np
 import pandas as pd
 
 from src.analyze_factor_importance import select_model
+from src.analyze_kenpom_discrepancies import (
+    attach_kenpom_ratings,
+    candidate_names,
+    load_kenpom_lookup,
+)
 from src.factor_matchups import FEATURES_PATH, add_percentiles, build_matchup_dataset, matchup_terms
 
 
@@ -84,6 +89,13 @@ class EnhancedPipelineTests(unittest.TestCase):
 
         self.assertEqual(selected, "training_winner")
         self.assertTrue(gate_passed)
+
+    def test_kenpom_aliases_cover_every_tournament_matchup(self):
+        self.assertIn("fairleigh dickinson", candidate_names("F Dickinson"))
+        _x, _y, meta, _families = build_matchup_dataset()
+        attached = attach_kenpom_ratings(meta, load_kenpom_lookup())
+
+        self.assertFalse(attached["kenpom_netrtg_gap"].isna().any())
 
 
 if __name__ == "__main__":

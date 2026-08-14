@@ -59,6 +59,12 @@ is incomplete, so the pipeline excludes it automatically.
 - These are predictive findings, not causal effects. The 2017-2023 period is
   evaluation-only, but no later post-development untouched test set is currently
   available in the downloaded detailed-results source.
+- A retrospective KenPom-derived discrepancy report covers all 401 held-out
+  games. It highlights 14 model-only correct calls, led by Abilene Christian
+  over Texas and North Texas over Purdue, alongside 46 KenPom-only correct
+  calls. This is not a fair leaderboard: the cached KenPom ratings are
+  season-end snapshots and the converted probabilities are not official
+  KenPom game probabilities.
 
 ## Setup
 
@@ -95,6 +101,9 @@ reports/
   feature_importance.csv
   group_importance.csv
   interaction_importance.csv
+  kenpom_discrepancy_matchups.csv
+  kenpom_discrepancy_metrics.json
+  kenpom_discrepancy_summary.md
   power_matchup_metrics.json
   power_matchup_model_comparison.csv
   power_matchup_validation_predictions.csv
@@ -114,6 +123,7 @@ reports/
     feature_importance.png
     group_importance.png
     interaction_importance.png
+    model_vs_kenpom_discrepancies.png
     power_matchup_model_comparison.png
     conditional_factor_importance.png
     conditional_matchup_mechanism_importance.png
@@ -133,6 +143,12 @@ baseline.
 See [`docs/factor_reference.md`](docs/factor_reference.md) for formulas,
 directionality, matchup interpretations, engineered-feature definitions, and
 importance-reading guidance for every factor.
+
+See [`reports/kenpom_discrepancy_summary.md`](reports/kenpom_discrepancy_summary.md)
+for notable model-only correct calls, games where the model assigned more
+probability to the eventual winner, and the model's largest misses. This
+optional report regenerates only when a local KenPom cache is available; the
+primary model workflow remains free and does not require a KenPom login.
 
 ## Optional KenPom Reference
 
