@@ -1,0 +1,70 @@
+{
+  "architecture": "separate regular-season power and Four Factors matchup channels",
+  "power_source": "opponent-adjusted scoring efficiency from regular-season detailed games",
+  "factor_source": "opponent-adjusted, reliability-shrunk Four Factors and miscellaneous rates",
+  "kenpom_rank_used": false,
+  "regular_season_games_used": 107634,
+  "train_seasons": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+  ],
+  "held_out_seasons": [
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023
+  ],
+  "factor_features": 98,
+  "factor_tuning": [
+    {
+      "configuration": "C=0.01",
+      "cv_log_loss": 0.581088420862228
+    }
+  ],
+  "power_tuning": [
+    {
+      "configuration": "C=0.25",
+      "cv_log_loss": 0.5603133760806197
+    }
+  ],
+  "stacker": {
+    "intercept": -0.004134650722228364,
+    "power_coefficient": 0.8371288234347612,
+    "factor_coefficient": 0.09043280404289969
+  },
+  "held_out_metrics": {
+    "two_channel_stack": {
+      "accuracy": 0.6533665835411472,
+      "brier": 0.20919918193204964,
+      "log_loss": 0.6023769401999626,
+      "roc_auc": 0.7295139061644859
+    },
+    "regular_season_power_only": {
+      "accuracy": 0.6583541147132169,
+      "brier": 0.21098894357143685,
+      "log_loss": 0.6064828330211524,
+      "roc_auc": 0.7274740036817753
+    },
+    "factor_only": {
+      "accuracy": 0.655860349127182,
+      "brier": 0.21170400710592555,
+      "log_loss": 0.6150825528833042,
+      "roc_auc": 0.7316781929449228
+    }
+  },
+  "data_limitation": "Current official-format local tournament outcomes end in 2023; 2024-2025 remain unavailable without a current competition-data download."
+}

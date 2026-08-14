@@ -299,12 +299,12 @@ def rolling_validation(
 
 def select_model(comparison: pd.DataFrame) -> tuple[str, bool]:
     eligible = comparison[
-        (comparison["calibrated_accuracy"] >= 0.60) & (comparison["calibrated_roc_auc"] >= 0.65)
+        (comparison["training_cv_accuracy"] >= 0.60) & (comparison["training_cv_roc_auc"] >= 0.65)
     ]
     if eligible.empty:
-        return str(comparison.sort_values("calibrated_log_loss").iloc[0]["model"]), False
+        return str(comparison.sort_values("training_cv_log_loss").iloc[0]["model"]), False
     selected = eligible.sort_values(
-        ["calibrated_accuracy", "calibrated_log_loss"], ascending=[False, True]
+        ["training_cv_log_loss", "training_cv_roc_auc"], ascending=[True, False]
     ).iloc[0]
     return str(selected["model"]), True
 
@@ -402,6 +402,14 @@ def grouped_model_importance(
 
 
 def feature_role(feature: str) -> str:
+    if "opponent_adjusted_matchup_edge" in feature:
+        return "opponent_adjusted_edges"
+    if "recent_form" in feature:
+        return "recent_form"
+    if "reliability" in feature:
+        return "reliability"
+    if "volatility" in feature:
+        return "volatility"
     if "_raw_" in feature:
         return "raw_matchup_edges"
     if "strength_vs_strength" in feature:
@@ -658,7 +666,7 @@ def write_summary(
             "## Interpretation guardrails",
             "",
             "Permutation importance measures predictive reliance, not causality. Correlated engineered features share credit, which is why the grouped chart and cross-model range are more reliable than a single feature's exact rank.",
-            "Tournament seeds, KenPom rank, net rating, luck, and adjusted efficiency are excluded from model features. Seeds are used only after prediction to label upset evaluation segments.",
+            "Tournament seeds, KenPom rank, net rating, luck, and adjusted efficiency are excluded from the factor-only model. The separate two-channel report uses an internally estimated regular-season scoring-efficiency baseline; seeds are used only after prediction to label upset evaluation segments.",
         ]
     )
     RESULTS_MD_PATH.write_text("\n".join(lines) + "\n")
@@ -722,12 +730,12 @@ def main() -> None:
         "feature_count": int(x.shape[1]),
         "raw_matchup_feature_count": int(sum("_raw_" in feature for feature in x.columns)),
         "selected_model": selected_name,
-        "selection_basis": "hyperparameters tuned by pre-2017 expanding-window cross-validation; model family selected by calibrated accuracy on the requested 2017-2025 validation period",
+        "selection_basis": "hyperparameters and model family selected only by pre-2017 expanding-window cross-validation; 2017-2023 is evaluation-only",
         "selected_metrics": {key: float(value) for key, value in selected_metrics.items() if key != "model"},
         "trustworthiness": {
             "importance_gate_passed": importance_gate,
             "selection_accuracy_auc_gate_passed": bool(selection_gate),
-            "validation_used_for_model_family_selection": True,
+            "validation_used_for_model_family_selection": False,
             "final_untouched_test_set_available": False,
             "accuracy_wilson_95": list(interval),
             "stable_features_in_top_15": stable_top_features,

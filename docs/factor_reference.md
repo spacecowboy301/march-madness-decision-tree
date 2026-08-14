@@ -4,14 +4,40 @@ This reference defines every base basketball factor and engineered matchup
 concept used by the factor-importance model. The formulas below describe this
 project's implementation exactly.
 
+## Enhanced Pre-Tournament Estimates
+
+Every factor now has four supporting estimates built exclusively from detailed
+regular-season games:
+
+- **Raw season rate:** the exact aggregate percentage shown in the original
+  factor analysis.
+- **Reliability-shrunk rate:** the raw numerator and denominator combined with
+  a six-game-equivalent season prior. High-opportunity teams remain close to
+  their observed rate; low-opportunity teams move toward the season average.
+- **Opponent-adjusted rate:** season-specific weighted ridge offense and
+  defense effects estimated from every team-game observation, with home court
+  controlled explicitly.
+- **Recent-form delta:** the final ten games, shrunk toward full-season form
+  with a four-game-equivalent prior, minus the full-season estimate.
+
+Game-level standard deviation over those final ten games supplies the
+volatility features. A separate opponent-adjusted points-per-100-possession
+model supplies regular-season power; it is never included in the factor-only
+feature importance model.
+
+The current local data provide 107,634 complete regular-season games from
+2003-2023. The available 2024 detailed file ends at day 100 and is excluded by
+the completeness audit rather than treated as a pre-tournament snapshot.
+
 ## Reading The Features
 
 All percentages are calculated from NCAA regular-season detailed box scores and
 multiplied by 100. Tournament games are stored separately and never contribute
 to a team's feature snapshot.
 
-Raw rates are converted to within-season percentile strengths before matchup
-features are constructed:
+Opponent-adjusted rates are converted to within-season percentile strengths
+before interaction features are constructed. Exact raw matchup edges remain in
+the model as a separate representation:
 
 - `1.00` means one of the strongest values in that season.
 - `0.50` is approximately average.

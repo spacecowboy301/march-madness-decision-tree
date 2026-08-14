@@ -30,6 +30,18 @@
     "2024": 100
   },
   "team_season_rows": 7255,
+  "regular_season_games_used": 107634,
+  "regular_season_team_game_observations": 215268,
+  "opponent_adjustment": {
+    "method": "season-specific weighted ridge offense and defense effects",
+    "alpha": 20.0,
+    "home_court_control": true
+  },
+  "shrinkage": {
+    "full_season_prior_equivalent_games": 6.0,
+    "recent_games": 10,
+    "recent_prior_equivalent_games": 4.0
+  },
   "feature_columns": [
     "ff_off_efg",
     "ff_off_to",

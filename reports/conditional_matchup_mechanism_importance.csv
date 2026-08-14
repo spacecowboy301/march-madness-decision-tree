@@ -1,0 +1,12 @@
+model,factor_group,feature_count,importance_mean,importance_std,positive_fraction
+two_channel_stack,recent_form,12,0.0011967996744466803,0.0005588182142628177,0.975
+two_channel_stack,strength_vs_strength,12,3.080139801988346e-05,0.00026246521677522665,0.5
+two_channel_stack,weakness_vs_strength,11,1.6593691308755543e-05,0.00028374164162983537,0.525
+two_channel_stack,three_point_volume_style,2,-8.374838920868766e-06,3.011933870430888e-05,0.4
+two_channel_stack,reliability,1,-1.6105446139919044e-05,7.418215668794677e-05,0.4
+two_channel_stack,net_matchup_edges,11,-0.00013063842952175942,0.00026456290848184854,0.225
+two_channel_stack,volatility,2,-0.00016042943842345115,6.960931987249495e-05,0.0
+two_channel_stack,opponent_adjusted_edges,11,-0.00019316886576444258,0.0006896993835509006,0.375
+two_channel_stack,raw_matchup_edges,13,-0.00019505306501519382,0.00025954915883144315,0.225
+two_channel_stack,strength_vs_weakness,12,-0.0002205827589434939,0.00028392554040437693,0.275
+two_channel_stack,engineered_composites,11,-0.00029811968756858763,0.0005913187813820559,0.275

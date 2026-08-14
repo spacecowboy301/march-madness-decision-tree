@@ -36,32 +36,32 @@
     2023
   ],
   "one_row_per_game": true,
-  "feature_count": 94,
-  "raw_matchup_feature_count": 24,
+  "feature_count": 98,
+  "raw_matchup_feature_count": 13,
   "selected_model": "regularized_logistic",
-  "selection_basis": "hyperparameters tuned by pre-2017 expanding-window cross-validation; model family selected by calibrated accuracy on the requested 2017-2025 validation period",
+  "selection_basis": "hyperparameters and model family selected only by pre-2017 expanding-window cross-validation; 2017-2023 is evaluation-only",
   "selected_metrics": {
-    "raw_accuracy": 0.6408977556109726,
-    "raw_brier": 0.22102708273787092,
-    "raw_log_loss": 0.6336623280879724,
-    "raw_roc_auc": 0.7055823672819543,
-    "calibrated_accuracy": 0.6408977556109726,
-    "calibrated_brier": 0.21817605330749576,
-    "calibrated_log_loss": 0.6253360941692474,
-    "calibrated_roc_auc": 0.7055823672819543,
-    "training_cv_accuracy": 0.6382978723404256,
-    "training_cv_brier": 0.2179554484599318,
-    "training_cv_log_loss": 0.6196784877355641,
-    "training_cv_roc_auc": 0.7067953446666112
+    "raw_accuracy": 0.6633416458852868,
+    "raw_brier": 0.213060257142454,
+    "raw_log_loss": 0.6217672274232393,
+    "raw_roc_auc": 0.7311060251753818,
+    "calibrated_accuracy": 0.6608478802992519,
+    "calibrated_brier": 0.21220738079089155,
+    "calibrated_log_loss": 0.616018894279835,
+    "calibrated_roc_auc": 0.7311060251753818,
+    "training_cv_accuracy": 0.6595744680851063,
+    "training_cv_brier": 0.20392355833296724,
+    "training_cv_log_loss": 0.585286964190194,
+    "training_cv_roc_auc": 0.7461660057128594
   },
   "trustworthiness": {
     "importance_gate_passed": true,
     "selection_accuracy_auc_gate_passed": true,
-    "validation_used_for_model_family_selection": true,
+    "validation_used_for_model_family_selection": false,
     "final_untouched_test_set_available": false,
     "accuracy_wilson_95": [
-      0.592809358133265,
-      0.6863121550709117
+      0.6131792704259504,
+      0.7054638729664282
     ],
     "stable_features_in_top_15": 12,
     "minimum_stability_definition": "positive permutation importance in at least 60% of held-out seasons"

@@ -1,402 +1,402 @@
-season,team_a,team_b,team_a_id,team_b_id,actual_team_a_win,actual_winner,actual_loser,winner_seed,loser_seed,actual_upset,pred_team_a_win_prob,pred_team_a_win,prediction_correct,predicted_winner
-2017,Wake Forest,Kansas St,1448,1243,0,Kansas St,Wake Forest,11.0,11.0,False,0.631326580485519,1,False,Wake Forest
-2017,New Orleans,Mt St Mary's,1309,1291,0,Mt St Mary's,New Orleans,16.0,16.0,False,0.5033082050915484,1,False,New Orleans
-2017,NC Central,UC Davis,1300,1413,0,UC Davis,NC Central,16.0,16.0,False,0.81257525684384,1,False,NC Central
-2017,USC,Providence,1425,1344,1,USC,Providence,11.0,11.0,False,0.7696345016766757,1,True,USC
-2017,Arizona,North Dakota,1112,1315,1,Arizona,North Dakota,2.0,15.0,False,0.8457710021199657,1,True,Arizona
-2017,Winthrop,Butler,1457,1139,0,Butler,Winthrop,4.0,13.0,False,0.444846749439171,0,True,Butler
-2017,ETSU,Florida,1190,1196,0,Florida,ETSU,4.0,13.0,False,0.2932897950347295,0,True,Florida
-2017,FL Gulf Coast,Florida St,1195,1199,0,Florida St,FL Gulf Coast,3.0,14.0,False,0.33508534766568315,0,True,Florida St
-2017,Gonzaga,S Dakota St,1211,1355,1,Gonzaga,S Dakota St,1.0,16.0,False,0.9263269741510891,1,True,Gonzaga
-2017,Iowa St,Nevada,1235,1305,1,Iowa St,Nevada,5.0,12.0,False,0.5946644288664203,1,True,Iowa St
-2017,MTSU,Minnesota,1292,1278,1,MTSU,Minnesota,12.0,5.0,True,0.6845285973720648,1,True,MTSU
-2017,Northwestern,Vanderbilt,1321,1435,1,Northwestern,Vanderbilt,8.0,9.0,False,0.7102375397575543,1,True,Northwestern
-2017,Notre Dame,Princeton,1323,1343,1,Notre Dame,Princeton,5.0,12.0,False,0.5918883369101523,1,True,Notre Dame
-2017,Purdue,Vermont,1345,1436,1,Purdue,Vermont,4.0,13.0,False,0.43630927967979766,0,False,Vermont
-2017,VCU,St Mary's CA,1433,1388,0,St Mary's CA,VCU,7.0,10.0,False,0.3966880199887395,0,True,St Mary's CA
-2017,Mt St Mary's,Villanova,1291,1437,0,Villanova,Mt St Mary's,1.0,16.0,False,0.08716753683004246,0,True,Villanova
-2017,UNC Wilmington,Virginia,1423,1438,0,Virginia,UNC Wilmington,5.0,12.0,False,0.41234762810779924,0,True,Virginia
-2017,West Virginia,Bucknell,1452,1137,1,West Virginia,Bucknell,4.0,13.0,False,0.7331067394939359,1,True,West Virginia
-2017,Virginia Tech,Wisconsin,1439,1458,0,Wisconsin,Virginia Tech,8.0,9.0,False,0.26411673442743294,0,True,Wisconsin
-2017,Maryland,Xavier,1268,1462,0,Xavier,Maryland,11.0,6.0,True,0.5197919504333361,1,False,Maryland
-2017,Seton Hall,Arkansas,1371,1116,0,Arkansas,Seton Hall,8.0,9.0,False,0.3269956174067548,0,True,Arkansas
-2017,Baylor,New Mexico St,1124,1308,1,Baylor,New Mexico St,3.0,14.0,False,0.4366739572814785,0,False,New Mexico St
-2017,Kansas St,Cincinnati,1243,1153,0,Cincinnati,Kansas St,6.0,11.0,False,0.21717045473843247,0,True,Cincinnati
-2017,Duke,Troy,1181,1407,1,Duke,Troy,2.0,15.0,False,0.6893931599118682,1,True,Duke
-2017,Kansas,UC Davis,1242,1413,1,Kansas,UC Davis,1.0,16.0,False,0.8471088134212639,1,True,Kansas
-2017,N Kentucky,Kentucky,1297,1246,0,Kentucky,N Kentucky,2.0,15.0,False,0.20440667123475714,0,True,Kentucky
-2017,Jacksonville St,Louisville,1240,1257,0,Louisville,Jacksonville St,2.0,15.0,False,0.15362690199684065,0,True,Louisville
-2017,Oklahoma St,Michigan,1329,1276,0,Michigan,Oklahoma St,7.0,10.0,False,0.4388379476503573,0,True,Michigan
-2017,Michigan St,Miami FL,1277,1274,1,Michigan St,Miami FL,9.0,8.0,True,0.4133878267649559,0,False,Miami FL
-2017,TX Southern,North Carolina,1411,1314,0,North Carolina,TX Southern,1.0,16.0,False,0.20596664354485553,0,True,North Carolina
-2017,Iona,Oregon,1233,1332,0,Oregon,Iona,3.0,14.0,False,0.1856914620708203,0,True,Oregon
-2017,Rhode Island,Creighton,1348,1166,1,Rhode Island,Creighton,11.0,6.0,True,0.6829144051632962,1,True,Rhode Island
-2017,South Carolina,Marquette,1376,1266,1,South Carolina,Marquette,7.0,10.0,False,0.40876885336900637,0,False,Marquette
-2017,Kent,UCLA,1245,1417,0,UCLA,Kent,3.0,14.0,False,0.28986604913480035,0,True,UCLA
-2017,SMU,USC,1374,1425,0,USC,SMU,11.0,6.0,True,0.76074272720154,1,False,SMU
-2017,Wichita St,Dayton,1455,1173,1,Wichita St,Dayton,10.0,7.0,True,0.8626730230465712,1,True,Wichita St
-2017,Arizona,St Mary's CA,1112,1388,1,Arizona,St Mary's CA,2.0,7.0,False,0.49790326467469087,0,False,St Mary's CA
-2017,MTSU,Butler,1292,1139,0,Butler,MTSU,4.0,12.0,False,0.6719961166076672,1,False,MTSU
-2017,Virginia,Florida,1438,1196,0,Florida,Virginia,4.0,5.0,False,0.5556844333847003,1,False,Virginia
-2017,Gonzaga,Northwestern,1211,1321,1,Gonzaga,Northwestern,1.0,8.0,False,0.7841623675111029,1,True,Gonzaga
-2017,Purdue,Iowa St,1345,1235,1,Purdue,Iowa St,4.0,5.0,False,0.6265002087897182,1,True,Purdue
-2017,Notre Dame,West Virginia,1323,1452,0,West Virginia,Notre Dame,4.0,5.0,False,0.48543419316272096,0,True,West Virginia
-2017,Villanova,Wisconsin,1437,1458,0,Wisconsin,Villanova,8.0,1.0,True,0.5845620956438059,1,False,Villanova
-2017,Florida St,Xavier,1199,1462,0,Xavier,Florida St,11.0,3.0,True,0.743157256920449,1,False,Florida St
-2017,Baylor,USC,1124,1425,1,Baylor,USC,3.0,11.0,False,0.551060654563799,1,True,Baylor
-2017,Kansas,Michigan St,1242,1277,1,Kansas,Michigan St,1.0,9.0,False,0.8083888513602177,1,True,Kansas
-2017,Kentucky,Wichita St,1246,1455,1,Kentucky,Wichita St,2.0,10.0,False,0.3670068807715828,0,False,Wichita St
-2017,Louisville,Michigan,1257,1276,0,Michigan,Louisville,7.0,2.0,True,0.6974291122310159,1,False,Louisville
-2017,North Carolina,Arkansas,1314,1116,1,North Carolina,Arkansas,1.0,8.0,False,0.6844634440531157,1,True,North Carolina
-2017,Rhode Island,Oregon,1348,1332,0,Oregon,Rhode Island,3.0,11.0,False,0.297957270905233,0,True,Oregon
-2017,Duke,South Carolina,1181,1376,0,South Carolina,Duke,7.0,2.0,True,0.6719387674476905,1,False,Duke
-2017,UCLA,Cincinnati,1417,1153,1,UCLA,Cincinnati,3.0,6.0,False,0.4593698316507986,0,False,Cincinnati
-2017,West Virginia,Gonzaga,1452,1211,0,Gonzaga,West Virginia,1.0,4.0,False,0.3502097850254352,0,True,Gonzaga
-2017,Kansas,Purdue,1242,1345,1,Kansas,Purdue,1.0,4.0,False,0.5691403453360758,1,True,Kansas
-2017,Oregon,Michigan,1332,1276,1,Oregon,Michigan,3.0,7.0,False,0.6943429027161208,1,True,Oregon
-2017,Xavier,Arizona,1462,1112,1,Xavier,Arizona,11.0,2.0,True,0.28338210255919827,0,False,Arizona
-2017,Florida,Wisconsin,1196,1458,1,Florida,Wisconsin,4.0,8.0,False,0.45615911484972715,0,False,Wisconsin
-2017,Kentucky,UCLA,1246,1417,1,Kentucky,UCLA,2.0,3.0,False,0.5566383513753773,1,True,Kentucky
-2017,North Carolina,Butler,1314,1139,1,North Carolina,Butler,1.0,4.0,False,0.7000886417217983,1,True,North Carolina
-2017,Baylor,South Carolina,1124,1376,0,South Carolina,Baylor,7.0,3.0,True,0.48670699672498186,0,True,South Carolina
-2017,Gonzaga,Xavier,1211,1462,1,Gonzaga,Xavier,1.0,11.0,False,0.8668994764689649,1,True,Gonzaga
-2017,Oregon,Kansas,1332,1242,1,Oregon,Kansas,3.0,1.0,True,0.6775280073384632,1,True,Oregon
-2017,North Carolina,Kentucky,1314,1246,1,North Carolina,Kentucky,1.0,2.0,False,0.5563839289729191,1,True,North Carolina
-2017,Florida,South Carolina,1196,1376,0,South Carolina,Florida,7.0,4.0,True,0.7167372397673288,1,False,Florida
-2017,Gonzaga,South Carolina,1211,1376,1,Gonzaga,South Carolina,1.0,7.0,False,0.8450205408216016,1,True,Gonzaga
-2017,Oregon,North Carolina,1332,1314,0,North Carolina,Oregon,1.0,3.0,False,0.4911797593721887,0,True,North Carolina
-2017,North Carolina,Gonzaga,1314,1211,1,North Carolina,Gonzaga,1.0,1.0,False,0.4248314700857353,0,False,Gonzaga
-2018,Radford,LIU Brooklyn,1347,1254,1,Radford,LIU Brooklyn,16.0,16.0,False,0.6860296326324782,1,True,Radford
-2018,UCLA,St Bonaventure,1417,1382,0,St Bonaventure,UCLA,11.0,11.0,False,0.45297247875648294,0,True,St Bonaventure
-2018,Syracuse,Arizona St,1393,1113,1,Syracuse,Arizona St,11.0,11.0,False,0.38621972352618733,0,False,Arizona St
-2018,NC Central,TX Southern,1300,1411,0,TX Southern,NC Central,16.0,16.0,False,0.6128343339228565,1,False,NC Central
-2018,Virginia Tech,Alabama,1439,1104,0,Alabama,Virginia Tech,9.0,8.0,True,0.7008944813090457,1,False,Virginia Tech
-2018,Buffalo,Arizona,1138,1112,1,Buffalo,Arizona,13.0,4.0,True,0.4858563562829845,0,False,Arizona
-2018,Iona,Duke,1233,1181,0,Duke,Iona,2.0,15.0,False,0.23544495076792102,0,True,Duke
-2018,Florida,St Bonaventure,1196,1382,1,Florida,St Bonaventure,6.0,11.0,False,0.4684476410045903,0,False,St Bonaventure
-2018,Gonzaga,UNC Greensboro,1211,1422,1,Gonzaga,UNC Greensboro,4.0,13.0,False,0.7401481118364586,1,True,Gonzaga
-2018,San Diego St,Houston,1361,1222,0,Houston,San Diego St,6.0,11.0,False,0.5453864234356443,1,False,San Diego St
-2018,Kansas,Penn,1242,1335,1,Kansas,Penn,1.0,16.0,False,0.7348424057534289,1,True,Kansas
-2018,Davidson,Kentucky,1172,1246,0,Kentucky,Davidson,5.0,12.0,False,0.5821422186184754,1,False,Davidson
-2018,Loyola-Chicago,Miami FL,1260,1274,1,Loyola-Chicago,Miami FL,11.0,6.0,True,0.5075430094462846,1,True,Loyola-Chicago
-2018,Michigan,Montana,1276,1285,1,Michigan,Montana,3.0,14.0,False,0.5911780195600265,1,True,Michigan
-2018,Ohio St,S Dakota St,1326,1355,1,Ohio St,S Dakota St,5.0,12.0,False,0.7595447058159974,1,True,Ohio St
-2018,Oklahoma,Rhode Island,1328,1348,0,Rhode Island,Oklahoma,7.0,10.0,False,0.44484560206733914,0,True,Rhode Island
-2018,Seton Hall,NC State,1371,1301,1,Seton Hall,NC State,8.0,9.0,False,0.41494462222176526,0,False,NC State
-2018,Wright St,Tennessee,1460,1397,0,Tennessee,Wright St,3.0,14.0,False,0.3812604028708142,0,True,Tennessee
-2018,Texas Tech,SF Austin,1403,1372,1,Texas Tech,SF Austin,3.0,14.0,False,0.6833220960601988,1,True,Texas Tech
-2018,Radford,Villanova,1347,1437,0,Villanova,Radford,1.0,16.0,False,0.18880204117462376,0,True,Villanova
-2018,Auburn,Col Charleston,1120,1158,1,Auburn,Col Charleston,4.0,13.0,False,0.6183511340654162,1,True,Auburn
-2018,Butler,Arkansas,1139,1116,1,Butler,Arkansas,10.0,7.0,True,0.6015611363363683,1,True,Butler
-2018,Georgia St,Cincinnati,1209,1153,0,Cincinnati,Georgia St,2.0,15.0,False,0.3088585102558832,0,True,Cincinnati
-2018,New Mexico St,Clemson,1308,1155,0,Clemson,New Mexico St,5.0,12.0,False,0.5988770325678627,1,False,New Mexico St
-2018,Florida St,Missouri,1199,1281,1,Florida St,Missouri,9.0,8.0,True,0.6725976718682304,1,True,Florida St
-2018,Creighton,Kansas St,1166,1243,0,Kansas St,Creighton,9.0,8.0,True,0.626526957863863,1,False,Creighton
-2018,Wichita St,Marshall,1455,1267,0,Marshall,Wichita St,13.0,4.0,True,0.8280455355646523,1,False,Wichita St
-2018,Michigan St,Bucknell,1277,1137,1,Michigan St,Bucknell,3.0,14.0,False,0.7131158064599814,1,True,Michigan St
-2018,Nevada,Texas,1305,1400,1,Nevada,Texas,7.0,10.0,False,0.6417254296255166,1,True,Nevada
-2018,Lipscomb,North Carolina,1252,1314,0,North Carolina,Lipscomb,2.0,15.0,False,0.2162252018539767,0,True,North Carolina
-2018,Purdue,CS Fullerton,1345,1168,1,Purdue,CS Fullerton,2.0,15.0,False,0.8657111945140591,1,True,Purdue
-2018,Syracuse,TCU,1393,1395,1,Syracuse,TCU,11.0,6.0,True,0.46281048484008214,0,False,TCU
-2018,Providence,Texas A&M,1344,1401,0,Texas A&M,Providence,7.0,10.0,False,0.3355011137353723,0,True,Texas A&M
-2018,Virginia,UMBC,1438,1420,0,UMBC,Virginia,16.0,1.0,True,0.9247751501098743,1,False,Virginia
-2018,West Virginia,Murray St,1452,1293,1,West Virginia,Murray St,5.0,12.0,False,0.4925785482904716,0,False,Murray St
-2018,TX Southern,Xavier,1411,1462,0,Xavier,TX Southern,1.0,16.0,False,0.20898745227979162,0,True,Xavier
-2018,Rhode Island,Duke,1348,1181,0,Duke,Rhode Island,2.0,7.0,False,0.3574856005950258,0,True,Duke
-2018,Gonzaga,Ohio St,1211,1326,1,Gonzaga,Ohio St,4.0,5.0,False,0.7036289727633704,1,True,Gonzaga
-2018,Kansas,Seton Hall,1242,1371,1,Kansas,Seton Hall,1.0,8.0,False,0.674740410405131,1,True,Kansas
-2018,Kentucky,Buffalo,1246,1138,1,Kentucky,Buffalo,5.0,13.0,False,0.43648453268287973,0,False,Buffalo
-2018,Loyola-Chicago,Tennessee,1260,1397,1,Loyola-Chicago,Tennessee,11.0,3.0,True,0.5566059096775844,1,True,Loyola-Chicago
-2018,Houston,Michigan,1222,1276,0,Michigan,Houston,3.0,6.0,False,0.6274404091114113,1,False,Houston
-2018,Texas Tech,Florida,1403,1196,1,Texas Tech,Florida,3.0,6.0,False,0.5929813355926482,1,True,Texas Tech
-2018,Alabama,Villanova,1104,1437,0,Villanova,Alabama,1.0,9.0,False,0.16016443296069457,0,True,Villanova
-2018,Auburn,Clemson,1120,1155,0,Clemson,Auburn,5.0,4.0,True,0.6059651730501212,1,False,Auburn
-2018,Xavier,Florida St,1462,1199,0,Florida St,Xavier,9.0,1.0,True,0.531684477832588,1,False,Xavier
-2018,UMBC,Kansas St,1420,1243,0,Kansas St,UMBC,9.0,16.0,False,0.41823318028309997,0,True,Kansas St
-2018,Cincinnati,Nevada,1153,1305,0,Nevada,Cincinnati,7.0,2.0,True,0.6536448671342404,1,False,Cincinnati
-2018,Purdue,Butler,1345,1139,1,Purdue,Butler,2.0,10.0,False,0.7271849925182293,1,True,Purdue
-2018,Michigan St,Syracuse,1277,1393,0,Syracuse,Michigan St,11.0,3.0,True,0.6357117074911096,1,False,Michigan St
-2018,Texas A&M,North Carolina,1401,1314,1,Texas A&M,North Carolina,7.0,2.0,True,0.3703645009763978,0,False,North Carolina
-2018,West Virginia,Marshall,1452,1267,1,West Virginia,Marshall,5.0,13.0,False,0.7399141916571356,1,True,West Virginia
-2018,Gonzaga,Florida St,1211,1199,0,Florida St,Gonzaga,9.0,4.0,True,0.7471667209919854,1,False,Gonzaga
-2018,Kansas St,Kentucky,1243,1246,1,Kansas St,Kentucky,9.0,5.0,True,0.4767624669908009,0,False,Kentucky
-2018,Nevada,Loyola-Chicago,1305,1260,0,Loyola-Chicago,Nevada,11.0,7.0,True,0.6735845152074946,1,False,Nevada
-2018,Michigan,Texas A&M,1276,1401,1,Michigan,Texas A&M,3.0,7.0,False,0.7122120163749894,1,True,Michigan
-2018,Duke,Syracuse,1181,1393,1,Duke,Syracuse,2.0,11.0,False,0.6970419177880626,1,True,Duke
-2018,Clemson,Kansas,1155,1242,0,Kansas,Clemson,1.0,5.0,False,0.4359615188235222,0,True,Kansas
-2018,Purdue,Texas Tech,1345,1403,0,Texas Tech,Purdue,3.0,2.0,True,0.6272028775886438,1,False,Purdue
-2018,Villanova,West Virginia,1437,1452,1,Villanova,West Virginia,1.0,5.0,False,0.6372583992622937,1,True,Villanova
-2018,Loyola-Chicago,Kansas St,1260,1243,1,Loyola-Chicago,Kansas St,11.0,9.0,True,0.5898473641998484,1,True,Loyola-Chicago
-2018,Florida St,Michigan,1199,1276,0,Michigan,Florida St,3.0,9.0,False,0.482199090822094,0,True,Michigan
-2018,Kansas,Duke,1242,1181,1,Kansas,Duke,1.0,2.0,False,0.45005023570393987,0,False,Duke
-2018,Villanova,Texas Tech,1437,1403,1,Villanova,Texas Tech,1.0,3.0,False,0.6592558940750212,1,True,Villanova
-2018,Loyola-Chicago,Michigan,1260,1276,0,Michigan,Loyola-Chicago,3.0,11.0,False,0.4919269345010304,0,True,Michigan
-2018,Villanova,Kansas,1437,1242,1,Villanova,Kansas,1.0,1.0,False,0.6715779477277378,1,True,Villanova
-2018,Michigan,Villanova,1276,1437,0,Villanova,Michigan,1.0,3.0,False,0.4200976142925101,0,True,Villanova
-2019,Temple,Belmont,1396,1125,0,Belmont,Temple,11.0,11.0,False,0.34069748523874716,0,True,Belmont
-2019,F Dickinson,Prairie View,1192,1341,1,F Dickinson,Prairie View,16.0,16.0,False,0.5262251298523858,1,True,F Dickinson
-2019,St John's,Arizona St,1385,1113,0,Arizona St,St John's,11.0,11.0,False,0.5603370543628233,1,False,St John's
-2019,N Dakota St,NC Central,1295,1300,1,N Dakota St,NC Central,16.0,16.0,False,0.5172700506214825,1,True,N Dakota St
-2019,Auburn,New Mexico St,1120,1308,1,Auburn,New Mexico St,5.0,12.0,False,0.5574467853619216,1,True,Auburn
-2019,Syracuse,Baylor,1393,1124,0,Baylor,Syracuse,9.0,8.0,True,0.5343937466806771,1,False,Syracuse
-2019,Florida,Nevada,1196,1305,1,Florida,Nevada,10.0,7.0,True,0.33814985734095154,0,False,Nevada
-2019,Florida St,Vermont,1199,1436,1,Florida St,Vermont,4.0,13.0,False,0.3477887276776917,0,False,Vermont
-2019,Gonzaga,F Dickinson,1211,1192,1,Gonzaga,F Dickinson,1.0,16.0,False,0.8951336211553537,1,True,Gonzaga
-2019,Northeastern,Kansas,1318,1242,0,Kansas,Northeastern,4.0,13.0,False,0.4474852016010187,0,True,Kansas
-2019,Abilene Chr,Kentucky,1101,1246,0,Kentucky,Abilene Chr,2.0,15.0,False,0.3376637696039845,0,True,Kentucky
-2019,LSU,Yale,1261,1463,1,LSU,Yale,3.0,14.0,False,0.5647282501179784,1,True,LSU
-2019,Belmont,Maryland,1125,1268,0,Maryland,Belmont,6.0,11.0,False,0.6014367503098474,1,False,Belmont
-2019,Montana,Michigan,1285,1276,0,Michigan,Montana,2.0,15.0,False,0.4435622295761346,0,True,Michigan
-2019,Michigan St,Bradley,1277,1133,1,Michigan St,Bradley,2.0,15.0,False,0.8566603525348709,1,True,Michigan St
-2019,Minnesota,Louisville,1278,1257,1,Minnesota,Louisville,10.0,7.0,True,0.37890459079669625,0,False,Louisville
-2019,Murray St,Marquette,1293,1266,1,Murray St,Marquette,12.0,5.0,True,0.7768201052160626,1,True,Murray St
-2019,Purdue,Old Dominion,1345,1330,1,Purdue,Old Dominion,3.0,14.0,False,0.8147608763141523,1,True,Purdue
-2019,Villanova,St Mary's CA,1437,1388,1,Villanova,St Mary's CA,6.0,11.0,False,0.4183067826297109,0,False,St Mary's CA
-2019,Wofford,Seton Hall,1459,1371,1,Wofford,Seton Hall,7.0,10.0,False,0.7721293229509023,1,True,Wofford
-2019,Arizona St,Buffalo,1113,1138,0,Buffalo,Arizona St,6.0,11.0,False,0.22355740920435313,0,True,Buffalo
-2019,N Dakota St,Duke,1295,1181,0,Duke,N Dakota St,1.0,16.0,False,0.12803039586832013,0,True,Duke
-2019,Georgia St,Houston,1209,1222,0,Houston,Georgia St,3.0,14.0,False,0.2989936896217045,0,True,Houston
-2019,Iowa,Cincinnati,1234,1153,1,Iowa,Cincinnati,10.0,7.0,True,0.416688146360351,0,False,Cincinnati
-2019,Liberty,Mississippi St,1251,1280,1,Liberty,Mississippi St,12.0,5.0,True,0.651382731928668,1,True,Liberty
-2019,North Carolina,Iona,1314,1233,1,North Carolina,Iona,1.0,16.0,False,0.8736746988394237,1,True,North Carolina
-2019,Ohio St,Iowa St,1326,1235,1,Ohio St,Iowa St,11.0,6.0,True,0.26928120030791075,0,False,Iowa St
-2019,Oklahoma,Mississippi,1328,1279,1,Oklahoma,Mississippi,9.0,8.0,True,0.4223264956901598,0,False,Mississippi
-2019,Wisconsin,Oregon,1458,1332,0,Oregon,Wisconsin,12.0,5.0,True,0.5293810454188171,1,False,Wisconsin
-2019,Tennessee,Colgate,1397,1159,1,Tennessee,Colgate,2.0,15.0,False,0.6927348235734107,1,True,Tennessee
-2019,N Kentucky,Texas Tech,1297,1403,0,Texas Tech,N Kentucky,3.0,14.0,False,0.411063692975077,0,True,Texas Tech
-2019,UC Irvine,Kansas St,1414,1243,1,UC Irvine,Kansas St,13.0,4.0,True,0.6688452310448327,1,True,UC Irvine
-2019,UCF,VCU,1416,1433,1,UCF,VCU,9.0,8.0,True,0.5677856107519085,1,True,UCF
-2019,Virginia,Gardner Webb,1438,1205,1,Virginia,Gardner Webb,1.0,16.0,False,0.9098289677422214,1,True,Virginia
-2019,Virginia Tech,St Louis,1439,1387,1,Virginia Tech,St Louis,4.0,13.0,False,0.8227252610157909,1,True,Virginia Tech
-2019,Utah St,Washington,1429,1449,0,Washington,Utah St,9.0,8.0,True,0.7092524562979953,1,False,Utah St
-2019,Kansas,Auburn,1242,1120,0,Auburn,Kansas,5.0,4.0,True,0.37272307424798823,0,True,Auburn
-2019,Florida St,Murray St,1199,1293,1,Florida St,Murray St,4.0,12.0,False,0.2616993963896844,0,False,Murray St
-2019,Gonzaga,Baylor,1211,1124,1,Gonzaga,Baylor,1.0,9.0,False,0.8541238607193655,1,True,Gonzaga
-2019,Kentucky,Wofford,1246,1459,1,Kentucky,Wofford,2.0,7.0,False,0.5289141645907549,1,True,Kentucky
-2019,Maryland,LSU,1268,1261,0,LSU,Maryland,3.0,6.0,False,0.42083604774170336,0,True,LSU
-2019,Michigan,Florida,1276,1196,1,Michigan,Florida,2.0,10.0,False,0.6813165465494188,1,True,Michigan
-2019,Minnesota,Michigan St,1278,1277,0,Michigan St,Minnesota,2.0,10.0,False,0.23525271368129572,0,True,Michigan St
-2019,Villanova,Purdue,1437,1345,0,Purdue,Villanova,3.0,6.0,False,0.39159998733677215,0,True,Purdue
-2019,UCF,Duke,1416,1181,0,Duke,UCF,1.0,9.0,False,0.25743946747529955,0,True,Duke
-2019,Houston,Ohio St,1222,1326,1,Houston,Ohio St,3.0,11.0,False,0.8229685843039247,1,True,Houston
-2019,North Carolina,Washington,1314,1449,1,North Carolina,Washington,1.0,9.0,False,0.7871190046453136,1,True,North Carolina
-2019,Oregon,UC Irvine,1332,1414,1,Oregon,UC Irvine,12.0,13.0,False,0.535812808315708,1,True,Oregon
-2019,Iowa,Tennessee,1234,1397,0,Tennessee,Iowa,2.0,10.0,False,0.31993548602459276,0,True,Tennessee
-2019,Texas Tech,Buffalo,1403,1138,1,Texas Tech,Buffalo,3.0,6.0,False,0.45376780055916566,0,False,Buffalo
-2019,Virginia,Oklahoma,1438,1328,1,Virginia,Oklahoma,1.0,9.0,False,0.8799323448893291,1,True,Virginia
-2019,Liberty,Virginia Tech,1251,1439,0,Virginia Tech,Liberty,4.0,12.0,False,0.4854874577729488,0,True,Virginia Tech
-2019,Florida St,Gonzaga,1199,1211,0,Gonzaga,Florida St,1.0,4.0,False,0.18021779270481203,0,True,Gonzaga
-2019,Purdue,Tennessee,1345,1397,1,Purdue,Tennessee,3.0,2.0,True,0.5940057731560761,1,True,Purdue
-2019,Michigan,Texas Tech,1276,1403,0,Texas Tech,Michigan,3.0,2.0,True,0.5559796389845624,1,False,Michigan
-2019,Virginia,Oregon,1438,1332,1,Virginia,Oregon,1.0,12.0,False,0.7293654469826804,1,True,Virginia
-2019,Auburn,North Carolina,1120,1314,1,Auburn,North Carolina,5.0,1.0,True,0.4009114640444724,0,False,North Carolina
-2019,Virginia Tech,Duke,1439,1181,0,Duke,Virginia Tech,1.0,4.0,False,0.4395066955230233,0,True,Duke
-2019,Houston,Kentucky,1222,1246,0,Kentucky,Houston,2.0,3.0,False,0.4768150701000462,0,True,Kentucky
-2019,Michigan St,LSU,1277,1261,1,Michigan St,LSU,2.0,3.0,False,0.5484757151817332,1,True,Michigan St
-2019,Gonzaga,Texas Tech,1211,1403,0,Texas Tech,Gonzaga,3.0,1.0,True,0.7737383109808175,1,False,Gonzaga
-2019,Virginia,Purdue,1438,1345,1,Virginia,Purdue,1.0,3.0,False,0.6204487398393221,1,True,Virginia
-2019,Auburn,Kentucky,1120,1246,1,Auburn,Kentucky,5.0,2.0,True,0.5202041333305417,1,True,Auburn
-2019,Michigan St,Duke,1277,1181,1,Michigan St,Duke,2.0,1.0,True,0.35204671796518533,0,False,Duke
-2019,Michigan St,Texas Tech,1277,1403,0,Texas Tech,Michigan St,3.0,2.0,True,0.4929976251570593,0,True,Texas Tech
-2019,Virginia,Auburn,1438,1120,1,Virginia,Auburn,1.0,5.0,False,0.7166790209801246,1,True,Virginia
-2019,Texas Tech,Virginia,1403,1438,0,Virginia,Texas Tech,1.0,3.0,False,0.3597333421600313,0,True,Virginia
-2021,Drake,Wichita St,1179,1455,1,Drake,Wichita St,11.0,11.0,False,0.8426565291493333,1,True,Drake
-2021,Norfolk St,Appalachian St,1313,1111,1,Norfolk St,Appalachian St,16.0,16.0,False,0.5887227515212016,1,True,Norfolk St
-2021,TX Southern,Mt St Mary's,1411,1291,1,TX Southern,Mt St Mary's,16.0,16.0,False,0.5683613580372487,1,True,TX Southern
-2021,Michigan St,UCLA,1277,1417,0,UCLA,Michigan St,11.0,11.0,False,0.3854328000850103,0,True,UCLA
-2021,Colgate,Arkansas,1159,1116,0,Arkansas,Colgate,3.0,14.0,False,0.5965370072725564,1,False,Colgate
-2021,Hartford,Baylor,1216,1124,0,Baylor,Hartford,1.0,16.0,False,0.2121485868796062,0,True,Baylor
-2021,Florida,Virginia Tech,1196,1439,1,Florida,Virginia Tech,7.0,10.0,False,0.5164328494763385,1,True,Florida
-2021,Houston,Cleveland St,1222,1156,1,Houston,Cleveland St,2.0,15.0,False,0.9028119682660087,1,True,Houston
-2021,Illinois,Drexel,1228,1180,1,Illinois,Drexel,1.0,16.0,False,0.6671387695466064,1,True,Illinois
-2021,Loyola-Chicago,Georgia Tech,1260,1210,1,Loyola-Chicago,Georgia Tech,8.0,9.0,False,0.7581815248370871,1,True,Loyola-Chicago
-2021,Purdue,North Texas,1345,1317,0,North Texas,Purdue,13.0,4.0,True,0.4914105213300971,0,True,North Texas
-2021,Oklahoma St,Liberty,1329,1251,1,Oklahoma St,Liberty,4.0,13.0,False,0.41596272690866953,0,False,Liberty
-2021,Ohio St,Oral Roberts,1326,1331,0,Oral Roberts,Ohio St,15.0,2.0,True,0.7290978406260622,1,False,Ohio St
-2021,Tennessee,Oregon St,1397,1333,0,Oregon St,Tennessee,12.0,5.0,True,0.820826561300717,1,False,Tennessee
-2021,Rutgers,Clemson,1353,1155,1,Rutgers,Clemson,10.0,7.0,True,0.5732475783108752,1,True,Rutgers
-2021,San Diego St,Syracuse,1361,1393,0,Syracuse,San Diego St,11.0,6.0,True,0.5974756252508429,1,False,San Diego St
-2021,Utah St,Texas Tech,1429,1403,0,Texas Tech,Utah St,6.0,11.0,False,0.5200137987392192,1,False,Utah St
-2021,Winthrop,Villanova,1457,1437,0,Villanova,Winthrop,5.0,12.0,False,0.6059251171461615,1,False,Winthrop
-2021,Morehead St,West Virginia,1287,1452,0,West Virginia,Morehead St,3.0,14.0,False,0.4989535660548971,0,True,West Virginia
-2021,Wisconsin,North Carolina,1458,1314,1,Wisconsin,North Carolina,9.0,8.0,True,0.5871436749108564,1,True,Wisconsin
-2021,Texas,Abilene Chr,1400,1101,0,Abilene Chr,Texas,14.0,3.0,True,0.3212904135640147,0,True,Abilene Chr
-2021,Iona,Alabama,1233,1104,0,Alabama,Iona,2.0,15.0,False,0.3216286844180145,0,True,Alabama
-2021,Georgetown,Colorado,1207,1160,0,Colorado,Georgetown,5.0,12.0,False,0.19595356205941153,0,True,Colorado
-2021,Creighton,UC Santa Barbara,1166,1364,1,Creighton,UC Santa Barbara,5.0,12.0,False,0.546803297708771,1,True,Creighton
-2021,UNC Greensboro,Florida St,1422,1199,0,Florida St,UNC Greensboro,4.0,13.0,False,0.5038569982621157,1,False,UNC Greensboro
-2021,Gonzaga,Norfolk St,1211,1313,1,Gonzaga,Norfolk St,1.0,16.0,False,0.8922140399721074,1,True,Gonzaga
-2021,Grand Canyon,Iowa,1213,1234,0,Iowa,Grand Canyon,2.0,15.0,False,0.45495263610580094,0,True,Iowa
-2021,Kansas,E Washington,1242,1186,1,Kansas,E Washington,3.0,14.0,False,0.6248876840514016,1,True,Kansas
-2021,St Bonaventure,LSU,1382,1261,0,LSU,St Bonaventure,8.0,9.0,False,0.5728667131072243,1,False,St Bonaventure
-2021,Connecticut,Maryland,1163,1268,0,Maryland,Connecticut,10.0,7.0,True,0.7533796144625071,1,False,Connecticut
-2021,TX Southern,Michigan,1411,1276,0,Michigan,TX Southern,1.0,16.0,False,0.31556587262480634,0,True,Michigan
-2021,Ohio,Virginia,1325,1438,1,Ohio,Virginia,13.0,4.0,True,0.4696625314830673,0,False,Virginia
-2021,Missouri,Oklahoma,1281,1328,0,Oklahoma,Missouri,8.0,9.0,False,0.33627510176872344,0,True,Oklahoma
-2021,BYU,UCLA,1140,1417,0,UCLA,BYU,11.0,6.0,True,0.6993119667153164,1,False,BYU
-2021,Drake,USC,1179,1425,0,USC,Drake,6.0,11.0,False,0.6466804214943488,1,False,Drake
-2021,Arkansas,Texas Tech,1116,1403,1,Arkansas,Texas Tech,3.0,6.0,False,0.5911601655463677,1,True,Arkansas
-2021,Baylor,Wisconsin,1124,1458,1,Baylor,Wisconsin,1.0,9.0,False,0.7628390953460368,1,True,Baylor
-2021,Houston,Rutgers,1222,1353,1,Houston,Rutgers,2.0,10.0,False,0.8559631096541864,1,True,Houston
-2021,Loyola-Chicago,Illinois,1260,1228,1,Loyola-Chicago,Illinois,8.0,1.0,True,0.697950361512629,1,True,Loyola-Chicago
-2021,Oral Roberts,Florida,1331,1196,1,Oral Roberts,Florida,15.0,7.0,True,0.3831114325394675,0,False,Florida
-2021,Oregon St,Oklahoma St,1333,1329,1,Oregon St,Oklahoma St,12.0,4.0,True,0.3287515931829482,0,False,Oklahoma St
-2021,West Virginia,Syracuse,1452,1393,0,Syracuse,West Virginia,11.0,3.0,True,0.2357436982668627,0,True,Syracuse
-2021,North Texas,Villanova,1317,1437,0,Villanova,North Texas,5.0,13.0,False,0.5835764313319103,1,False,North Texas
-2021,Maryland,Alabama,1268,1104,0,Alabama,Maryland,2.0,10.0,False,0.3576583555012595,0,True,Alabama
-2021,Creighton,Ohio,1166,1325,1,Creighton,Ohio,5.0,13.0,False,0.6895649201817818,1,True,Creighton
-2021,Colorado,Florida St,1160,1199,0,Florida St,Colorado,4.0,5.0,False,0.5953630931775943,1,False,Colorado
-2021,Gonzaga,Oklahoma,1211,1328,1,Gonzaga,Oklahoma,1.0,8.0,False,0.7734500634726375,1,True,Gonzaga
-2021,LSU,Michigan,1261,1276,0,Michigan,LSU,1.0,8.0,False,0.43412030624625975,0,True,Michigan
-2021,Oregon,Iowa,1332,1234,1,Oregon,Iowa,7.0,2.0,True,0.521996876693658,1,True,Oregon
-2021,UCLA,Abilene Chr,1417,1101,1,UCLA,Abilene Chr,11.0,14.0,False,0.4527047970616624,0,False,Abilene Chr
-2021,Kansas,USC,1242,1425,0,USC,Kansas,6.0,3.0,True,0.5320855591696142,1,False,Kansas
-2021,Oral Roberts,Arkansas,1331,1116,0,Arkansas,Oral Roberts,3.0,15.0,False,0.25047345803726057,0,True,Arkansas
-2021,Villanova,Baylor,1437,1124,0,Baylor,Villanova,1.0,5.0,False,0.44553691948068713,0,True,Baylor
-2021,Syracuse,Houston,1393,1222,0,Houston,Syracuse,2.0,11.0,False,0.29361673042118663,0,True,Houston
-2021,Loyola-Chicago,Oregon St,1260,1333,0,Oregon St,Loyola-Chicago,12.0,8.0,True,0.8561740553370945,1,False,Loyola-Chicago
-2021,Gonzaga,Creighton,1211,1166,1,Gonzaga,Creighton,1.0,5.0,False,0.8129933028209892,1,True,Gonzaga
-2021,Michigan,Florida St,1276,1199,1,Michigan,Florida St,1.0,4.0,False,0.5733100353268584,1,True,Michigan
-2021,UCLA,Alabama,1417,1104,1,UCLA,Alabama,11.0,2.0,True,0.41453149627867314,0,False,Alabama
-2021,USC,Oregon,1425,1332,1,USC,Oregon,6.0,7.0,False,0.5793004141246098,1,True,USC
-2021,Arkansas,Baylor,1116,1124,0,Baylor,Arkansas,1.0,3.0,False,0.4594681056769867,0,True,Baylor
-2021,Houston,Oregon St,1222,1333,1,Houston,Oregon St,2.0,12.0,False,0.906227717765849,1,True,Houston
-2021,USC,Gonzaga,1425,1211,0,Gonzaga,USC,1.0,6.0,False,0.3865514372005681,0,True,Gonzaga
-2021,Michigan,UCLA,1276,1417,0,UCLA,Michigan,11.0,1.0,True,0.7721816859838692,1,False,Michigan
-2021,Baylor,Houston,1124,1222,1,Baylor,Houston,1.0,2.0,False,0.35998305927168706,0,False,Houston
-2021,UCLA,Gonzaga,1417,1211,0,Gonzaga,UCLA,1.0,11.0,False,0.30346327362059095,0,True,Gonzaga
-2021,Gonzaga,Baylor,1211,1124,0,Baylor,Gonzaga,1.0,1.0,False,0.6230353721912865,1,False,Gonzaga
-2022,Wyoming,Indiana,1461,1231,0,Indiana,Wyoming,12.0,12.0,False,0.6011062049093414,1,False,Wyoming
-2022,TX Southern,TAM C. Christi,1411,1394,1,TX Southern,TAM C. Christi,16.0,16.0,False,0.4829412353189775,0,False,TAM C. Christi
-2022,Rutgers,Notre Dame,1353,1323,0,Notre Dame,Rutgers,11.0,11.0,False,0.6205145579839153,1,False,Rutgers
-2022,Bryant,Wright St,1136,1460,0,Wright St,Bryant,16.0,16.0,False,0.4596791541934457,0,True,Wright St
-2022,Arkansas,Vermont,1116,1436,1,Arkansas,Vermont,4.0,13.0,False,0.5011787587974399,1,True,Arkansas
-2022,Baylor,Norfolk St,1124,1313,1,Baylor,Norfolk St,1.0,16.0,False,0.7780671650980495,1,True,Baylor
-2022,San Diego St,Creighton,1361,1166,0,Creighton,San Diego St,9.0,8.0,True,0.6553786517157534,1,False,San Diego St
-2022,Georgia St,Gonzaga,1209,1211,0,Gonzaga,Georgia St,1.0,16.0,False,0.19491692720609505,0,True,Gonzaga
-2022,TX Southern,Kansas,1411,1242,0,Kansas,TX Southern,1.0,16.0,False,0.2546884460366714,0,True,Kansas
-2022,Boise St,Memphis,1129,1272,0,Memphis,Boise St,9.0,8.0,True,0.5686439272762597,1,False,Boise St
-2022,Michigan,Colorado St,1276,1161,1,Michigan,Colorado St,11.0,6.0,True,0.5405128845158927,1,True,Michigan
-2022,San Francisco,Murray St,1362,1293,0,Murray St,San Francisco,7.0,10.0,False,0.32189981673074325,0,True,Murray St
-2022,Connecticut,New Mexico St,1163,1308,0,New Mexico St,Connecticut,12.0,5.0,True,0.6486900089084888,1,False,Connecticut
-2022,North Carolina,Marquette,1314,1266,1,North Carolina,Marquette,8.0,9.0,False,0.7398819696197233,1,True,North Carolina
-2022,S Dakota St,Providence,1355,1344,0,Providence,S Dakota St,4.0,13.0,False,0.5627694172359673,1,False,S Dakota St
-2022,Richmond,Iowa,1350,1234,1,Richmond,Iowa,12.0,5.0,True,0.2786522170809741,0,False,Iowa
-2022,St Mary's CA,Indiana,1388,1231,1,St Mary's CA,Indiana,5.0,12.0,False,0.7280582538464739,1,True,St Mary's CA
-2022,Kentucky,St Peter's,1246,1389,0,St Peter's,Kentucky,15.0,2.0,True,0.829127554531311,1,False,Kentucky
-2022,Tennessee,Longwood,1397,1255,1,Tennessee,Longwood,3.0,14.0,False,0.6259677639981237,1,True,Tennessee
-2022,UCLA,Akron,1417,1103,1,UCLA,Akron,4.0,13.0,False,0.8134581948580331,1,True,UCLA
-2022,Wright St,Arizona,1460,1112,0,Arizona,Wright St,1.0,16.0,False,0.26314254515891194,0,True,Arizona
-2022,Auburn,Jacksonville St,1120,1240,1,Auburn,Jacksonville St,2.0,15.0,False,0.7790532020028372,1,True,Auburn
-2022,CS Fullerton,Duke,1168,1181,0,Duke,CS Fullerton,2.0,15.0,False,0.2004347177131487,0,True,Duke
-2022,UAB,Houston,1412,1222,0,Houston,UAB,5.0,12.0,False,0.4152201022875311,0,True,Houston
-2022,Illinois,Chattanooga,1228,1151,1,Illinois,Chattanooga,4.0,13.0,False,0.399871560845305,0,False,Chattanooga
-2022,LSU,Iowa St,1261,1235,0,Iowa St,LSU,11.0,6.0,True,0.558419035241994,1,False,LSU
-2022,USC,Miami FL,1425,1274,0,Miami FL,USC,10.0,7.0,True,0.6725260196989132,1,False,USC
-2022,Michigan St,Davidson,1277,1172,1,Michigan St,Davidson,7.0,10.0,False,0.526468771684607,1,True,Michigan St
-2022,Alabama,Notre Dame,1104,1323,0,Notre Dame,Alabama,11.0,6.0,True,0.502447678160783,1,False,Alabama
-2022,Loyola-Chicago,Ohio St,1260,1326,0,Ohio St,Loyola-Chicago,7.0,10.0,False,0.619317957124756,1,False,Loyola-Chicago
-2022,Purdue,Yale,1345,1463,1,Purdue,Yale,3.0,14.0,False,0.7813735323314254,1,True,Purdue
-2022,TCU,Seton Hall,1395,1371,1,TCU,Seton Hall,9.0,8.0,True,0.31375087492574444,0,False,Seton Hall
-2022,Texas,Virginia Tech,1400,1439,1,Texas,Virginia Tech,6.0,11.0,False,0.5083904001993879,1,True,Texas
-2022,Montana St,Texas Tech,1286,1403,0,Texas Tech,Montana St,3.0,14.0,False,0.30369213187049526,0,True,Texas Tech
-2022,Delaware,Villanova,1174,1437,0,Villanova,Delaware,2.0,15.0,False,0.19851684317892251,0,True,Villanova
-2022,Wisconsin,Colgate,1458,1159,1,Wisconsin,Colgate,3.0,14.0,False,0.5413709833242853,1,True,Wisconsin
-2022,New Mexico St,Arkansas,1308,1116,0,Arkansas,New Mexico St,4.0,12.0,False,0.3806327530226014,0,True,Arkansas
-2022,Gonzaga,Memphis,1211,1272,1,Gonzaga,Memphis,1.0,9.0,False,0.7760723742197344,1,True,Gonzaga
-2022,Creighton,Kansas,1166,1242,0,Kansas,Creighton,1.0,9.0,False,0.282870991322254,0,True,Kansas
-2022,Tennessee,Michigan,1397,1276,0,Michigan,Tennessee,11.0,3.0,True,0.7124367568139378,1,False,Tennessee
-2022,Baylor,North Carolina,1124,1314,0,North Carolina,Baylor,8.0,1.0,True,0.698829328186014,1,False,Baylor
-2022,Providence,Richmond,1344,1350,1,Providence,Richmond,4.0,12.0,False,0.6581456784010694,1,True,Providence
-2022,St Peter's,Murray St,1389,1293,1,St Peter's,Murray St,15.0,7.0,True,0.1255989305020886,0,False,Murray St
-2022,St Mary's CA,UCLA,1388,1417,0,UCLA,St Mary's CA,4.0,5.0,False,0.45036696583974456,0,True,UCLA
-2022,TCU,Arizona,1395,1112,0,Arizona,TCU,1.0,9.0,False,0.21794785784398357,0,True,Arizona
-2022,Michigan St,Duke,1277,1181,0,Duke,Michigan St,2.0,7.0,False,0.30615274959838173,0,True,Duke
-2022,Houston,Illinois,1222,1228,1,Houston,Illinois,5.0,4.0,True,0.8039934821849686,1,True,Houston
-2022,Wisconsin,Iowa St,1458,1235,0,Iowa St,Wisconsin,11.0,3.0,True,0.7211628830450759,1,False,Wisconsin
-2022,Auburn,Miami FL,1120,1274,0,Miami FL,Auburn,10.0,2.0,True,0.7559529623775225,1,False,Auburn
-2022,Texas,Purdue,1400,1345,0,Purdue,Texas,3.0,6.0,False,0.6059042521818963,1,False,Texas
-2022,Texas Tech,Notre Dame,1403,1323,1,Texas Tech,Notre Dame,3.0,11.0,False,0.7846286469088084,1,True,Texas Tech
-2022,Villanova,Ohio St,1437,1326,1,Villanova,Ohio St,2.0,7.0,False,0.6908094493700021,1,True,Villanova
-2022,Gonzaga,Arkansas,1211,1116,0,Arkansas,Gonzaga,4.0,1.0,True,0.762294029746582,1,False,Gonzaga
-2022,Duke,Texas Tech,1181,1403,1,Duke,Texas Tech,2.0,3.0,False,0.6356832174700211,1,True,Duke
-2022,Arizona,Houston,1112,1222,0,Houston,Arizona,5.0,1.0,True,0.46042764337724046,0,True,Houston
-2022,Michigan,Villanova,1276,1437,0,Villanova,Michigan,2.0,11.0,False,0.295675135616412,0,True,Villanova
-2022,Kansas,Providence,1242,1344,1,Kansas,Providence,1.0,4.0,False,0.6639277285864273,1,True,Kansas
-2022,Iowa St,Miami FL,1235,1274,0,Miami FL,Iowa St,10.0,11.0,False,0.4211102136788957,0,True,Miami FL
-2022,UCLA,North Carolina,1417,1314,0,North Carolina,UCLA,8.0,4.0,True,0.7198176320316129,1,False,UCLA
-2022,Purdue,St Peter's,1345,1389,0,St Peter's,Purdue,15.0,3.0,True,0.7341184014915623,1,False,Purdue
-2022,Arkansas,Duke,1116,1181,0,Duke,Arkansas,2.0,4.0,False,0.3433888457929342,0,True,Duke
-2022,Villanova,Houston,1437,1222,1,Villanova,Houston,2.0,5.0,False,0.38523369774438115,0,False,Houston
-2022,Kansas,Miami FL,1242,1274,1,Kansas,Miami FL,1.0,10.0,False,0.717000725740646,1,True,Kansas
-2022,North Carolina,St Peter's,1314,1389,1,North Carolina,St Peter's,8.0,15.0,False,0.6776158538987869,1,True,North Carolina
-2022,Villanova,Kansas,1437,1242,0,Kansas,Villanova,1.0,2.0,False,0.5749490200204339,1,False,Villanova
-2022,North Carolina,Duke,1314,1181,1,North Carolina,Duke,8.0,2.0,True,0.39005707853152605,0,False,Duke
-2022,Kansas,North Carolina,1242,1314,1,Kansas,North Carolina,1.0,8.0,False,0.6501273157320993,1,True,Kansas
-2023,Pittsburgh,Mississippi St,1338,1280,1,Pittsburgh,Mississippi St,11.0,11.0,False,0.7021047430523242,1,True,Pittsburgh
-2023,SE Missouri St,TAM C. Christi,1369,1394,0,TAM C. Christi,SE Missouri St,16.0,16.0,False,0.3794827316245892,0,True,TAM C. Christi
-2023,Nevada,Arizona St,1305,1113,0,Arizona St,Nevada,11.0,11.0,False,0.6194062576105862,1,False,Nevada
-2023,F Dickinson,TX Southern,1192,1411,1,F Dickinson,TX Southern,16.0,16.0,False,0.8055342279917563,1,True,F Dickinson
-2023,Alabama,TAM C. Christi,1104,1394,1,Alabama,TAM C. Christi,1.0,16.0,False,0.6717594360841005,1,True,Alabama
-2023,Arkansas,Illinois,1116,1228,1,Arkansas,Illinois,8.0,9.0,False,0.3847955819677726,0,False,Illinois
-2023,Iowa,Auburn,1234,1120,0,Auburn,Iowa,9.0,8.0,True,0.5745431076278394,1,False,Iowa
-2023,Duke,Oral Roberts,1181,1331,1,Duke,Oral Roberts,5.0,12.0,False,0.4924507970174434,0,False,Oral Roberts
-2023,Furman,Virginia,1202,1438,1,Furman,Virginia,13.0,4.0,True,0.5725252017572818,1,True,Furman
-2023,Houston,N Kentucky,1222,1297,1,Houston,N Kentucky,1.0,16.0,False,0.9229474617620836,1,True,Houston
-2023,Kansas,Howard,1242,1224,1,Kansas,Howard,1.0,16.0,False,0.6778985736753386,1,True,Kansas
-2023,West Virginia,Maryland,1452,1268,0,Maryland,West Virginia,8.0,9.0,False,0.3310495858130276,0,True,Maryland
-2023,Missouri,Utah St,1281,1429,1,Missouri,Utah St,7.0,10.0,False,0.5874948920979628,1,True,Missouri
-2023,Northwestern,Boise St,1321,1129,1,Northwestern,Boise St,7.0,10.0,False,0.594381047644197,1,True,Northwestern
-2023,Penn St,Texas A&M,1336,1401,1,Penn St,Texas A&M,10.0,7.0,True,0.5638166796225127,1,True,Penn St
-2023,Princeton,Arizona,1343,1112,1,Princeton,Arizona,15.0,2.0,True,0.518279206461183,1,True,Princeton
-2023,Col Charleston,San Diego St,1158,1361,0,San Diego St,Col Charleston,5.0,12.0,False,0.6438789092679497,1,False,Col Charleston
-2023,Louisiana,Tennessee,1418,1397,0,Tennessee,Louisiana,4.0,13.0,False,0.2935199296088693,0,True,Tennessee
-2023,Colgate,Texas,1159,1400,0,Texas,Colgate,2.0,15.0,False,0.49553044270691815,0,True,Texas
-2023,UNC Asheville,UCLA,1421,1417,0,UCLA,UNC Asheville,2.0,15.0,False,0.15034012172829525,0,True,UCLA
-2023,UC Santa Barbara,Baylor,1364,1124,0,Baylor,UC Santa Barbara,3.0,14.0,False,0.6345326882221312,1,False,UC Santa Barbara
-2023,Iona,Connecticut,1233,1163,0,Connecticut,Iona,4.0,13.0,False,0.5080999310127138,1,False,Iona
-2023,Creighton,NC State,1166,1301,1,Creighton,NC State,6.0,11.0,False,0.4821147431727518,0,False,NC State
-2023,Purdue,F Dickinson,1345,1192,0,F Dickinson,Purdue,16.0,1.0,True,0.7898043127904888,1,False,Purdue
-2023,FL Atlantic,Memphis,1194,1272,1,FL Atlantic,Memphis,9.0,8.0,True,0.6206977016472244,1,True,FL Atlantic
-2023,Grand Canyon,Gonzaga,1213,1211,0,Gonzaga,Grand Canyon,3.0,14.0,False,0.30916556144520957,0,True,Gonzaga
-2023,Kent,Indiana,1245,1231,0,Indiana,Kent,4.0,13.0,False,0.6732607913610228,1,False,Kent
-2023,Kansas St,Montana St,1243,1286,1,Kansas St,Montana St,3.0,14.0,False,0.5351748489548434,1,True,Kansas St
-2023,Kentucky,Providence,1246,1344,1,Kentucky,Providence,6.0,11.0,False,0.4685767526110012,0,False,Providence
-2023,Marquette,Vermont,1266,1436,1,Marquette,Vermont,2.0,15.0,False,0.6745034541686318,1,True,Marquette
-2023,Drake,Miami FL,1179,1274,0,Miami FL,Drake,5.0,12.0,False,0.5351215780470817,1,False,Drake
-2023,USC,Michigan St,1425,1277,0,Michigan St,USC,7.0,10.0,False,0.6150776609029402,1,False,USC
-2023,Iowa St,Pittsburgh,1235,1338,0,Pittsburgh,Iowa St,11.0,6.0,True,0.44392474565877826,0,True,Pittsburgh
-2023,St Mary's CA,VCU,1388,1433,1,St Mary's CA,VCU,5.0,12.0,False,0.7390668708025797,1,True,St Mary's CA
-2023,Arizona St,TCU,1113,1395,0,TCU,Arizona St,6.0,11.0,False,0.3015675103926394,0,True,TCU
-2023,Xavier,Kennesaw,1462,1244,1,Xavier,Kennesaw,3.0,14.0,False,0.7947488073552398,1,True,Xavier
-2023,Alabama,Maryland,1104,1268,1,Alabama,Maryland,1.0,8.0,False,0.47948901161140656,0,False,Maryland
-2023,Kansas,Arkansas,1242,1116,0,Arkansas,Kansas,8.0,1.0,True,0.4476133161218115,0,True,Arkansas
-2023,Houston,Auburn,1222,1120,1,Houston,Auburn,1.0,9.0,False,0.8286511837650603,1,True,Houston
-2023,Missouri,Princeton,1281,1343,0,Princeton,Missouri,15.0,7.0,True,0.5384494642566289,1,False,Missouri
-2023,San Diego St,Furman,1361,1202,1,San Diego St,Furman,5.0,13.0,False,0.5394775918591902,1,True,San Diego St
-2023,Tennessee,Duke,1397,1181,1,Tennessee,Duke,4.0,5.0,False,0.5268871408700956,1,True,Tennessee
-2023,Penn St,Texas,1336,1400,0,Texas,Penn St,2.0,10.0,False,0.41899367687324995,0,True,Texas
-2023,Northwestern,UCLA,1321,1417,0,UCLA,Northwestern,2.0,7.0,False,0.34859720964265817,0,True,UCLA
-2023,Connecticut,St Mary's CA,1163,1388,1,Connecticut,St Mary's CA,4.0,5.0,False,0.46293850799566405,0,False,St Mary's CA
-2023,Creighton,Baylor,1166,1124,1,Creighton,Baylor,6.0,3.0,True,0.6860261318934178,1,True,Creighton
-2023,F Dickinson,FL Atlantic,1192,1194,0,FL Atlantic,F Dickinson,9.0,16.0,False,0.2838155727625177,0,True,FL Atlantic
-2023,TCU,Gonzaga,1395,1211,0,Gonzaga,TCU,3.0,6.0,False,0.4455726532395597,0,True,Gonzaga
-2023,Kentucky,Kansas St,1246,1243,0,Kansas St,Kentucky,3.0,6.0,False,0.644727256927832,1,False,Kentucky
-2023,Indiana,Miami FL,1231,1274,0,Miami FL,Indiana,5.0,4.0,True,0.435432406934885,0,True,Miami FL
-2023,Michigan St,Marquette,1277,1266,1,Michigan St,Marquette,7.0,2.0,True,0.548290900116986,1,True,Michigan St
-2023,Pittsburgh,Xavier,1338,1462,0,Xavier,Pittsburgh,3.0,11.0,False,0.6292084698047836,1,False,Pittsburgh
-2023,Arkansas,Connecticut,1116,1163,0,Connecticut,Arkansas,4.0,8.0,False,0.29988325465743026,0,True,Connecticut
-2023,Tennessee,FL Atlantic,1397,1194,0,FL Atlantic,Tennessee,9.0,4.0,True,0.5508603364017388,1,False,Tennessee
-2023,UCLA,Gonzaga,1417,1211,0,Gonzaga,UCLA,3.0,2.0,True,0.697051966505603,1,False,UCLA
-2023,Michigan St,Kansas St,1277,1243,0,Kansas St,Michigan St,3.0,7.0,False,0.5444830895602896,1,False,Michigan St
-2023,Creighton,Princeton,1166,1343,1,Creighton,Princeton,6.0,15.0,False,0.6644029254861493,1,True,Creighton
-2023,Houston,Miami FL,1222,1274,0,Miami FL,Houston,5.0,1.0,True,0.7438626432379727,1,False,Houston
-2023,Alabama,San Diego St,1104,1361,0,San Diego St,Alabama,5.0,1.0,True,0.5321345918422563,1,False,Alabama
-2023,Texas,Xavier,1400,1462,1,Texas,Xavier,2.0,3.0,False,0.7243802935317313,1,True,Texas
-2023,Gonzaga,Connecticut,1211,1163,0,Connecticut,Gonzaga,4.0,3.0,True,0.5177440729299831,1,False,Gonzaga
-2023,Kansas St,FL Atlantic,1243,1194,0,FL Atlantic,Kansas St,9.0,3.0,True,0.2866875145934947,0,True,FL Atlantic
-2023,Texas,Miami FL,1400,1274,0,Miami FL,Texas,5.0,2.0,True,0.5303631322732967,1,False,Texas
-2023,Creighton,San Diego St,1166,1361,0,San Diego St,Creighton,5.0,6.0,False,0.5545695869396826,1,False,Creighton
-2023,Connecticut,Miami FL,1163,1274,1,Connecticut,Miami FL,4.0,5.0,False,0.5632064667920266,1,True,Connecticut
-2023,FL Atlantic,San Diego St,1194,1361,0,San Diego St,FL Atlantic,5.0,9.0,False,0.5969678190896792,1,False,FL Atlantic
-2023,Connecticut,San Diego St,1163,1361,1,Connecticut,San Diego St,4.0,5.0,False,0.5941694766233384,1,True,Connecticut
+season,team_a,team_b,team_a_id,team_b_id,actual_team_a_win,actual_winner,actual_loser,winner_seed,loser_seed,actual_upset,regular_season_power_gap,team_a_power_rating,team_b_power_rating,pred_team_a_win_prob,pred_team_a_win,prediction_correct,predicted_winner
+2017,Wake Forest,Kansas St,1448,1243,0,Kansas St,Wake Forest,11.0,11.0,False,0.058880583706127254,6.503699648918726,6.444819065212599,0.409610920492553,0,True,Kansas St
+2017,New Orleans,Mt St Mary's,1309,1291,0,Mt St Mary's,New Orleans,16.0,16.0,False,0.702467753285049,0.3174453961335217,-0.3850223571515272,0.5410458972160254,1,False,New Orleans
+2017,NC Central,UC Davis,1300,1413,0,UC Davis,NC Central,16.0,16.0,False,5.929408327393176,5.295131935397222,-0.6342763919959538,0.7800501890465722,1,False,NC Central
+2017,USC,Providence,1425,1344,1,USC,Providence,11.0,11.0,False,1.0863626507080255,5.385714266938834,4.299351616230808,0.7405918550521041,1,True,USC
+2017,Arizona,North Dakota,1112,1315,1,Arizona,North Dakota,2.0,15.0,False,8.801130866764055,11.337660394608164,2.5365295278441096,0.9055481668398245,1,True,Arizona
+2017,Winthrop,Butler,1457,1139,0,Butler,Winthrop,4.0,13.0,False,-3.8169905501515853,5.298695513032214,9.1156860631838,0.2448011668595327,0,True,Butler
+2017,ETSU,Florida,1190,1196,0,Florida,ETSU,4.0,13.0,False,-5.247419663663534,8.053635008899562,13.301054672563096,0.19778405387418924,0,True,Florida
+2017,FL Gulf Coast,Florida St,1195,1199,0,Florida St,FL Gulf Coast,3.0,14.0,False,-6.726970693771092,4.309272391666312,11.036243085437404,0.24109460497460486,0,True,Florida St
+2017,Gonzaga,S Dakota St,1211,1355,1,Gonzaga,S Dakota St,1.0,16.0,False,20.61752781666577,20.24061201471045,-0.3769158019553202,0.9593071674315607,1,True,Gonzaga
+2017,Iowa St,Nevada,1235,1305,1,Iowa St,Nevada,5.0,12.0,False,2.359420325053023,10.41849330319701,8.059072978143988,0.652134378662905,1,True,Iowa St
+2017,MTSU,Minnesota,1292,1278,1,MTSU,Minnesota,12.0,5.0,True,3.1454334707751173,9.782286700926704,6.636853230151587,0.6434247780583653,1,True,MTSU
+2017,Northwestern,Vanderbilt,1321,1435,1,Northwestern,Vanderbilt,8.0,9.0,False,0.8757356987192111,6.386604546386366,5.510868847667155,0.6858432093807912,1,True,Northwestern
+2017,Notre Dame,Princeton,1323,1343,1,Notre Dame,Princeton,5.0,12.0,False,1.4993410388994999,9.60165911492676,8.10231807602726,0.6797228406754277,1,True,Notre Dame
+2017,Purdue,Vermont,1345,1436,1,Purdue,Vermont,4.0,13.0,False,3.5030246518673067,12.40752151113422,8.904496859266914,0.5698208044976533,1,True,Purdue
+2017,VCU,St Mary's CA,1433,1388,0,St Mary's CA,VCU,7.0,10.0,False,-6.903579737813843,7.760408971784173,14.663988709598016,0.4932705822430993,0,True,St Mary's CA
+2017,Mt St Mary's,Villanova,1291,1437,0,Villanova,Mt St Mary's,1.0,16.0,False,-15.979926126998834,-0.3850223571515272,15.594903769847306,0.04215575044615548,0,True,Villanova
+2017,UNC Wilmington,Virginia,1423,1438,0,Virginia,UNC Wilmington,5.0,12.0,False,-4.60712419552074,8.25035148074592,12.85747567626666,0.3104649008915832,0,True,Virginia
+2017,West Virginia,Bucknell,1452,1137,1,West Virginia,Bucknell,4.0,13.0,False,7.9422144373744175,14.776945897349364,6.834731459974947,0.8623360251007228,1,True,West Virginia
+2017,Virginia Tech,Wisconsin,1439,1458,0,Wisconsin,Virginia Tech,8.0,9.0,False,-5.860537275354218,5.205646973783644,11.066184249137862,0.1804133488580446,0,True,Wisconsin
+2017,Maryland,Xavier,1268,1462,0,Xavier,Maryland,11.0,6.0,True,0.030892472482804578,5.40889755298781,5.378005080505005,0.41049240244624313,0,True,Xavier
+2017,Seton Hall,Arkansas,1371,1116,0,Arkansas,Seton Hall,8.0,9.0,False,-1.7843741860034896,4.450907823178781,6.235282009182271,0.42970942069258183,0,True,Arkansas
+2017,Baylor,New Mexico St,1124,1308,1,Baylor,New Mexico St,3.0,14.0,False,4.176955211329357,10.386916679675409,6.209961468346052,0.6553375871465372,1,True,Baylor
+2017,Kansas St,Cincinnati,1243,1153,0,Cincinnati,Kansas St,6.0,11.0,False,-6.6264812546668,6.444819065212599,13.071300319879398,0.2753985206946173,0,True,Cincinnati
+2017,Duke,Troy,1181,1407,1,Duke,Troy,2.0,15.0,False,9.58043333041657,12.270535561950725,2.690102231534155,0.8633686933102475,1,True,Duke
+2017,Kansas,UC Davis,1242,1413,1,Kansas,UC Davis,1.0,16.0,False,12.305119159575796,11.670842767579842,-0.6342763919959538,0.9286454559917583,1,True,Kansas
+2017,N Kentucky,Kentucky,1297,1246,0,Kentucky,N Kentucky,2.0,15.0,False,-11.90496025541455,2.142361157139746,14.047321412554297,0.11176010106254965,0,True,Kentucky
+2017,Jacksonville St,Louisville,1240,1257,0,Louisville,Jacksonville St,2.0,15.0,False,-11.689613561908956,1.2617465709558502,12.951360132864806,0.0695572059653701,0,True,Louisville
+2017,Oklahoma St,Michigan,1329,1276,0,Michigan,Oklahoma St,7.0,10.0,False,-1.838787652900237,8.772817753917764,10.611605406818,0.5747447169216219,1,False,Oklahoma St
+2017,Michigan St,Miami FL,1277,1274,1,Michigan St,Miami FL,9.0,8.0,True,-1.6844832829034004,5.105342135563973,6.789825418467373,0.34185904414308055,0,False,Miami FL
+2017,TX Southern,North Carolina,1411,1314,0,North Carolina,TX Southern,1.0,16.0,False,-12.698897117592567,1.5201795415963772,14.219076659188945,0.10035780245953006,0,True,North Carolina
+2017,Iona,Oregon,1233,1332,0,Oregon,Iona,3.0,14.0,False,-8.998861099880557,3.733692173507393,12.73255327338795,0.1314059173363227,0,True,Oregon
+2017,Rhode Island,Creighton,1348,1166,1,Rhode Island,Creighton,11.0,6.0,True,-0.6553372017504699,8.345758405650557,9.001095607401027,0.5814543771975281,1,True,Rhode Island
+2017,South Carolina,Marquette,1376,1266,1,South Carolina,Marquette,7.0,10.0,False,-0.23602650413769766,7.247215466964562,7.4832419711022595,0.5416753793937186,1,True,South Carolina
+2017,Kent,UCLA,1245,1417,0,UCLA,Kent,3.0,14.0,False,-10.816461437787922,1.924463781529127,12.740925219317049,0.2205009337200184,0,True,UCLA
+2017,SMU,USC,1374,1425,0,USC,SMU,11.0,6.0,True,8.741600922733198,14.127315189672032,5.385714266938834,0.7584116036569352,1,False,SMU
+2017,Wichita St,Dayton,1455,1173,1,Wichita St,Dayton,10.0,7.0,True,8.052329700021815,16.19159554795361,8.139265847931796,0.7866266530856786,1,True,Wichita St
+2017,Arizona,St Mary's CA,1112,1388,1,Arizona,St Mary's CA,2.0,7.0,False,-3.3263283149898513,11.337660394608164,14.663988709598016,0.5945391656143474,1,True,Arizona
+2017,MTSU,Butler,1292,1139,0,Butler,MTSU,4.0,12.0,False,0.6666006377429046,9.782286700926704,9.1156860631838,0.5006826991595023,1,False,MTSU
+2017,Virginia,Florida,1438,1196,0,Florida,Virginia,4.0,5.0,False,-0.44357899629643605,12.85747567626666,13.301054672563096,0.5113621401412228,1,False,Virginia
+2017,Gonzaga,Northwestern,1211,1321,1,Gonzaga,Northwestern,1.0,8.0,False,13.854007468324085,20.24061201471045,6.386604546386366,0.7807299767572696,1,True,Gonzaga
+2017,Purdue,Iowa St,1345,1235,1,Purdue,Iowa St,4.0,5.0,False,1.98902820793721,12.40752151113422,10.41849330319701,0.5136414736928208,1,True,Purdue
+2017,Notre Dame,West Virginia,1323,1452,0,West Virginia,Notre Dame,4.0,5.0,False,-5.175286782422605,9.60165911492676,14.776945897349364,0.3473089726088722,0,True,West Virginia
+2017,Villanova,Wisconsin,1437,1458,0,Wisconsin,Villanova,8.0,1.0,True,4.528719520709444,15.594903769847306,11.066184249137862,0.6009235556801322,1,False,Villanova
+2017,Florida St,Xavier,1199,1462,0,Xavier,Florida St,11.0,3.0,True,5.658238004932398,11.036243085437404,5.378005080505005,0.690922271682893,1,False,Florida St
+2017,Baylor,USC,1124,1425,1,Baylor,USC,3.0,11.0,False,5.001202412736575,10.386916679675409,5.385714266938834,0.694629772968742,1,True,Baylor
+2017,Kansas,Michigan St,1242,1277,1,Kansas,Michigan St,1.0,9.0,False,6.565500632015869,11.670842767579842,5.105342135563973,0.80391374796865,1,True,Kansas
+2017,Kentucky,Wichita St,1246,1455,1,Kentucky,Wichita St,2.0,10.0,False,-2.144274135399314,14.047321412554297,16.19159554795361,0.5580158883272285,1,True,Kentucky
+2017,Louisville,Michigan,1257,1276,0,Michigan,Louisville,7.0,2.0,True,2.339754726046806,12.951360132864806,10.611605406818,0.7815107294734969,1,False,Louisville
+2017,North Carolina,Arkansas,1314,1116,1,North Carolina,Arkansas,1.0,8.0,False,7.983794650006674,14.219076659188945,6.235282009182271,0.7445225429223044,1,True,North Carolina
+2017,Rhode Island,Oregon,1348,1332,0,Oregon,Rhode Island,3.0,11.0,False,-4.386794867737393,8.345758405650557,12.73255327338795,0.3246506455412066,0,True,Oregon
+2017,Duke,South Carolina,1181,1376,0,South Carolina,Duke,7.0,2.0,True,5.023320094986163,12.270535561950725,7.247215466964562,0.7617540181212763,1,False,Duke
+2017,UCLA,Cincinnati,1417,1153,1,UCLA,Cincinnati,3.0,6.0,False,-0.33037510056234964,12.740925219317049,13.071300319879398,0.2914446096661149,0,False,Cincinnati
+2017,West Virginia,Gonzaga,1452,1211,0,Gonzaga,West Virginia,1.0,4.0,False,-5.463666117361086,14.776945897349364,20.24061201471045,0.4677842037488871,0,True,Gonzaga
+2017,Kansas,Purdue,1242,1345,1,Kansas,Purdue,1.0,4.0,False,-0.7366787435543785,11.670842767579842,12.40752151113422,0.5971596761228871,1,True,Kansas
+2017,Oregon,Michigan,1332,1276,1,Oregon,Michigan,3.0,7.0,False,2.1209478665699493,12.73255327338795,10.611605406818,0.6786900337520976,1,True,Oregon
+2017,Xavier,Arizona,1462,1112,1,Xavier,Arizona,11.0,2.0,True,-5.959655314103159,5.378005080505005,11.337660394608164,0.3297643798219126,0,False,Arizona
+2017,Florida,Wisconsin,1196,1458,1,Florida,Wisconsin,4.0,8.0,False,2.2348704234252335,13.301054672563096,11.066184249137862,0.5167088493478733,1,True,Florida
+2017,Kentucky,UCLA,1246,1417,1,Kentucky,UCLA,2.0,3.0,False,1.3063961932372479,14.047321412554297,12.740925219317049,0.6741648772093664,1,True,Kentucky
+2017,North Carolina,Butler,1314,1139,1,North Carolina,Butler,1.0,4.0,False,5.103390596005145,14.219076659188945,9.1156860631838,0.6122132961712452,1,True,North Carolina
+2017,Baylor,South Carolina,1124,1376,0,South Carolina,Baylor,7.0,3.0,True,3.139701212710847,10.386916679675409,7.247215466964562,0.6317229005187559,1,False,Baylor
+2017,Gonzaga,Xavier,1211,1462,1,Gonzaga,Xavier,1.0,11.0,False,14.862606934205445,20.24061201471045,5.378005080505005,0.7984651128782759,1,True,Gonzaga
+2017,Oregon,Kansas,1332,1242,1,Oregon,Kansas,3.0,1.0,True,1.061710505808108,12.73255327338795,11.670842767579842,0.5949544689977816,1,True,Oregon
+2017,North Carolina,Kentucky,1314,1246,1,North Carolina,Kentucky,1.0,2.0,False,0.17175524663464792,14.219076659188945,14.047321412554297,0.4509251745193694,0,False,Kentucky
+2017,Florida,South Carolina,1196,1376,0,South Carolina,Florida,7.0,4.0,True,6.053839205598534,13.301054672563096,7.247215466964562,0.8158654758390429,1,False,Florida
+2017,Gonzaga,South Carolina,1211,1376,1,Gonzaga,South Carolina,1.0,7.0,False,12.993396547745888,20.24061201471045,7.247215466964562,0.8155085726093223,1,True,Gonzaga
+2017,Oregon,North Carolina,1332,1314,0,North Carolina,Oregon,1.0,3.0,False,-1.4865233858009947,12.73255327338795,14.219076659188945,0.4790747642239408,0,True,North Carolina
+2017,North Carolina,Gonzaga,1314,1211,1,North Carolina,Gonzaga,1.0,1.0,False,-6.021535355521506,14.219076659188945,20.24061201471045,0.39602148353801914,0,False,Gonzaga
+2018,Radford,LIU Brooklyn,1347,1254,1,Radford,LIU Brooklyn,16.0,16.0,False,3.1864951830552712,1.736455184974986,-1.4500399980802854,0.7749484191265333,1,True,Radford
+2018,UCLA,St Bonaventure,1417,1382,0,St Bonaventure,UCLA,11.0,11.0,False,-0.9019342260775147,5.616432738124985,6.5183669642024995,0.48173472358797426,0,True,St Bonaventure
+2018,Syracuse,Arizona St,1393,1113,1,Syracuse,Arizona St,11.0,11.0,False,-2.566657289065958,4.382211784089947,6.948869073155905,0.4734353185624138,0,False,Arizona St
+2018,NC Central,TX Southern,1300,1411,0,TX Southern,NC Central,16.0,16.0,False,-1.0458505755669165,-2.986862691685374,-1.9410121161184577,0.5453951952118912,1,False,NC Central
+2018,Virginia Tech,Alabama,1439,1104,0,Alabama,Virginia Tech,9.0,8.0,True,3.447979246818477,7.51458233823783,4.066603091419353,0.6400381085396513,1,False,Virginia Tech
+2018,Buffalo,Arizona,1138,1112,1,Buffalo,Arizona,13.0,4.0,True,-2.3972103203499717,7.168021372245889,9.56523169259586,0.3377449471519183,0,False,Arizona
+2018,Iona,Duke,1233,1181,0,Duke,Iona,2.0,15.0,False,-11.800377508835778,3.6234645378307135,15.423842046666492,0.1408921445421923,0,True,Duke
+2018,Florida,St Bonaventure,1196,1382,1,Florida,St Bonaventure,6.0,11.0,False,0.8244297775331262,7.342796741735626,6.5183669642024995,0.5525678041409986,1,True,Florida
+2018,Gonzaga,UNC Greensboro,1211,1422,1,Gonzaga,UNC Greensboro,4.0,13.0,False,8.383365028055309,15.073452461663464,6.690087433608156,0.833171575056026,1,True,Gonzaga
+2018,San Diego St,Houston,1361,1222,0,Houston,San Diego St,6.0,11.0,False,-3.8613593252545684,7.842014492418215,11.703373817672784,0.510122011407171,1,False,San Diego St
+2018,Kansas,Penn,1242,1335,1,Kansas,Penn,1.0,16.0,False,6.685421136901143,11.374854269038297,4.689433132137154,0.7934488230352549,1,True,Kansas
+2018,Davidson,Kentucky,1172,1246,0,Kentucky,Davidson,5.0,12.0,False,0.9815556804273919,8.81592769128352,7.834372010856128,0.5659601508999476,1,False,Davidson
+2018,Loyola-Chicago,Miami FL,1260,1274,1,Loyola-Chicago,Miami FL,11.0,6.0,True,1.5144401259228033,8.420273592214102,6.905833466291298,0.30755795307583345,0,False,Miami FL
+2018,Michigan,Montana,1276,1285,1,Michigan,Montana,3.0,14.0,False,3.503640674334891,10.812662089439629,7.309021415104738,0.62598763228742,1,True,Michigan
+2018,Ohio St,S Dakota St,1326,1355,1,Ohio St,S Dakota St,5.0,12.0,False,2.802919199903201,9.365224002954378,6.562304803051177,0.7782549993174961,1,True,Ohio St
+2018,Oklahoma,Rhode Island,1328,1348,0,Rhode Island,Oklahoma,7.0,10.0,False,-2.919616015038514,4.8355971101851765,7.75521312522369,0.5458254880683993,1,False,Oklahoma
+2018,Seton Hall,NC State,1371,1301,1,Seton Hall,NC State,8.0,9.0,False,0.6590996513335767,6.752115331471828,6.093015680138251,0.591094193933055,1,True,Seton Hall
+2018,Wright St,Tennessee,1460,1397,0,Tennessee,Wright St,3.0,14.0,False,-5.631627384263098,3.766383579800447,9.398010964063545,0.30380028930624575,0,True,Tennessee
+2018,Texas Tech,SF Austin,1403,1372,1,Texas Tech,SF Austin,3.0,14.0,False,3.7296427992013292,10.382272922277764,6.652630123076435,0.8679534446698902,1,True,Texas Tech
+2018,Radford,Villanova,1347,1437,0,Villanova,Radford,1.0,16.0,False,-15.084121322128823,1.736455184974986,16.82057650710381,0.0941445803611384,0,True,Villanova
+2018,Auburn,Col Charleston,1120,1158,1,Auburn,Col Charleston,4.0,13.0,False,5.546663750544312,9.48979814776537,3.9431343972210584,0.8179026619379562,1,True,Auburn
+2018,Butler,Arkansas,1139,1116,1,Butler,Arkansas,10.0,7.0,True,1.1384557877651247,7.44923385266452,6.310778064899395,0.6502249134906307,1,True,Butler
+2018,Georgia St,Cincinnati,1209,1153,0,Cincinnati,Georgia St,2.0,15.0,False,-10.166482850231276,5.706318336013084,15.87280118624436,0.2120513462521838,0,True,Cincinnati
+2018,New Mexico St,Clemson,1308,1155,0,Clemson,New Mexico St,5.0,12.0,False,0.03176744029809697,8.415202362397892,8.383434922099795,0.5105789980174448,1,False,New Mexico St
+2018,Florida St,Missouri,1199,1281,1,Florida St,Missouri,9.0,8.0,True,1.2322305317014894,7.160288206556572,5.928057674855083,0.7673594308468998,1,True,Florida St
+2018,Creighton,Kansas St,1166,1243,0,Kansas St,Creighton,9.0,8.0,True,3.4318093581352827,8.495788334466042,5.063978976330759,0.605297606912382,1,False,Creighton
+2018,Wichita St,Marshall,1455,1267,0,Marshall,Wichita St,13.0,4.0,True,7.346016717629027,10.80837425221111,3.4623575345820825,0.844079084782758,1,False,Wichita St
+2018,Michigan St,Bucknell,1277,1137,1,Michigan St,Bucknell,3.0,14.0,False,7.996645548263375,14.86799093415256,6.871345385889185,0.8199679519946318,1,True,Michigan St
+2018,Nevada,Texas,1305,1400,1,Nevada,Texas,7.0,10.0,False,5.011561409977704,10.148091641199857,5.136530231222153,0.5877400600822007,1,True,Nevada
+2018,Lipscomb,North Carolina,1252,1314,0,North Carolina,Lipscomb,2.0,15.0,False,-9.205539160699246,1.899749153318666,11.105288314017912,0.12497439902788172,0,True,North Carolina
+2018,Purdue,CS Fullerton,1345,1168,1,Purdue,CS Fullerton,2.0,15.0,False,14.550729296287258,15.124860648559633,0.5741313522723743,0.9455244381907761,1,True,Purdue
+2018,Syracuse,TCU,1393,1395,1,Syracuse,TCU,11.0,6.0,True,-3.3931886270603115,4.382211784089947,7.775400411150258,0.5185168573657991,1,True,Syracuse
+2018,Providence,Texas A&M,1344,1401,0,Texas A&M,Providence,7.0,10.0,False,-3.553392753047291,3.011844264878846,6.565237017926137,0.4008377909065708,0,True,Texas A&M
+2018,Virginia,UMBC,1438,1420,0,UMBC,Virginia,16.0,1.0,True,14.947084641938744,15.569937732975376,0.6228530910366317,0.9651134211143593,1,False,Virginia
+2018,West Virginia,Murray St,1452,1293,1,West Virginia,Murray St,5.0,12.0,False,1.8964730469880777,10.630208345938016,8.733735298949938,0.6788587327588282,1,True,West Virginia
+2018,TX Southern,Xavier,1411,1462,0,Xavier,TX Southern,1.0,16.0,False,-12.044948137970835,-1.9410121161184577,10.103936021852377,0.08112917662414777,0,True,Xavier
+2018,Rhode Island,Duke,1348,1181,0,Duke,Rhode Island,2.0,7.0,False,-7.668628921442801,7.75521312522369,15.423842046666492,0.29264867704435565,0,True,Duke
+2018,Gonzaga,Ohio St,1211,1326,1,Gonzaga,Ohio St,4.0,5.0,False,5.708228458709087,15.073452461663464,9.365224002954378,0.6089668720171142,1,True,Gonzaga
+2018,Kansas,Seton Hall,1242,1371,1,Kansas,Seton Hall,1.0,8.0,False,4.622738937566469,11.374854269038297,6.752115331471828,0.576823933314023,1,True,Kansas
+2018,Kentucky,Buffalo,1246,1138,1,Kentucky,Buffalo,5.0,13.0,False,0.6663506386102389,7.834372010856128,7.168021372245889,0.5379216687286731,1,True,Kentucky
+2018,Loyola-Chicago,Tennessee,1260,1397,1,Loyola-Chicago,Tennessee,11.0,3.0,True,-0.9777373718494431,8.420273592214102,9.398010964063545,0.41565918469098806,0,False,Tennessee
+2018,Houston,Michigan,1222,1276,0,Michigan,Houston,3.0,6.0,False,0.8907117282331551,11.703373817672784,10.812662089439629,0.511384152530287,1,False,Houston
+2018,Texas Tech,Florida,1403,1196,1,Texas Tech,Florida,3.0,6.0,False,3.039476180542138,10.382272922277764,7.342796741735626,0.6646488343268997,1,True,Texas Tech
+2018,Alabama,Villanova,1104,1437,0,Villanova,Alabama,1.0,9.0,False,-12.753973415684456,4.066603091419353,16.82057650710381,0.15143155759271587,0,True,Villanova
+2018,Auburn,Clemson,1120,1155,0,Clemson,Auburn,5.0,4.0,True,1.106363225665575,9.48979814776537,8.383434922099795,0.6548906450515759,1,False,Auburn
+2018,Xavier,Florida St,1462,1199,0,Florida St,Xavier,9.0,1.0,True,2.9436478152958045,10.103936021852377,7.160288206556572,0.4708313904172019,0,True,Florida St
+2018,UMBC,Kansas St,1420,1243,0,Kansas St,UMBC,9.0,16.0,False,-4.441125885294127,0.6228530910366317,5.063978976330759,0.20001616127497368,0,True,Kansas St
+2018,Cincinnati,Nevada,1153,1305,0,Nevada,Cincinnati,7.0,2.0,True,5.724709545044503,15.87280118624436,10.148091641199857,0.6688153785743568,1,False,Cincinnati
+2018,Purdue,Butler,1345,1139,1,Purdue,Butler,2.0,10.0,False,7.675626795895113,15.124860648559633,7.44923385266452,0.7175820862071756,1,True,Purdue
+2018,Michigan St,Syracuse,1277,1393,0,Syracuse,Michigan St,11.0,3.0,True,10.485779150062614,14.86799093415256,4.382211784089947,0.7158470708601198,1,False,Michigan St
+2018,Texas A&M,North Carolina,1401,1314,1,Texas A&M,North Carolina,7.0,2.0,True,-4.540051296091775,6.565237017926137,11.105288314017912,0.3352626949350195,0,False,North Carolina
+2018,West Virginia,Marshall,1452,1267,1,West Virginia,Marshall,5.0,13.0,False,7.167850811355933,10.630208345938016,3.4623575345820825,0.8562249113198475,1,True,West Virginia
+2018,Gonzaga,Florida St,1211,1199,0,Florida St,Gonzaga,9.0,4.0,True,7.913164255106892,15.073452461663464,7.160288206556572,0.6464852433430432,1,False,Gonzaga
+2018,Kansas St,Kentucky,1243,1246,1,Kansas St,Kentucky,9.0,5.0,True,-2.7703930345253687,5.063978976330759,7.834372010856128,0.6022112690206594,1,True,Kansas St
+2018,Nevada,Loyola-Chicago,1305,1260,0,Loyola-Chicago,Nevada,11.0,7.0,True,1.727818048985755,10.148091641199857,8.420273592214102,0.7145755534112166,1,False,Nevada
+2018,Michigan,Texas A&M,1276,1401,1,Michigan,Texas A&M,3.0,7.0,False,4.247425071513492,10.812662089439629,6.565237017926137,0.6678549725433843,1,True,Michigan
+2018,Duke,Syracuse,1181,1393,1,Duke,Syracuse,2.0,11.0,False,11.041630262576545,15.423842046666492,4.382211784089947,0.7964210602221844,1,True,Duke
+2018,Clemson,Kansas,1155,1242,0,Kansas,Clemson,1.0,5.0,False,-2.9914193469385015,8.383434922099795,11.374854269038297,0.48480216998846776,0,True,Kansas
+2018,Purdue,Texas Tech,1345,1403,0,Texas Tech,Purdue,3.0,2.0,True,4.742587726281869,15.124860648559633,10.382272922277764,0.6789837534223777,1,False,Purdue
+2018,Villanova,West Virginia,1437,1452,1,Villanova,West Virginia,1.0,5.0,False,6.190368161165793,16.82057650710381,10.630208345938016,0.6864277531496137,1,True,Villanova
+2018,Loyola-Chicago,Kansas St,1260,1243,1,Loyola-Chicago,Kansas St,11.0,9.0,True,3.3562946158833427,8.420273592214102,5.063978976330759,0.4386700275851801,0,False,Kansas St
+2018,Florida St,Michigan,1199,1276,0,Michigan,Florida St,3.0,9.0,False,-3.6523738828830563,7.160288206556572,10.812662089439629,0.5243506582858855,1,False,Florida St
+2018,Kansas,Duke,1242,1181,1,Kansas,Duke,1.0,2.0,False,-4.048987777628195,11.374854269038297,15.423842046666492,0.339215351516899,0,False,Duke
+2018,Villanova,Texas Tech,1437,1403,1,Villanova,Texas Tech,1.0,3.0,False,6.438303584826045,16.82057650710381,10.382272922277764,0.6909854364790741,1,True,Villanova
+2018,Loyola-Chicago,Michigan,1260,1276,0,Michigan,Loyola-Chicago,3.0,11.0,False,-2.392388497225527,8.420273592214102,10.812662089439629,0.31339649098874317,0,True,Michigan
+2018,Villanova,Kansas,1437,1242,1,Villanova,Kansas,1.0,1.0,False,5.445722238065512,16.82057650710381,11.374854269038297,0.7364326151993679,1,True,Villanova
+2018,Michigan,Villanova,1276,1437,0,Villanova,Michigan,1.0,3.0,False,-6.00791441766418,10.812662089439629,16.82057650710381,0.3165325124394663,0,True,Villanova
+2019,Temple,Belmont,1396,1125,0,Belmont,Temple,11.0,11.0,False,-6.030784563561568,3.5548530472938182,9.585637610855386,0.4321535297136848,0,True,Belmont
+2019,F Dickinson,Prairie View,1192,1341,1,F Dickinson,Prairie View,16.0,16.0,False,-0.6674426338864379,0.2328284983108375,0.9002711321972754,0.4689240677787863,0,False,Prairie View
+2019,St John's,Arizona St,1385,1113,0,Arizona St,St John's,11.0,11.0,False,-1.888877740555941,2.838784036559133,4.727661777115074,0.5706800687956842,1,False,St John's
+2019,N Dakota St,NC Central,1295,1300,1,N Dakota St,NC Central,16.0,16.0,False,1.2896897768240048,-1.036577827326667,-2.326267604150672,0.5940890378692808,1,True,N Dakota St
+2019,Auburn,New Mexico St,1120,1308,1,Auburn,New Mexico St,5.0,12.0,False,1.0296523858295803,10.991788256424272,9.962135870594691,0.6755293077657976,1,True,Auburn
+2019,Syracuse,Baylor,1393,1124,0,Baylor,Syracuse,9.0,8.0,True,0.6111060412720661,5.842915685224511,5.231809643952445,0.5392250468750367,1,False,Syracuse
+2019,Florida,Nevada,1196,1305,1,Florida,Nevada,10.0,7.0,True,-6.279437949281842,6.33208389713684,12.611521846418682,0.35280432087692964,0,False,Nevada
+2019,Florida St,Vermont,1199,1436,1,Florida St,Vermont,4.0,13.0,False,1.3683908803102298,9.085750514073254,7.717359633763024,0.6177659433933871,1,True,Florida St
+2019,Gonzaga,F Dickinson,1211,1192,1,Gonzaga,F Dickinson,1.0,16.0,False,21.119198064660978,21.352026562971815,0.2328284983108375,0.9669683920907706,1,True,Gonzaga
+2019,Northeastern,Kansas,1318,1242,0,Kansas,Northeastern,4.0,13.0,False,-2.2467800676538587,5.504509607718134,7.751289675371993,0.2293760576443545,0,True,Kansas
+2019,Abilene Chr,Kentucky,1101,1246,0,Kentucky,Abilene Chr,2.0,15.0,False,-7.786949027958471,4.122519115598266,11.909468143556737,0.17877591997956324,0,True,Kentucky
+2019,LSU,Yale,1261,1463,1,LSU,Yale,3.0,14.0,False,2.7434258028295346,8.648209614543177,5.904783811713642,0.7693674154555205,1,True,LSU
+2019,Belmont,Maryland,1125,1268,0,Maryland,Belmont,6.0,11.0,False,2.212063289495944,9.585637610855386,7.373574321359442,0.40090245024823434,0,True,Maryland
+2019,Montana,Michigan,1285,1276,0,Michigan,Montana,2.0,15.0,False,-6.902933278851194,5.718077079495515,12.621010358346709,0.2670910674847735,0,True,Michigan
+2019,Michigan St,Bradley,1277,1133,1,Michigan St,Bradley,2.0,15.0,False,14.13526446406699,14.35796365602006,0.2226991919530689,0.9169584151317861,1,True,Michigan St
+2019,Minnesota,Louisville,1278,1257,1,Minnesota,Louisville,10.0,7.0,True,-5.339444663166134,3.3290445851317685,8.668489248297902,0.2398769902571497,0,False,Louisville
+2019,Murray St,Marquette,1293,1266,1,Murray St,Marquette,12.0,5.0,True,1.7533930012417187,9.931033234723529,8.17764023348181,0.6888487590100403,1,True,Murray St
+2019,Purdue,Old Dominion,1345,1330,1,Purdue,Old Dominion,3.0,14.0,False,6.973783251418952,10.984397609854229,4.0106143584352765,0.8007887380054531,1,True,Purdue
+2019,Villanova,St Mary's CA,1437,1388,1,Villanova,St Mary's CA,6.0,11.0,False,-1.0633531906641753,8.026707592446257,9.090060783110433,0.4530296617005541,0,False,St Mary's CA
+2019,Wofford,Seton Hall,1459,1371,1,Wofford,Seton Hall,7.0,10.0,False,8.082205218257286,11.907423376394846,3.825218158137559,0.7537102493586758,1,True,Wofford
+2019,Arizona St,Buffalo,1113,1138,0,Buffalo,Arizona St,6.0,11.0,False,-8.177592130268321,4.727661777115074,12.905253907383395,0.22521053699085028,0,True,Buffalo
+2019,N Dakota St,Duke,1295,1181,0,Duke,N Dakota St,1.0,16.0,False,-17.575812467715764,-1.036577827326667,16.539234640389097,0.03909380415359062,0,True,Duke
+2019,Georgia St,Houston,1209,1222,0,Houston,Georgia St,3.0,14.0,False,-10.291575825785301,2.878007588045449,13.16958341383075,0.24256773539531207,0,True,Houston
+2019,Iowa,Cincinnati,1234,1153,1,Iowa,Cincinnati,10.0,7.0,True,-3.994399883054456,5.20163159942453,9.196031482478986,0.44522512586858914,0,False,Cincinnati
+2019,Liberty,Mississippi St,1251,1280,1,Liberty,Mississippi St,12.0,5.0,True,-0.6840735660538542,7.5553356755311825,8.239409241585037,0.5838200016304278,1,True,Liberty
+2019,North Carolina,Iona,1314,1233,1,North Carolina,Iona,1.0,16.0,False,13.868557514283582,14.228923070543717,0.3603655562601346,0.9309529028749359,1,True,North Carolina
+2019,Ohio St,Iowa St,1326,1235,1,Ohio St,Iowa St,11.0,6.0,True,-4.914443816026006,4.752662712643669,9.667106528669676,0.28385055790577635,0,False,Iowa St
+2019,Oklahoma,Mississippi,1328,1279,1,Oklahoma,Mississippi,9.0,8.0,True,-0.4873302450443475,4.990118255492504,5.477448500536852,0.41202314035172194,0,False,Mississippi
+2019,Wisconsin,Oregon,1458,1332,0,Oregon,Wisconsin,12.0,5.0,True,1.7372511198285139,9.426317701684596,7.689066581856082,0.6597175877350109,1,False,Wisconsin
+2019,Tennessee,Colgate,1397,1159,1,Tennessee,Colgate,2.0,15.0,False,7.783578961552664,12.286770183974667,4.503191222422004,0.8533855229892138,1,True,Tennessee
+2019,N Kentucky,Texas Tech,1297,1403,0,Texas Tech,N Kentucky,3.0,14.0,False,-7.441456220307998,5.417194251168894,12.858650471476892,0.33090602351886717,0,True,Texas Tech
+2019,UC Irvine,Kansas St,1414,1243,1,UC Irvine,Kansas St,13.0,4.0,True,-0.3057880418634653,7.345936757255956,7.651724799119421,0.3769595212758005,0,False,Kansas St
+2019,UCF,VCU,1416,1433,1,UCF,VCU,9.0,8.0,True,-1.5615854081448362,7.325913533251395,8.887498941396231,0.6780694566350316,1,True,UCF
+2019,Virginia,Gardner Webb,1438,1205,1,Virginia,Gardner Webb,1.0,16.0,False,16.002619499229198,17.675547784312187,1.672928285082989,0.9295951538823917,1,True,Virginia
+2019,Virginia Tech,St Louis,1439,1387,1,Virginia Tech,St Louis,4.0,13.0,False,9.334862978620777,12.145065916694762,2.810202938073985,0.9144805247812896,1,True,Virginia Tech
+2019,Utah St,Washington,1429,1449,0,Washington,Utah St,9.0,8.0,True,4.660526063763415,10.734710934778208,6.074184871014793,0.6155534399994484,1,False,Utah St
+2019,Kansas,Auburn,1242,1120,0,Auburn,Kansas,5.0,4.0,True,-3.240498581052279,7.751289675371993,10.991788256424272,0.4711291140204459,0,True,Auburn
+2019,Florida St,Murray St,1199,1293,1,Florida St,Murray St,4.0,12.0,False,-0.8452827206502747,9.085750514073254,9.931033234723529,0.5795554572284538,1,True,Florida St
+2019,Gonzaga,Baylor,1211,1124,1,Gonzaga,Baylor,1.0,9.0,False,16.12021691901937,21.352026562971815,5.231809643952445,0.8508736718834345,1,True,Gonzaga
+2019,Kentucky,Wofford,1246,1459,1,Kentucky,Wofford,2.0,7.0,False,0.002044767161891059,11.909468143556737,11.907423376394846,0.6706357460441684,1,True,Kentucky
+2019,Maryland,LSU,1268,1261,0,LSU,Maryland,3.0,6.0,False,-1.274635293183735,7.373574321359442,8.648209614543177,0.4516254775068251,0,True,LSU
+2019,Michigan,Florida,1276,1196,1,Michigan,Florida,2.0,10.0,False,6.2889264612098685,12.621010358346709,6.33208389713684,0.6856402752906977,1,True,Michigan
+2019,Minnesota,Michigan St,1278,1277,0,Michigan St,Minnesota,2.0,10.0,False,-11.028919070888291,3.3290445851317685,14.35796365602006,0.1660587694788566,0,True,Michigan St
+2019,Villanova,Purdue,1437,1345,0,Purdue,Villanova,3.0,6.0,False,-2.9576900174079714,8.026707592446257,10.984397609854229,0.4738282489151963,0,True,Purdue
+2019,UCF,Duke,1416,1181,0,Duke,UCF,1.0,9.0,False,-9.213321107137702,7.325913533251395,16.539234640389097,0.160082911792107,0,True,Duke
+2019,Houston,Ohio St,1222,1326,1,Houston,Ohio St,3.0,11.0,False,8.416920701187081,13.16958341383075,4.752662712643669,0.7225639502643293,1,True,Houston
+2019,North Carolina,Washington,1314,1449,1,North Carolina,Washington,1.0,9.0,False,8.154738199528923,14.228923070543717,6.074184871014793,0.7605817894243987,1,True,North Carolina
+2019,Oregon,UC Irvine,1332,1414,1,Oregon,UC Irvine,12.0,13.0,False,0.3431298246001262,7.689066581856082,7.345936757255956,0.6811061469708598,1,True,Oregon
+2019,Iowa,Tennessee,1234,1397,0,Tennessee,Iowa,2.0,10.0,False,-7.085138584550137,5.20163159942453,12.286770183974667,0.30600973311917756,0,True,Tennessee
+2019,Texas Tech,Buffalo,1403,1138,1,Texas Tech,Buffalo,3.0,6.0,False,-0.046603435906503066,12.858650471476892,12.905253907383395,0.453276559393715,0,False,Buffalo
+2019,Virginia,Oklahoma,1438,1328,1,Virginia,Oklahoma,1.0,9.0,False,12.685429528819682,17.675547784312187,4.990118255492504,0.8059791272364238,1,True,Virginia
+2019,Liberty,Virginia Tech,1251,1439,0,Virginia Tech,Liberty,4.0,12.0,False,-4.589730241163579,7.5553356755311825,12.145065916694762,0.37669998618262823,0,True,Virginia Tech
+2019,Florida St,Gonzaga,1199,1211,0,Gonzaga,Florida St,1.0,4.0,False,-12.266276048898561,9.085750514073254,21.352026562971815,0.284057214558092,0,True,Gonzaga
+2019,Purdue,Tennessee,1345,1397,1,Purdue,Tennessee,3.0,2.0,True,-1.3023725741204384,10.984397609854229,12.286770183974667,0.5021927269957097,1,True,Purdue
+2019,Michigan,Texas Tech,1276,1403,0,Texas Tech,Michigan,3.0,2.0,True,-0.2376401131301833,12.621010358346709,12.858650471476892,0.6260584196203777,1,False,Michigan
+2019,Virginia,Oregon,1438,1332,1,Virginia,Oregon,1.0,12.0,False,9.986481202456105,17.675547784312187,7.689066581856082,0.7865876728144896,1,True,Virginia
+2019,Auburn,North Carolina,1120,1314,1,Auburn,North Carolina,5.0,1.0,True,-3.237134814119445,10.991788256424272,14.228923070543717,0.40917966684727597,0,False,North Carolina
+2019,Virginia Tech,Duke,1439,1181,0,Duke,Virginia Tech,1.0,4.0,False,-4.394168723694335,12.145065916694762,16.539234640389097,0.367734036330982,0,True,Duke
+2019,Houston,Kentucky,1222,1246,0,Kentucky,Houston,2.0,3.0,False,1.2601152702740137,13.16958341383075,11.909468143556737,0.37244556442262744,0,True,Kentucky
+2019,Michigan St,LSU,1277,1261,1,Michigan St,LSU,2.0,3.0,False,5.709754041476883,14.35796365602006,8.648209614543177,0.5715370702264111,1,True,Michigan St
+2019,Gonzaga,Texas Tech,1211,1403,0,Texas Tech,Gonzaga,3.0,1.0,True,8.493376091494923,21.352026562971815,12.858650471476892,0.8126179674290838,1,False,Gonzaga
+2019,Virginia,Purdue,1438,1345,1,Virginia,Purdue,1.0,3.0,False,6.691150174457958,17.675547784312187,10.984397609854229,0.6428110105334511,1,True,Virginia
+2019,Auburn,Kentucky,1120,1246,1,Auburn,Kentucky,5.0,2.0,True,-0.917679887132465,10.991788256424272,11.909468143556737,0.4748913489603033,0,False,Kentucky
+2019,Michigan St,Duke,1277,1181,1,Michigan St,Duke,2.0,1.0,True,-2.1812709843690374,14.35796365602006,16.539234640389097,0.22855475174597442,0,False,Duke
+2019,Michigan St,Texas Tech,1277,1403,0,Texas Tech,Michigan St,3.0,2.0,True,1.4993131845431673,14.35796365602006,12.858650471476892,0.5539748243370572,1,False,Michigan St
+2019,Virginia,Auburn,1438,1120,1,Virginia,Auburn,1.0,5.0,False,6.683759527887915,17.675547784312187,10.991788256424272,0.7144375668994061,1,True,Virginia
+2019,Texas Tech,Virginia,1403,1438,0,Virginia,Texas Tech,1.0,3.0,False,-4.8168973128352945,12.858650471476892,17.675547784312187,0.3903881388715383,0,True,Virginia
+2021,Drake,Wichita St,1179,1455,1,Drake,Wichita St,11.0,11.0,False,6.477988775270447,8.53047777871484,2.052489003444393,0.9267356708570555,1,True,Drake
+2021,Norfolk St,Appalachian St,1313,1111,1,Norfolk St,Appalachian St,16.0,16.0,False,2.368913710051586,1.935010670557176,-0.4339030394944103,0.7011393679771359,1,True,Norfolk St
+2021,TX Southern,Mt St Mary's,1411,1291,1,TX Southern,Mt St Mary's,16.0,16.0,False,-0.15602253917268172,1.0538056662432354,1.209828205415917,0.6658279817516347,1,True,TX Southern
+2021,Michigan St,UCLA,1277,1417,0,UCLA,Michigan St,11.0,11.0,False,-4.593071381960385,-0.1004654314264712,4.492605950533914,0.2665713817729052,0,True,UCLA
+2021,Colgate,Arkansas,1159,1116,0,Arkansas,Colgate,3.0,14.0,False,-0.12574573575008863,9.492362524725207,9.618108260475296,0.48737033057628865,0,True,Arkansas
+2021,Hartford,Baylor,1216,1124,0,Baylor,Hartford,1.0,16.0,False,-12.30354610483191,1.4000280369503315,13.70357414178224,0.2125550478892874,0,True,Baylor
+2021,Florida,Virginia Tech,1196,1439,1,Florida,Virginia Tech,7.0,10.0,False,0.3825212921881871,4.943249778039672,4.5607284858514845,0.7423176792364335,1,True,Florida
+2021,Houston,Cleveland St,1222,1156,1,Houston,Cleveland St,2.0,15.0,False,13.582951527137666,14.236392520596056,0.6534409934583891,0.94902734752345,1,True,Houston
+2021,Illinois,Drexel,1228,1180,1,Illinois,Drexel,1.0,16.0,False,8.759059620171968,11.65343542409994,2.894375803927971,0.7829337882479618,1,True,Illinois
+2021,Loyola-Chicago,Georgia Tech,1260,1210,1,Loyola-Chicago,Georgia Tech,8.0,9.0,False,7.732014286600474,12.334168782767051,4.602154496166577,0.8131752285293932,1,True,Loyola-Chicago
+2021,Purdue,North Texas,1345,1317,0,North Texas,Purdue,13.0,4.0,True,-1.217754182564022,5.4261391414108715,6.643893323974893,0.49413855424600994,0,True,North Texas
+2021,Oklahoma St,Liberty,1329,1251,1,Oklahoma St,Liberty,4.0,13.0,False,-1.805527281243556,5.275751579235433,7.081278860478989,0.6136202443140689,1,True,Oklahoma St
+2021,Ohio St,Oral Roberts,1326,1331,0,Oral Roberts,Ohio St,15.0,2.0,True,5.917955264499952,7.239419404456314,1.3214641399563618,0.8506103965238819,1,False,Ohio St
+2021,Tennessee,Oregon St,1397,1333,0,Oregon St,Tennessee,12.0,5.0,True,7.443651102972069,7.934715249812655,0.4910641468405856,0.930284523371845,1,False,Tennessee
+2021,Rutgers,Clemson,1353,1155,1,Rutgers,Clemson,10.0,7.0,True,-0.5071650765735853,2.8663811310835996,3.373546207657185,0.6990081124169789,1,True,Rutgers
+2021,San Diego St,Syracuse,1361,1393,0,Syracuse,San Diego St,11.0,6.0,True,5.436838417162916,10.049888843784116,4.6130504266212,0.6364161507999584,1,False,San Diego St
+2021,Utah St,Texas Tech,1429,1403,0,Texas Tech,Utah St,6.0,11.0,False,-0.12273114731836188,8.583762225442172,8.706493372760534,0.48071629530509974,0,True,Texas Tech
+2021,Winthrop,Villanova,1457,1437,0,Villanova,Winthrop,5.0,12.0,False,1.682002799330263,8.675469863895543,6.99346706456528,0.630789869610235,1,False,Winthrop
+2021,Morehead St,West Virginia,1287,1452,0,West Virginia,Morehead St,3.0,14.0,False,-2.5284972033513924,3.4101185208305225,5.938615724181915,0.40414582314096736,0,True,West Virginia
+2021,Wisconsin,North Carolina,1458,1314,1,Wisconsin,North Carolina,9.0,8.0,True,-0.5721620038303286,5.870315638137555,6.4424776419678835,0.7157367524466569,1,True,Wisconsin
+2021,Texas,Abilene Chr,1400,1101,0,Abilene Chr,Texas,14.0,3.0,True,-2.9872558278088803,6.28953378581825,9.27678961362713,0.6113758326346505,1,False,Texas
+2021,Iona,Alabama,1233,1104,0,Alabama,Iona,2.0,15.0,False,-6.471520465265712,3.3902722825144593,9.861792747780171,0.32065192961479466,0,True,Alabama
+2021,Georgetown,Colorado,1207,1160,0,Colorado,Georgetown,5.0,12.0,False,-7.816145296299112,1.6022262414808637,9.418371537779976,0.1078891798620033,0,True,Colorado
+2021,Creighton,UC Santa Barbara,1166,1364,1,Creighton,UC Santa Barbara,5.0,12.0,False,-0.56747441289383,7.394533629203622,7.962008042097452,0.43757443093010195,0,False,UC Santa Barbara
+2021,UNC Greensboro,Florida St,1422,1199,0,Florida St,UNC Greensboro,4.0,13.0,False,-0.840137037661961,5.679477709144237,6.519614746806198,0.6439460452683406,1,False,UNC Greensboro
+2021,Gonzaga,Norfolk St,1211,1313,1,Gonzaga,Norfolk St,1.0,16.0,False,15.585338528689775,17.52034919924695,1.935010670557176,0.9403140554353105,1,True,Gonzaga
+2021,Grand Canyon,Iowa,1213,1234,0,Iowa,Grand Canyon,2.0,15.0,False,-5.110582740188931,5.588683561907956,10.699266302096888,0.48974224087215384,0,True,Iowa
+2021,Kansas,E Washington,1242,1186,1,Kansas,E Washington,3.0,14.0,False,1.3758984942152068,6.737222599131272,5.361324104916065,0.7389901839559948,1,True,Kansas
+2021,St Bonaventure,LSU,1382,1261,0,LSU,St Bonaventure,8.0,9.0,False,0.9702078088734396,8.043699174952906,7.073491366079466,0.5512678702455134,1,False,St Bonaventure
+2021,Connecticut,Maryland,1163,1268,0,Maryland,Connecticut,10.0,7.0,True,3.224910185482912,6.532373387719161,3.3074632022362493,0.7865762766800529,1,False,Connecticut
+2021,TX Southern,Michigan,1411,1276,0,Michigan,TX Southern,1.0,16.0,False,-8.291231894143579,1.0538056662432354,9.345037560386814,0.22456487769232003,0,True,Michigan
+2021,Ohio,Virginia,1325,1438,1,Ohio,Virginia,13.0,4.0,True,-2.367648206857652,5.245516312669892,7.613164519527544,0.41465985738551814,0,False,Virginia
+2021,Missouri,Oklahoma,1281,1328,0,Oklahoma,Missouri,8.0,9.0,False,-1.72348944820844,3.3668438814686823,5.090333329677122,0.4240076570001711,0,True,Oklahoma
+2021,BYU,UCLA,1140,1417,0,UCLA,BYU,11.0,6.0,True,3.8509144266856623,8.343520377219576,4.492605950533914,0.6191487255022882,1,False,BYU
+2021,Drake,USC,1179,1425,0,USC,Drake,6.0,11.0,False,-0.41686860601836884,8.53047777871484,8.947346384733208,0.6806618767108608,1,False,Drake
+2021,Arkansas,Texas Tech,1116,1403,1,Arkansas,Texas Tech,3.0,6.0,False,0.9116148877147623,9.618108260475296,8.706493372760534,0.6240859324831811,1,True,Arkansas
+2021,Baylor,Wisconsin,1124,1458,1,Baylor,Wisconsin,1.0,9.0,False,7.833258503644686,13.70357414178224,5.870315638137555,0.7011199474887648,1,True,Baylor
+2021,Houston,Rutgers,1222,1353,1,Houston,Rutgers,2.0,10.0,False,11.370011389512456,14.236392520596056,2.8663811310835996,0.8689663976539841,1,True,Houston
+2021,Loyola-Chicago,Illinois,1260,1228,1,Loyola-Chicago,Illinois,8.0,1.0,True,0.680733358667112,12.334168782767051,11.65343542409994,0.6727239693108522,1,True,Loyola-Chicago
+2021,Oral Roberts,Florida,1331,1196,1,Oral Roberts,Florida,15.0,7.0,True,-3.6217856380833098,1.3214641399563618,4.943249778039672,0.30579435548904504,0,False,Florida
+2021,Oregon St,Oklahoma St,1333,1329,1,Oregon St,Oklahoma St,12.0,4.0,True,-4.784687432394847,0.4910641468405856,5.275751579235433,0.21628976271858302,0,False,Oklahoma St
+2021,West Virginia,Syracuse,1452,1393,0,Syracuse,West Virginia,11.0,3.0,True,1.3255652975607148,5.938615724181915,4.6130504266212,0.3740011435335965,0,True,Syracuse
+2021,North Texas,Villanova,1317,1437,0,Villanova,North Texas,5.0,13.0,False,-0.3495737405903867,6.643893323974893,6.99346706456528,0.624950554252044,1,False,North Texas
+2021,Maryland,Alabama,1268,1104,0,Alabama,Maryland,2.0,10.0,False,-6.554329545543922,3.3074632022362493,9.861792747780171,0.30891582085381863,0,True,Alabama
+2021,Creighton,Ohio,1166,1325,1,Creighton,Ohio,5.0,13.0,False,2.1490173165337296,7.394533629203622,5.245516312669892,0.7069356555377703,1,True,Creighton
+2021,Colorado,Florida St,1160,1199,0,Florida St,Colorado,4.0,5.0,False,2.8987567909737777,9.418371537779976,6.519614746806198,0.7714978991567003,1,False,Colorado
+2021,Gonzaga,Oklahoma,1211,1328,1,Gonzaga,Oklahoma,1.0,8.0,False,12.430015869569829,17.52034919924695,5.090333329677122,0.7974140132945904,1,True,Gonzaga
+2021,LSU,Michigan,1261,1276,0,Michigan,LSU,1.0,8.0,False,-2.271546194307348,7.073491366079466,9.345037560386814,0.4939417583555177,0,True,Michigan
+2021,Oregon,Iowa,1332,1234,1,Oregon,Iowa,7.0,2.0,True,-4.86895288547386,5.830313416623028,10.699266302096888,0.5500364170481574,1,True,Oregon
+2021,UCLA,Abilene Chr,1417,1101,1,UCLA,Abilene Chr,11.0,14.0,False,-4.784183663093216,4.492605950533914,9.27678961362713,0.6711496839285405,1,True,UCLA
+2021,Kansas,USC,1242,1425,0,USC,Kansas,6.0,3.0,True,-2.2101237856019367,6.737222599131272,8.947346384733208,0.49036257912980596,0,True,USC
+2021,Oral Roberts,Arkansas,1331,1116,0,Arkansas,Oral Roberts,3.0,15.0,False,-8.296644120518934,1.3214641399563618,9.618108260475296,0.18841620479990384,0,True,Arkansas
+2021,Villanova,Baylor,1437,1124,0,Baylor,Villanova,1.0,5.0,False,-6.710107077216961,6.99346706456528,13.70357414178224,0.4314010678644405,0,True,Baylor
+2021,Syracuse,Houston,1393,1222,0,Houston,Syracuse,2.0,11.0,False,-9.623342093974856,4.6130504266212,14.236392520596056,0.358078974329991,0,True,Houston
+2021,Loyola-Chicago,Oregon St,1260,1333,0,Oregon St,Loyola-Chicago,12.0,8.0,True,11.843104635926466,12.334168782767051,0.4910641468405856,0.9312300403888143,1,False,Loyola-Chicago
+2021,Gonzaga,Creighton,1211,1166,1,Gonzaga,Creighton,1.0,5.0,False,10.12581557004333,17.52034919924695,7.394533629203622,0.8252333147741493,1,True,Gonzaga
+2021,Michigan,Florida St,1276,1199,1,Michigan,Florida St,1.0,4.0,False,2.825422813580616,9.345037560386814,6.519614746806198,0.6948005604211879,1,True,Michigan
+2021,UCLA,Alabama,1417,1104,1,UCLA,Alabama,11.0,2.0,True,-5.3691867972462575,4.492605950533914,9.861792747780171,0.46788158758924153,0,False,Alabama
+2021,USC,Oregon,1425,1332,1,USC,Oregon,6.0,7.0,False,3.1170329681101805,8.947346384733208,5.830313416623028,0.5931080069595099,1,True,USC
+2021,Arkansas,Baylor,1116,1124,0,Baylor,Arkansas,1.0,3.0,False,-4.085465881306945,9.618108260475296,13.70357414178224,0.5363720913802972,1,False,Arkansas
+2021,Houston,Oregon St,1222,1333,1,Houston,Oregon St,2.0,12.0,False,13.74532837375547,14.236392520596056,0.4910641468405856,0.9647729620939218,1,True,Houston
+2021,USC,Gonzaga,1425,1211,0,Gonzaga,USC,1.0,6.0,False,-8.573002814513742,8.947346384733208,17.52034919924695,0.3051293112505077,0,True,Gonzaga
+2021,Michigan,UCLA,1276,1417,0,UCLA,Michigan,11.0,1.0,True,4.8524316098529,9.345037560386814,4.492605950533914,0.7349838915334953,1,False,Michigan
+2021,Baylor,Houston,1124,1222,1,Baylor,Houston,1.0,2.0,False,-0.5328183788138148,13.70357414178224,14.236392520596056,0.43127457830437427,0,False,Houston
+2021,UCLA,Gonzaga,1417,1211,0,Gonzaga,UCLA,1.0,11.0,False,-13.027743248713037,4.492605950533914,17.52034919924695,0.2685131957883407,0,True,Gonzaga
+2021,Gonzaga,Baylor,1211,1124,0,Baylor,Gonzaga,1.0,1.0,False,3.81677505746471,17.52034919924695,13.70357414178224,0.6971496764969135,1,False,Gonzaga
+2022,Wyoming,Indiana,1461,1231,0,Indiana,Wyoming,12.0,12.0,False,0.21825312330452107,6.261375683484317,6.043122560179796,0.5918059172079267,1,False,Wyoming
+2022,TX Southern,TAM C. Christi,1411,1394,1,TX Southern,TAM C. Christi,16.0,16.0,False,2.256434072862959,1.8175735948038607,-0.4388604780590981,0.609540784921357,1,True,TX Southern
+2022,Rutgers,Notre Dame,1353,1323,0,Notre Dame,Rutgers,11.0,11.0,False,-2.4834347352385038,2.813816077227642,5.297250812466146,0.5497527488846755,1,False,Rutgers
+2022,Bryant,Wright St,1136,1460,0,Wright St,Bryant,16.0,16.0,False,-0.7886938567237534,1.1538458470346882,1.9425397037584415,0.4562367881019779,0,True,Wright St
+2022,Arkansas,Vermont,1116,1436,1,Arkansas,Vermont,4.0,13.0,False,-3.4814955223149724,8.046990141541855,11.528485663856827,0.6117131896000942,1,True,Arkansas
+2022,Baylor,Norfolk St,1124,1313,1,Baylor,Norfolk St,1.0,16.0,False,8.894983139326273,12.588615731143848,3.6936325918175754,0.9259057763722979,1,True,Baylor
+2022,San Diego St,Creighton,1361,1166,0,Creighton,San Diego St,9.0,8.0,True,3.5582757211306557,7.647253523818804,4.088977802688149,0.6190621438432528,1,False,San Diego St
+2022,Georgia St,Gonzaga,1209,1211,0,Gonzaga,Georgia St,1.0,16.0,False,-17.32224032911043,0.8074804160708169,18.129720745181245,0.07705277376039844,0,True,Gonzaga
+2022,TX Southern,Kansas,1411,1242,0,Kansas,TX Southern,1.0,16.0,False,-10.004499344642895,1.8175735948038607,11.822072939446755,0.14223092244618826,0,True,Kansas
+2022,Boise St,Memphis,1129,1272,0,Memphis,Boise St,9.0,8.0,True,0.08063288300955662,7.505589834071515,7.424956951061958,0.6570515716306184,1,False,Boise St
+2022,Michigan,Colorado St,1276,1161,1,Michigan,Colorado St,11.0,6.0,True,-1.5379798512493323,5.419681965960294,6.957661817209626,0.5517883208781613,1,True,Michigan
+2022,San Francisco,Murray St,1362,1293,0,Murray St,San Francisco,7.0,10.0,False,-2.3561055182416055,9.118457531157134,11.47456304939874,0.3980949899297101,0,True,Murray St
+2022,Connecticut,New Mexico St,1163,1308,0,New Mexico St,Connecticut,12.0,5.0,True,4.18893088184258,9.74651721638213,5.55758633453955,0.7194545975513364,1,False,Connecticut
+2022,North Carolina,Marquette,1314,1266,1,North Carolina,Marquette,8.0,9.0,False,2.262095330400456,6.556601442853179,4.294506112452723,0.5966746012315218,1,True,North Carolina
+2022,S Dakota St,Providence,1355,1344,0,Providence,S Dakota St,4.0,13.0,False,3.8788879442332984,8.738700119124431,4.8598121748911325,0.44910167952247687,0,True,Providence
+2022,Richmond,Iowa,1350,1234,1,Richmond,Iowa,12.0,5.0,True,-7.861319539651076,4.2844128052230275,12.145732344874103,0.23834600619245483,0,False,Iowa
+2022,St Mary's CA,Indiana,1388,1231,1,St Mary's CA,Indiana,5.0,12.0,False,3.0672016132706403,9.110324173450437,6.043122560179796,0.7256342401504473,1,True,St Mary's CA
+2022,Kentucky,St Peter's,1246,1389,0,St Peter's,Kentucky,15.0,2.0,True,9.918843962863917,13.433400828065842,3.514556865201925,0.9312754256697795,1,False,Kentucky
+2022,Tennessee,Longwood,1397,1255,1,Tennessee,Longwood,3.0,14.0,False,7.46734007875439,11.73902998686006,4.271689908105671,0.7937191663545156,1,True,Tennessee
+2022,UCLA,Akron,1417,1103,1,UCLA,Akron,4.0,13.0,False,8.183509213265763,11.753875013633872,3.5703658003681085,0.8599029026577838,1,True,UCLA
+2022,Wright St,Arizona,1460,1112,0,Arizona,Wright St,1.0,16.0,False,-13.49987260014015,1.9425397037584415,15.442412303898593,0.14124289468138676,0,True,Arizona
+2022,Auburn,Jacksonville St,1120,1240,1,Auburn,Jacksonville St,2.0,15.0,False,8.740441810177316,11.367336863532358,2.6268950533550424,0.8953867964045604,1,True,Auburn
+2022,CS Fullerton,Duke,1168,1181,0,Duke,CS Fullerton,2.0,15.0,False,-10.740600809511534,1.8948802031006269,12.63548101261216,0.13018556244113527,0,True,Duke
+2022,UAB,Houston,1412,1222,0,Houston,UAB,5.0,12.0,False,-6.594816719048708,9.365882298308094,15.960699017356802,0.32654643077490036,0,True,Houston
+2022,Illinois,Chattanooga,1228,1151,1,Illinois,Chattanooga,4.0,13.0,False,1.508474817922945,8.818853255429872,7.310378437506927,0.46690017381665333,0,False,Chattanooga
+2022,LSU,Iowa St,1261,1235,0,Iowa St,LSU,11.0,6.0,True,5.716816637450378,9.997303523056615,4.280486885606237,0.6330013087886585,1,False,LSU
+2022,USC,Miami FL,1425,1274,0,Miami FL,USC,10.0,7.0,True,1.9302024079665188,6.395524619742659,4.46532221177614,0.7266520213941084,1,False,USC
+2022,Michigan St,Davidson,1277,1172,1,Michigan St,Davidson,7.0,10.0,False,-2.9919295064682387,5.285965095830505,8.277894602298744,0.49630905704594236,0,False,Davidson
+2022,Alabama,Notre Dame,1104,1323,0,Notre Dame,Alabama,11.0,6.0,True,1.1030937781686987,6.400344590634845,5.297250812466146,0.709023109435685,1,False,Alabama
+2022,Loyola-Chicago,Ohio St,1260,1326,0,Ohio St,Loyola-Chicago,7.0,10.0,False,4.396376593283364,10.494704817709533,6.098328224426169,0.5394324408465218,1,False,Loyola-Chicago
+2022,Purdue,Yale,1345,1463,1,Purdue,Yale,3.0,14.0,False,9.361522599899914,11.28290856469711,1.921385964797196,0.8548145298546889,1,True,Purdue
+2022,TCU,Seton Hall,1395,1371,1,TCU,Seton Hall,9.0,8.0,True,-1.300815621263908,4.502465892273065,5.803281513536973,0.4572666149568573,0,False,Seton Hall
+2022,Texas,Virginia Tech,1400,1439,1,Texas,Virginia Tech,6.0,11.0,False,0.11791201138711926,9.266893115247427,9.148981103860308,0.6786114320260858,1,True,Texas
+2022,Montana St,Texas Tech,1286,1403,0,Texas Tech,Montana St,3.0,14.0,False,-7.054734728414999,4.671938586006945,11.726673314421944,0.17839950315964703,0,True,Texas Tech
+2022,Delaware,Villanova,1174,1437,0,Villanova,Delaware,2.0,15.0,False,-9.028992996208189,2.287104246719011,11.3160972429272,0.09120056796939918,0,True,Villanova
+2022,Wisconsin,Colgate,1458,1159,1,Wisconsin,Colgate,3.0,14.0,False,-0.4680277900613987,5.37094612298678,5.838973913048179,0.6267069792346599,1,True,Wisconsin
+2022,New Mexico St,Arkansas,1308,1116,0,Arkansas,New Mexico St,4.0,12.0,False,-2.4894038070023043,5.55758633453955,8.046990141541855,0.31093844368420354,0,True,Arkansas
+2022,Gonzaga,Memphis,1211,1272,1,Gonzaga,Memphis,1.0,9.0,False,10.704763794119287,18.129720745181245,7.424956951061958,0.7868364898898235,1,True,Gonzaga
+2022,Creighton,Kansas,1166,1242,0,Kansas,Creighton,1.0,9.0,False,-7.733095136758607,4.088977802688149,11.822072939446755,0.20535805303742158,0,True,Kansas
+2022,Tennessee,Michigan,1397,1276,0,Michigan,Tennessee,11.0,3.0,True,6.319348020899767,11.73902998686006,5.419681965960294,0.7420592157989518,1,False,Tennessee
+2022,Baylor,North Carolina,1124,1314,0,North Carolina,Baylor,8.0,1.0,True,6.03201428829067,12.588615731143848,6.556601442853179,0.8513725607761732,1,False,Baylor
+2022,Providence,Richmond,1344,1350,1,Providence,Richmond,4.0,12.0,False,0.575399369668105,4.8598121748911325,4.2844128052230275,0.5922243337923315,1,True,Providence
+2022,St Peter's,Murray St,1389,1293,1,St Peter's,Murray St,15.0,7.0,True,-7.960006184196814,3.514556865201925,11.47456304939874,0.10504093791473262,0,False,Murray St
+2022,St Mary's CA,UCLA,1388,1417,0,UCLA,St Mary's CA,4.0,5.0,False,-2.643550840183435,9.110324173450437,11.753875013633872,0.4863548037440046,0,True,UCLA
+2022,TCU,Arizona,1395,1112,0,Arizona,TCU,1.0,9.0,False,-10.939946411625527,4.502465892273065,15.442412303898593,0.22551225080451762,0,True,Arizona
+2022,Michigan St,Duke,1277,1181,0,Duke,Michigan St,2.0,7.0,False,-7.349515916781655,5.285965095830505,12.63548101261216,0.2392653200148452,0,True,Duke
+2022,Houston,Illinois,1222,1228,1,Houston,Illinois,5.0,4.0,True,7.14184576192693,15.960699017356802,8.818853255429872,0.8009483623886997,1,True,Houston
+2022,Wisconsin,Iowa St,1458,1235,0,Iowa St,Wisconsin,11.0,3.0,True,1.0904592373805428,5.37094612298678,4.280486885606237,0.5943464662223042,1,False,Wisconsin
+2022,Auburn,Miami FL,1120,1274,0,Miami FL,Auburn,10.0,2.0,True,6.902014651756218,11.367336863532358,4.46532221177614,0.8565744196130354,1,False,Auburn
+2022,Texas,Purdue,1400,1345,0,Purdue,Texas,3.0,6.0,False,-2.0160154494496823,9.266893115247427,11.28290856469711,0.6060072570420134,1,False,Texas
+2022,Texas Tech,Notre Dame,1403,1323,1,Texas Tech,Notre Dame,3.0,11.0,False,6.4294225019557985,11.726673314421944,5.297250812466146,0.8788052468558694,1,True,Texas Tech
+2022,Villanova,Ohio St,1437,1326,1,Villanova,Ohio St,2.0,7.0,False,5.217769018501031,11.3160972429272,6.098328224426169,0.7958351477548801,1,True,Villanova
+2022,Gonzaga,Arkansas,1211,1116,0,Arkansas,Gonzaga,4.0,1.0,True,10.08273060363939,18.129720745181245,8.046990141541855,0.6834936710982704,1,False,Gonzaga
+2022,Duke,Texas Tech,1181,1403,1,Duke,Texas Tech,2.0,3.0,False,0.9088076981902162,12.63548101261216,11.726673314421944,0.4775306545744894,0,False,Texas Tech
+2022,Arizona,Houston,1112,1222,0,Houston,Arizona,5.0,1.0,True,-0.5182867134582096,15.442412303898593,15.960699017356802,0.39551812066683917,0,True,Houston
+2022,Michigan,Villanova,1276,1437,0,Villanova,Michigan,2.0,11.0,False,-5.896415276966906,5.419681965960294,11.3160972429272,0.2128509910180133,0,True,Villanova
+2022,Kansas,Providence,1242,1344,1,Kansas,Providence,1.0,4.0,False,6.962260764555623,11.822072939446755,4.8598121748911325,0.7763412632058865,1,True,Kansas
+2022,Iowa St,Miami FL,1235,1274,0,Miami FL,Iowa St,10.0,11.0,False,-0.18483532616990317,4.280486885606237,4.46532221177614,0.6252252450524073,1,False,Iowa St
+2022,UCLA,North Carolina,1417,1314,0,North Carolina,UCLA,8.0,4.0,True,5.197273570780693,11.753875013633872,6.556601442853179,0.7237366803300647,1,False,UCLA
+2022,Purdue,St Peter's,1345,1389,0,St Peter's,Purdue,15.0,3.0,True,7.7683516994951844,11.28290856469711,3.514556865201925,0.8624017657229341,1,False,Purdue
+2022,Arkansas,Duke,1116,1181,0,Duke,Arkansas,2.0,4.0,False,-4.588490871070306,8.046990141541855,12.63548101261216,0.39138334776074607,0,True,Duke
+2022,Villanova,Houston,1437,1222,1,Villanova,Houston,2.0,5.0,False,-4.644601774429603,11.3160972429272,15.960699017356802,0.5169261622276603,1,True,Villanova
+2022,Kansas,Miami FL,1242,1274,1,Kansas,Miami FL,1.0,10.0,False,7.356750727670615,11.822072939446755,4.46532221177614,0.849577023277824,1,True,Kansas
+2022,North Carolina,St Peter's,1314,1389,1,North Carolina,St Peter's,8.0,15.0,False,3.0420445776512537,6.556601442853179,3.514556865201925,0.7034989852960221,1,True,North Carolina
+2022,Villanova,Kansas,1437,1242,0,Kansas,Villanova,1.0,2.0,False,-0.5059756965195561,11.3160972429272,11.822072939446755,0.6113180775890666,1,False,Villanova
+2022,North Carolina,Duke,1314,1181,1,North Carolina,Duke,8.0,2.0,True,-6.078879569758982,6.556601442853179,12.63548101261216,0.24067386533925209,0,False,Duke
+2022,Kansas,North Carolina,1242,1314,1,Kansas,North Carolina,1.0,8.0,False,5.265471496593577,11.822072939446755,6.556601442853179,0.7620930700852958,1,True,Kansas
+2023,Pittsburgh,Mississippi St,1338,1280,1,Pittsburgh,Mississippi St,11.0,11.0,False,-0.5788434386706314,4.9921396769649675,5.570983115635599,0.5766855763812807,1,True,Pittsburgh
+2023,SE Missouri St,TAM C. Christi,1369,1394,0,TAM C. Christi,SE Missouri St,16.0,16.0,False,-3.6859801469014286,-1.1749599083620552,2.5110202385393734,0.3979792246162544,0,True,TAM C. Christi
+2023,Nevada,Arizona St,1305,1113,0,Arizona St,Nevada,11.0,11.0,False,1.7207117067029998,5.490819170294785,3.770107463591785,0.6200179140635027,1,False,Nevada
+2023,F Dickinson,TX Southern,1192,1411,1,F Dickinson,TX Southern,16.0,16.0,False,2.6372219643567543,-2.170750256029081,-4.807972220385835,0.7520343826765522,1,True,F Dickinson
+2023,Alabama,TAM C. Christi,1104,1394,1,Alabama,TAM C. Christi,1.0,16.0,False,11.896589340157831,14.407609578697205,2.5110202385393734,0.8695700614385554,1,True,Alabama
+2023,Arkansas,Illinois,1116,1228,1,Arkansas,Illinois,8.0,9.0,False,0.8036969206708022,7.9966294793887585,7.192932558717956,0.35828373410335296,0,False,Illinois
+2023,Iowa,Auburn,1234,1120,0,Auburn,Iowa,9.0,8.0,True,-0.9373942403117184,6.037834165493109,6.9752284058048275,0.49056975407213743,0,True,Auburn
+2023,Duke,Oral Roberts,1181,1331,1,Duke,Oral Roberts,5.0,12.0,False,-1.3539569139501992,8.854407488549953,10.208364402500152,0.4714493101914872,0,False,Oral Roberts
+2023,Furman,Virginia,1202,1438,1,Furman,Virginia,13.0,4.0,True,-0.9481900156714715,6.732375219893768,7.68056523556524,0.46763760833088974,0,False,Virginia
+2023,Houston,N Kentucky,1222,1297,1,Houston,N Kentucky,1.0,16.0,False,15.8697864603716,17.400782571018937,1.5309961106473366,0.9717091322909871,1,True,Houston
+2023,Kansas,Howard,1242,1224,1,Kansas,Howard,1.0,16.0,False,9.536601164046841,9.15723911936024,-0.3793620446866015,0.8969712288532113,1,True,Kansas
+2023,West Virginia,Maryland,1452,1268,0,Maryland,West Virginia,8.0,9.0,False,-0.5683729247957814,7.020514735070591,7.588887659866373,0.4903301097571657,0,True,Maryland
+2023,Missouri,Utah St,1281,1429,1,Missouri,Utah St,7.0,10.0,False,-3.2994029805560388,4.919989084162879,8.219392064718917,0.5465512533332632,1,True,Missouri
+2023,Northwestern,Boise St,1321,1129,1,Northwestern,Boise St,7.0,10.0,False,-1.5432781183124575,5.724603012959122,7.267881131271579,0.429266874450883,0,False,Boise St
+2023,Penn St,Texas A&M,1336,1401,1,Penn St,Texas A&M,10.0,7.0,True,-2.1865587719156565,5.343645499481781,7.530204271397437,0.4098506061351284,0,False,Texas A&M
+2023,Princeton,Arizona,1343,1112,1,Princeton,Arizona,15.0,2.0,True,-6.048159696320951,4.810789470829064,10.858949167150016,0.4459130650122449,0,False,Arizona
+2023,Col Charleston,San Diego St,1158,1361,0,San Diego St,Col Charleston,5.0,12.0,False,1.279075844901456,9.606125280050833,8.327049435149377,0.5774664305809494,1,False,Col Charleston
+2023,Louisiana,Tennessee,1418,1397,0,Tennessee,Louisiana,4.0,13.0,False,-8.613757227617683,4.998819061730188,13.61257628934787,0.19938721951507427,0,True,Tennessee
+2023,Colgate,Texas,1159,1400,0,Texas,Colgate,2.0,15.0,False,-4.239263015831595,6.80200081364012,11.041263829471715,0.18647115556028707,0,True,Texas
+2023,UNC Asheville,UCLA,1421,1417,0,UCLA,UNC Asheville,2.0,15.0,False,-10.579841778652167,3.001172526712864,13.58101430536503,0.07106252023145267,0,True,UCLA
+2023,UC Santa Barbara,Baylor,1364,1124,0,Baylor,UC Santa Barbara,3.0,14.0,False,-3.337064108109516,4.741033380142369,8.078097488251885,0.4289283694304632,0,True,Baylor
+2023,Iona,Connecticut,1233,1163,0,Connecticut,Iona,4.0,13.0,False,-2.6862131782838787,9.87881622772693,12.565029406010808,0.42728012704014817,0,True,Connecticut
+2023,Creighton,NC State,1166,1301,1,Creighton,NC State,6.0,11.0,False,2.43280635606547,8.952402439711065,6.519596083645595,0.485864553313187,0,False,NC State
+2023,Purdue,F Dickinson,1345,1192,0,F Dickinson,Purdue,16.0,1.0,True,13.241168568971716,11.070418312942635,-2.170750256029081,0.9255922712102145,1,False,Purdue
+2023,FL Atlantic,Memphis,1194,1272,1,FL Atlantic,Memphis,9.0,8.0,True,2.9833959378635058,11.40271719075497,8.419321252891464,0.5930035969206419,1,True,FL Atlantic
+2023,Grand Canyon,Gonzaga,1213,1211,0,Gonzaga,Grand Canyon,3.0,14.0,False,-9.219653802130878,2.796543304002185,12.016197106133063,0.25101821938841024,0,True,Gonzaga
+2023,Kent,Indiana,1245,1231,0,Indiana,Kent,4.0,13.0,False,0.8983711182774528,8.394601219064242,7.496230100786789,0.6019555550873223,1,False,Kent
+2023,Kansas St,Montana St,1243,1286,1,Kansas St,Montana St,3.0,14.0,False,3.3991795946745924,7.165113047819574,3.7659334531449815,0.6561367873473928,1,True,Kansas St
+2023,Kentucky,Providence,1246,1344,1,Kentucky,Providence,6.0,11.0,False,0.8672951418256503,7.31539796975089,6.44810282792524,0.4963337930049892,0,False,Providence
+2023,Marquette,Vermont,1266,1436,1,Marquette,Vermont,2.0,15.0,False,3.7940262185160663,9.200445238218265,5.406419019702199,0.744489254153232,1,True,Marquette
+2023,Drake,Miami FL,1179,1274,0,Miami FL,Drake,5.0,12.0,False,1.5024053849040229,8.140733212715688,6.638327827811665,0.47052546848673527,0,True,Miami FL
+2023,USC,Michigan St,1425,1277,0,Michigan St,USC,7.0,10.0,False,0.48588605152627906,5.52493686139735,5.039050809871071,0.522636520796535,1,False,USC
+2023,Iowa St,Pittsburgh,1235,1338,0,Pittsburgh,Iowa St,11.0,6.0,True,2.0873342143425475,7.079473891307515,4.9921396769649675,0.6757006805857098,1,False,Iowa St
+2023,St Mary's CA,VCU,1388,1433,1,St Mary's CA,VCU,5.0,12.0,False,3.4506933935369233,10.861111340506923,7.41041794697,0.860340516302846,1,True,St Mary's CA
+2023,Arizona St,TCU,1113,1395,0,TCU,Arizona St,6.0,11.0,False,-3.714475647188422,3.770107463591785,7.484583110780207,0.27280206030271437,0,True,TCU
+2023,Xavier,Kennesaw,1462,1244,1,Xavier,Kennesaw,3.0,14.0,False,5.237670959756414,7.878783680634811,2.6411127208783967,0.7055714998951615,1,True,Xavier
+2023,Alabama,Maryland,1104,1268,1,Alabama,Maryland,1.0,8.0,False,6.818721918830832,14.407609578697205,7.588887659866373,0.5120073313145297,1,True,Alabama
+2023,Kansas,Arkansas,1242,1116,0,Arkansas,Kansas,8.0,1.0,True,1.1606096399714811,9.15723911936024,7.9966294793887585,0.49626975661538714,0,True,Arkansas
+2023,Houston,Auburn,1222,1120,1,Houston,Auburn,1.0,9.0,False,10.425554165214109,17.400782571018937,6.9752284058048275,0.8783851880957059,1,True,Houston
+2023,Missouri,Princeton,1281,1343,0,Princeton,Missouri,15.0,7.0,True,0.10919961333381423,4.919989084162879,4.810789470829064,0.5863844455891601,1,False,Missouri
+2023,San Diego St,Furman,1361,1202,1,San Diego St,Furman,5.0,13.0,False,1.5946742152556084,8.327049435149377,6.732375219893768,0.6214780964006775,1,True,San Diego St
+2023,Tennessee,Duke,1397,1181,1,Tennessee,Duke,4.0,5.0,False,4.758168800797918,13.61257628934787,8.854407488549953,0.7715610567013508,1,True,Tennessee
+2023,Penn St,Texas,1336,1400,0,Texas,Penn St,2.0,10.0,False,-5.697618329989934,5.343645499481781,11.041263829471715,0.2736519555258898,0,True,Texas
+2023,Northwestern,UCLA,1321,1417,0,UCLA,Northwestern,2.0,7.0,False,-7.856411292405909,5.724603012959122,13.58101430536503,0.22596965792285756,0,True,UCLA
+2023,Connecticut,St Mary's CA,1163,1388,1,Connecticut,St Mary's CA,4.0,5.0,False,1.7039180655038848,12.565029406010808,10.861111340506923,0.411450280013154,0,False,St Mary's CA
+2023,Creighton,Baylor,1166,1124,1,Creighton,Baylor,6.0,3.0,True,0.8743049514591803,8.952402439711065,8.078097488251885,0.5262490311733633,1,True,Creighton
+2023,F Dickinson,FL Atlantic,1192,1194,0,FL Atlantic,F Dickinson,9.0,16.0,False,-13.57346744678405,-2.170750256029081,11.40271719075497,0.13165582048583793,0,True,FL Atlantic
+2023,TCU,Gonzaga,1395,1211,0,Gonzaga,TCU,3.0,6.0,False,-4.531613995352856,7.484583110780207,12.016197106133063,0.5021947544565003,1,False,TCU
+2023,Kentucky,Kansas St,1246,1243,0,Kansas St,Kentucky,3.0,6.0,False,0.15028492193131626,7.31539796975089,7.165113047819574,0.6275676076717495,1,False,Kentucky
+2023,Indiana,Miami FL,1231,1274,0,Miami FL,Indiana,5.0,4.0,True,0.8579022729751244,7.496230100786789,6.638327827811665,0.45274134857813364,0,True,Miami FL
+2023,Michigan St,Marquette,1277,1266,1,Michigan St,Marquette,7.0,2.0,True,-4.161394428347194,5.039050809871071,9.200445238218265,0.4391546725652324,0,False,Marquette
+2023,Pittsburgh,Xavier,1338,1462,0,Xavier,Pittsburgh,3.0,11.0,False,-2.8866440036698435,4.9921396769649675,7.878783680634811,0.520366117635758,1,False,Pittsburgh
+2023,Arkansas,Connecticut,1116,1163,0,Connecticut,Arkansas,4.0,8.0,False,-4.56839992662205,7.9966294793887585,12.565029406010808,0.4063740879895919,0,True,Connecticut
+2023,Tennessee,FL Atlantic,1397,1194,0,FL Atlantic,Tennessee,9.0,4.0,True,2.2098590985929008,13.61257628934787,11.40271719075497,0.6773810903317784,1,False,Tennessee
+2023,UCLA,Gonzaga,1417,1211,0,Gonzaga,UCLA,3.0,2.0,True,1.5648171992319675,13.58101430536503,12.016197106133063,0.7424641248237867,1,False,UCLA
+2023,Michigan St,Kansas St,1277,1243,0,Kansas St,Michigan St,3.0,7.0,False,-2.126062237948503,5.039050809871071,7.165113047819574,0.4480689185965921,0,True,Kansas St
+2023,Creighton,Princeton,1166,1343,1,Creighton,Princeton,6.0,15.0,False,4.141612968882001,8.952402439711065,4.810789470829064,0.6425563289007149,1,True,Creighton
+2023,Houston,Miami FL,1222,1274,0,Miami FL,Houston,5.0,1.0,True,10.762454743207272,17.400782571018937,6.638327827811665,0.8259825812742191,1,False,Houston
+2023,Alabama,San Diego St,1104,1361,0,San Diego St,Alabama,5.0,1.0,True,6.080560143547828,14.407609578697205,8.327049435149377,0.6341355437703773,1,False,Alabama
+2023,Texas,Xavier,1400,1462,1,Texas,Xavier,2.0,3.0,False,3.162480148836904,11.041263829471715,7.878783680634811,0.7653855749648677,1,True,Texas
+2023,Gonzaga,Connecticut,1211,1163,0,Connecticut,Gonzaga,4.0,3.0,True,-0.5488322998777448,12.016197106133063,12.565029406010808,0.4618059103510033,0,True,Connecticut
+2023,Kansas St,FL Atlantic,1243,1194,0,FL Atlantic,Kansas St,9.0,3.0,True,-4.237604142935396,7.165113047819574,11.40271719075497,0.3543730195783757,0,True,FL Atlantic
+2023,Texas,Miami FL,1400,1274,0,Miami FL,Texas,5.0,2.0,True,4.40293600166005,11.041263829471715,6.638327827811665,0.6367589428051109,1,False,Texas
+2023,Creighton,San Diego St,1166,1361,0,San Diego St,Creighton,5.0,6.0,False,0.6253530045616884,8.952402439711065,8.327049435149377,0.5986236168381123,1,False,Creighton
+2023,Connecticut,Miami FL,1163,1274,1,Connecticut,Miami FL,4.0,5.0,False,5.926701578199143,12.565029406010808,6.638327827811665,0.6316154318509125,1,True,Connecticut
+2023,FL Atlantic,San Diego St,1194,1361,0,San Diego St,FL Atlantic,5.0,9.0,False,3.0756677556055934,11.40271719075497,8.327049435149377,0.648332593617725,1,False,FL Atlantic
+2023,Connecticut,San Diego St,1163,1361,1,Connecticut,San Diego St,4.0,5.0,False,4.237979970861431,12.565029406010808,8.327049435149377,0.6664331820568904,1,True,Connecticut
